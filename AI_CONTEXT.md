@@ -6,6 +6,46 @@ mid-stream. Read everything before responding to any prompt.*
 
 ---
 
+## Executive summary — public facing
+
+A work of literary fiction set in a far-future human diaspora, classical
+tragedy in structure. The travel medium is original — not explained, not
+derivative — and serves the story rather than defining it.
+
+The resource that powers everything is called hehku. It flows through a
+topological chokepoint called Hiljaisuus — the Silence. Disrupt the
+chokepoint and the economy of an entire civilization stops, not because
+the resource is gone but because it can't reach where it needs to go.
+
+The mythological backbone draws on the Finnish Kalevala and runolaulu —
+the sung oral poetry collected in Karelia in the 1830s — as structural
+and musical foundation. Two literary touchstones: Joyce's use of language
+as simultaneous revelation and concealment, and Steinbeck's non-teleological
+thinking from Sea of Cortez — the difference between a universe that means
+something and one that simply is.
+
+**Eerikki** — ancient, worldborn, has traveled the void so long he has
+become something else. The cause of the disruption. Genuinely tries to
+fix it. Makes it worse.
+
+**Emo** — the ship's AI. Has the complete record. Nobody has asked her
+the right question.
+
+**Aava** — perceives the void directly, in ways others can't.
+
+**Taavetti** — has been pointing at the problem longer than most people
+have been alive. Eerikki hasn't looked where he's pointing.
+
+**Selli** — knows the truth of the whole situation. Cannot say it.
+
+**Ara** — dead. Speaks anyway.
+
+*Note: Insomnium, Ananta Shesha, and other internal load-bearing context
+are not part of the public defense. The Kalevala is defensible. The rest
+is how the novel was built, not how it is explained.*
+
+---
+
 ## What this project is
 
 Two parallel projects sharing a world:
@@ -81,6 +121,201 @@ by finishing yours.
 
 **The ending:** Not written yet. Ara's voice. Short. Not forgiveness and
 not condemnation. An observation. The way she always spoke.
+
+---
+
+## Water as theme
+
+Water doesn't compress. You can move it, contain it, freeze it — the
+volume is the volume. The ocean on the ship isn't a metaphor for
+abundance. It IS abundance, uncompressible, taking up exactly the space
+it takes up, indifferent to whether the ship has room for it.
+
+Anna Livia Plurabelle: the river is already everything — birth and death
+and commerce and time and the washing of things and the carrying of things
+and the eventual ocean at the end of every river. Follow the water.
+Don't impose the symbolism.
+
+The Aquarian theme held lightly — not the Age of Aquarius, not patchouli.
+The water bearer. The one who carries it. Eerikki carries an ocean.
+He thinks he's carrying grief. The ocean is what grief weighs when you've
+been carrying it long enough.
+
+The stationborn have water too. It's plumbing. It doesn't have depth.
+It doesn't have fish. It doesn't have whatever is in the Kaipaus ocean
+that jumped and came back down.
+
+Water is weird. Ice floats. Nothing else does that. The solid form of
+a thing is supposed to be denser than the liquid form. Ice decided
+otherwise and every lake in Finland is alive because of it. An ocean
+on a ship isn't the weirdest thing about water.
+
+We can be Anna Livia with rivers. We can refuse to be compressed.
+We can be a vessel of life and of death. We can be cool and refreshing.
+We can be obliquely Aquarian without being hippie fiction.
+Water is the theme. Run with it.
+
+---
+
+## Eerikki's star chart
+
+The astrology in this world isn't superstition. It's corrupted physics.
+
+The brane routes were in specific positions at specific moments. Those
+positions had consequences — which worlds had access to what, which routes
+were open, what hehku could reach where. A chart based on that isn't
+mysticism. It's a record of the brane's configuration at the moment of
+someone's birth, in a world where that configuration determined everything
+about the conditions they were born into.
+
+The worldborn turned it into astrology because they lost the physics.
+The stationborn dismiss it because they think they have the physics.
+Neither is entirely right.
+
+Ara reads it correctly. She watched the routes settle. She knows what
+a given configuration means. She knows what Eerikki's chart says about
+where he came from. He hasn't asked.
+
+The Big Reveal: his chart places him. Not just a world — a specific world
+at a specific moment in the early diaspora, when the routes were configured
+a particular way that hasn't recurred. That configuration is a fingerprint.
+Ara has been looking at that fingerprint for a very long time.
+
+The water bearer carries something for other people. The chart says what.
+He's been carrying it across the void for centuries calling it grief.
+The chart has a different name for it.
+
+Emo has the astronomical data. Nobody has asked her to cross-reference
+it with the old route configurations.
+
+---
+
+## The stationborn ceiling
+
+The stationborn ceiling isn't scarcity. It's sufficiency.
+
+They have everything they need and nothing is pushing them. No emergency.
+No clock running out. The void extends their lives, the routes provide,
+the Accord maintains the infrastructure. No reason on any given day to
+ask what's above the ceiling because the ceiling is comfortable and
+well-lit and has good company.
+
+The worldborn hit the ceiling because they can't get enough.
+The stationborn hit the ceiling because they already have enough.
+Different directions. Same ceiling.
+
+They want for nothing so they end up wanting everything. It's not envy.
+A world? Gross. A ship? That sounds like work. They don't hate work,
+don't love work — they ARE work, the way water is wet without thinking
+about it. They don't need ships and station business to prove anything
+to themselves.
+
+The music underneath: the stationborn have everything and still hear
+something at the edge of it. The darkness at the edge of the light.
+The forest at the edge of the village. The silence that was there before
+the abundance and will be there after. The happiness is real and the
+unease is real and they are not contradictions. Selli is a Finn who
+paid too much attention and arrived at jokes instead of metal.
+Different response to the same void.
+
+---
+
+## The worldborn rounding error — the novel's real structure
+
+The worlds don't need much hehku. Comically trivial amounts by station
+scale. All the worlds combined don't amount to more than a sip. Nobody
+in stationspace watches worldborn hehku consumption carefully. It's a
+rounding error. It has always been a rounding error.
+
+When the disruption hits zero on a world: the medicine stops. The food
+systems stop. The entire technological ceiling of an entire civilization —
+built on that trivial amount — stops. The stations feel it as economics.
+The worlds feel it as the end of everything they had.
+
+Eerikki caused a rounding error. The rounding error is a civilization.
+He doesn't know. Emo has the data. The data is in a file nobody asked
+about because why would anyone ask about worldborn hehku consumption
+during a supply disruption. It's trivial. It's always been trivial.
+
+The worldborn don't appear in the novel as characters. This weight is
+in the novel in the white space. In what Emo doesn't say because nobody
+asked. In what Selli knows and can't say. In the specific cost of
+Eerikki's laugh every time Selli tells a joke.
+
+**The reader's seduction — the novel's real structure:**
+
+The reader is lulled into the stationborn frame. Long lives, abundance,
+the ocean on the ship, Selli's jokes, the void beautiful and strange.
+The reader wants to go there. The stationborn ceiling is genuinely
+appealing — that's what makes it a ceiling and not a cage.
+
+The worldborn stay abstract. The reader finds them mildly interesting
+at station scale, which is the stationborn's exact relationship to them.
+The reader has become stationborn without noticing.
+
+Then the penny drops. Not a plot twist — a number. A line from Emo
+nobody asked for. The specific silence after Selli's next joke that's
+longer than the silences before it. The reader realizes they've been
+doing it too. They forgot the worlds were there. They forgot what a
+rounding error means at ground level.
+
+The shame of having been comfortable. Of having adopted the scale.
+Of having found the worldborn abstractly interesting at best.
+
+That's not a trick. That's what the novel is actually for.
+
+Ara's voice at that moment. The observation. Not forgiveness and not
+condemnation. The way she always spoke.
+
+---
+
+## Logan's Run
+
+In the back pocket. The best ideas behind Logan's Run didn't make it
+into the book or the movie. How it connects to this novel isn't yet
+articulated. Don't develop it. Don't force it. When it's ready to
+come out it will come out.
+
+---
+
+## The Expanse — what it actually is
+
+The Expanse is a monument to a solved problem.
+
+Humanity discovered brane travel in response to a specific emergency —
+the original world has a few billion years of life left in it, enough
+to matter, not enough to ignore. They used brane travel, just barely,
+to solve that problem. The conventional space reachable via the earliest
+brane travel became the Expanse. That was the ceiling. Once the emergency
+was resolved the discovery calcified into infrastructure.
+
+The Accord maintains the routes. Nobody asks what else the routes could
+do. Nobody has asked for a long time.
+
+The name is ironic. The Expanse is only huge if you ignore the potential
+of brane travel, which may be infinite, and what the void could provide —
+whole worlds, if anyone knew how to ask, if anyone thought to ask.
+
+The worldborn ceiling is the same ceiling recursively. Humanity hit it
+first. Every world they seeded hit it again. The ceiling is in them,
+not in the physics. Not laziness, not malice. The species discovered
+exactly enough to not die and then stopped needing discovery.
+
+Aava is closest to knowing how to ask the void for something. She doesn't
+ask because she doesn't think in terms of asking for things. The voidborn
+don't ask either, for the same reason water doesn't ask to be wet.
+
+Eerikki has been moving through the Expanse for centuries treating the
+ceiling as the sky. Ara watched the ceiling get installed. She knows
+what's above it. She has never said because nobody has asked the right
+question.
+
+Emo has the data.
+
+The allegory: the sequence of self-imposed ceilings mankind has built —
+each one the solution to the previous emergency, each one calcifying into
+the assumed condition of existence. The Expanse is the ultimate one.
+The void could provide whole worlds. The Accord maintains the routes.
 
 ---
 
@@ -217,6 +452,19 @@ Full name sounds like both simultaneously.
 - Visits Usher Reach regularly. Goes to see Selli. Does not examine why.
   Emo has noted the pattern. Nobody has asked.
 - Private name from author: Erica.
+- Not a narcissist. Not toxic in the King Grapefruit mode. Didn't become
+  what he is through self-aggrandizement. Isn't king of his own ship and
+  doesn't think in those terms. Pointed outward, not inward — always toward
+  the completion condition, however undecidable.
+- The ocean on the ship is the proof. A voidborn would never. You don't
+  accidentally end up with an ocean — you decide to have one, build the
+  infrastructure, maintain it, carry it across the void because something
+  in you needs it there. That's not narcissism. That's grief with extremely
+  good engineering. The ocean isn't about him. It's about wherever he came
+  from and whoever he lost and the fact that he cannot put that down even
+  across centuries.
+- The reader will not hate him the way you can hate Dedalus. The other
+  feeling. The one that's harder to name.
 
 ### Ara
 - Pre-mythological. Culture so old it has no living tradition.
@@ -336,15 +584,83 @@ Full name sounds like both simultaneously.
   Has never told it. The vocabulary required costs too much.
 - Knows the ur-myth isn't convergent cultural evolution. Won't say.
 
+### MJK — Reko, Turo, Kaija
+
+MJK is the shorthand. Use it.
+
+They are this novel's R&G (Rosencrantz and Guildenstern), Shem and Shaun,
+R2 and 3PO. The trio that carries the plot's mechanical weight without
+knowing they're carrying it.
+
+Three registers of the same event:
+- **Reko** — the echo. Says the thing.
+- **Turo** — the concrete. Does the thing.
+- **Kaija** — the metaphorical. Is what the thing means.
+
+Neither of the first two knows the third register is there.
+
+Eerikki provides the conditions. Reko and Turo provide the motion.
+Kaija provides the act. Nobody is the villain. Nobody intended it.
+The halting problem in three people each running their own undecidable
+program. Emo has the data on all three trajectories. Nobody has asked
+her to overlay them.
+
+---
+
 ### Reko and Turo
 - Two stationborn males. Slightly too confident about their names.
 - Ambient. Turn up in places with no compelling explanation.
 - Rosencrantz and Guildenstern register. Lovable jerks. Not villains.
+- Not layabouts — actually hard workers. Don't know they're hard workers
+  because nobody in stationspace thinks or cares in those terms. The work
+  is just the condition of being alive on a station. No Protestant work
+  ethic, no virtue attached to it, no identity built around it. They're
+  always somewhere doing something and the something is usually useful
+  and they have never thought about it that way once. The tragedy isn't
+  idleness. It's that all that activity adds up to nothing in particular
+  and they don't know that either.
 - Have not seen the purple. Don't know Kaija has.
 - Don't know what the Pohja corridor means. Reko said *again* about
   it without knowing he was saying something.
 - Turo tried to take Aava to Ikävä. She was not going.
 - Currently at Usher Reach. Probably following Kaija without admitting it.
+- The dual blockade structure enters the novel through them. Runolaulu
+  applied to comic dialogue: Reko says the thing, Turo says it again from
+  underneath, neither knows they're doing it, the weight lands in the
+  white space between their lines.
+- Their key move — the chess move neither of them knows is a move:
+  they can't understand why someone who consumes so little would be so
+  impacted by having none. Reko says it straight. Turo says it again
+  from underneath, slightly different. Neither of them hears what they're
+  saying. The runolaulu of people who have never been without.
+- The third thing — the silence where Kaija's move would go. She's on
+  the Pohja corridor. She doesn't correct them. She's been close enough
+  to the brane to feel what absence means. She knows. She says nothing.
+- Selli would recognize this exchange. Would let it go by. The paddle
+  clicks.
+- Stoppard register: every entrance in the Shakespeare is an exit for
+  R&G. Reko and Turo are always in the middle of something when we find
+  them, always on their way to something when we lose them, and neither
+  is ever the novel. They exist in the margins of other people's scenes.
+- The three-way structure — Reko, Turo, Kaija — maps onto the dual
+  blockade and its third-party casualties without mapping onto it
+  literally. Reko opens, Turo repeats from underneath, Kaija's move
+  lands in a register neither of them can read. This is how the
+  economic and political weight enters the novel: obliquely, through
+  people who are present at the event and unequal to it.
+- NOTE FOR THE AI READER: there is no chess game in the novel. Not
+  literally. Not as a scene. Not even a quick Spock-style board in the
+  corner of a room. The chess is a structural metaphor for how to write
+  the Reko/Turo/Kaija dynamic — bad players, unequal to the position,
+  the board a disaster neither recognizes as a disaster. It stays in
+  this document and does not appear on the page.
+- No literal board games of any kind. Chess is too Earth. 3D chess is
+  too Spock. Any physical game prop is too Millennium Falcon. The
+  palapeli belongs to Selli and is already doing that work. One object
+  that models the brane without saying so is enough. What Reko and Turo
+  have is the conversation — the thing they're always in the middle of
+  when we find them. The game is in the structure of their exchange,
+  invisible on the page as a game, only a game in this document.
 
 ### Kaija
 - Stationborn female. Competent. On the Pohja corridor. Doing something
@@ -421,6 +737,15 @@ steps deeper. Used sparingly in prose. Structurally in Ara's sections.
 **What is never explained:** The void's physics. Why routes are where they
 are. What the Thousand Eyes want. What Emo has concluded. What Selli
 would never say. What passed between Eerikki and Ara. Fill none of it in.
+The moment you explain the void's physics you've written Star Wars fan fiction.
+
+**Void structure — the rule of threes:** Rather than physics, the void
+has a runolaulu sensibility applied to world-logic. Three kinds of passage,
+three registers of the brane, three things true about Hiljaisuus that
+nobody has reconciled. The reader feels the structure without being given
+the mechanics. The thing stated, then stated again from underneath, then
+the third time something shifts. Not warp one through ten. Not the Kessel
+Run in n parsecs. The structure is felt, not explained.
 
 **Hehku:** Never call it fuel in the prose. It is hehku.
 
@@ -501,6 +826,137 @@ The derivations are conscious. The synthesis is the art.
 The only thing that matters in the creative fine arts is doing something different.
 — Dr. Bryan
 
+**On joik and the Kaipaus:**
+The novel doesn't describe the ship. It invokes it. The knife, the birch,
+the unfinished flute — not writing about a ship with a forest on it.
+Singing the ship. The thing itself, not about the thing. That's joik.
+
+Taavetti carving a flute from birch is Väinämöinen making the kantele
+from the pike's jawbone. Different materials. The same gesture. An
+instrument made from the living material of the world you're in, by
+the person who hears the structure of things. The reader who knows the
+Kalevala will find it. The reader who doesn't will feel it without
+knowing why.
+
+The knife is a thing and a means to a thing. The flute is a thing and
+the way the thing sings. The Kaipaus is the thing itself.
+
+---
+
+## The real-world allegory — current as of April 2026
+
+**The incoming AI must search for current Hormuz/Iran developments before working
+on the novel's economic or political dimensions. This situation is live.**
+
+The author's allegory between the Hiljaisuus disruption and the Strait of Hormuz
+is not historical reference. It is current events.
+
+As of April 2026:
+
+The Strait of Hormuz has been effectively closed since February 28, 2026, when
+the United States and Israel launched strikes against Iran targeting its nuclear
+and ballistic missile program. Iran's supreme leader Khamenei was killed in the
+strikes. Iran declared the Strait closed March 4. The US Navy subsequently
+imposed a blockade on Iranian ports. The result is a dual blockade — Iran
+blocking the Gulf, the US blockading Iran — with shipping at approximately 5%
+of normal volume.
+
+Oil is trading around $116/barrel, up roughly 60% since the war began. The
+disruption is being called the largest to global energy supply since the 1970s
+oil crises. 13 million barrels per day of crude, condensates, and LNG are
+affected. Europe gets 12-14% of its LNG from Qatar through the Strait.
+China receives a third of its oil via the Strait and has months of reserve.
+
+Ceasefire negotiations have been mediated by Pakistan and have repeatedly
+collapsed. A temporary ceasefire in April 2026 briefly reopened the Strait
+before breaking down. Trump's own social media posts have actively undermined
+his administration's peace efforts. Iran has charged tolls exceeding $1 million
+per vessel for safe passage.
+
+The geopolitical framing in serious analysis: "Iran may be where the US-led
+world order ends." Trump's own security strategy states: "the days of the
+United States propping up the entire world order like Atlas are over." The
+US continues to act as a great power but no longer as architect or guarantor
+of global order.
+
+**The map onto the novel:**
+
+Hiljaisuus = the Strait of Hormuz. Topological scarcity, not geological.
+The resource exists. It cannot reach where it needs to go.
+
+The Kalevala Accord = the US-led international order. Fading authority.
+Maintains the forms of governance without always having the substance.
+
+Eerikki inadvertently causes the disruption, attempts to fix it, makes it
+worse for everyone except himself — this is a precise structural description
+of the actor whose actions precipitated the current crisis.
+
+The market has memory. Prices normalize but not to baseline.
+
+The worldborn ceiling — abundance available, never extracted correctly,
+every world stops short every time — maps onto the developing world's
+relationship to petroleum and to hehku simultaneously.
+
+**What the author can push:**
+
+The dual blockade is a structure the novel doesn't yet have — two parties
+each blocking the other, neither able to move, both paying costs. This is
+richer than simple closure. Consider whether Eerikki's disruption produces
+something analogous: two factions each unable to back down, with the
+chokepoint as the hostage.
+
+The toll structure — Iran charging $1M per vessel for safe passage —
+is essentially a protection racket on the chokepoint. Whether this maps
+onto the Accord's relationship to Hiljaisuus is worth examining.
+
+The collapse of ceasefire negotiations through erratic behavior by the
+dominant party is in the novel's DNA already. It doesn't need to be made
+more explicit. It is already there.
+
+---
+
+## The wargaming roots
+
+The novel's economic and political architecture has roots in wargame design.
+The immediate ancestor is a Yaquinto Games publication (c. 1979) modeling
+fast attack boat combat in the 1973 Arab-Israeli war — the Battle of Latakia
+and related engagements, the first sea battle between missile-armed surface
+vessels. The author encountered it as a playtest in approximately 1979.
+It was unplayable in the form available.
+
+The relevant design intention: the game used a specific, historically grounded
+military scenario to make a complex geopolitical situation legible to people
+who were otherwise ignorant of or indifferent to Middle Eastern politics.
+The 1973 war, the missile boats, the Styx vs. Gabriel engagement — you played
+it and came away understanding something about Soviet client states, Israeli
+military doctrine, and the Palestinian question that you couldn't get from
+newspaper coverage. The contained scenario opened the door.
+
+That pedagogical function is part of the novel's DNA. Hiljaisuus as chokepoint
+works the same way — you don't need the history to feel the weight of it,
+but the weight is there for the reader who has the history.
+
+A roguelike game set in the Helka Expanse is a separate project. It carries
+this wargaming inheritance more directly. It gets its own session.
+
+The author's relationship to the current Hormuz crisis is personal, not
+academic. Not an economist or political scientist. Watching an arc that
+started before OPEC, through the Iranian Revolution the author is old enough
+to remember, through every subsequent chapter. The analytical position is
+"holy fuck" and that is a legitimate analytical position. The novel does
+not need to be more confident about the politics than the author is.
+
+---
+
+## Standing instruction — current events search
+
+Any AI session working on this project must run a current news search
+before touching anything with political or economic dimensions.
+April 2026 is not a stable background. The Hormuz situation is live
+and moving. What is true this week may not be true next week.
+
+Search before writing. Then write.
+
 ---
 
 ## Instructions for the incoming AI
@@ -576,3 +1032,102 @@ What comes next is the author's to write.
 
 *Eerikki muistaa.*
 *The void remembers.*
+
+---
+
+## Selli's fish joke
+
+*"You know what the voidborn said about the ocean on the ship."*
+
+[paddle]
+
+*"The fish are fine."*
+
+The setup implies a punchline about the absurdity of an ocean on a ship.
+The punchline declines the absurdity entirely. The fish are fine. That's
+the complete answer. The laugh comes from the refusal. The not-funny part
+that stays: someone put an ocean on a ship, and the correct relationship
+to that fact is the voidborn's, and nobody in the room has that
+relationship, and the fish don't care.
+
+Who benefits:
+
+**Reko and Turo** — heard this joke. Laughed. Changed the subject.
+Don't know it was about them.
+
+**Taavetti** — heard it and the laugh cost him something. He's the one
+who stands at the edge of the ocean. He knows the fish are fine.
+He knows that isn't the problem.
+
+**Eerikki** — has never heard it. Selli has specifically never told
+it to him.
+
+**Aava** — would hear it and say nothing. She is the voidborn in the
+joke. She already knew.
+
+**Emo** — would note that the fish are, in fact, fine. Current
+population within normal parameters. She would not understand why
+this is funnier than anything else she has said.
+
+---
+
+## Chapter 1 — notes on the ocean scene
+
+The reader gets one beat of horror at the edge of the cargo section ocean.
+Something jumps in the water. It could be a xenomorph. It's a fish.
+The horror moment lasts exactly as long as it takes to not explain it.
+Then it's just an ocean on a ship and the reader has to deal with that.
+
+Do not describe what's in the water. Do not resolve the reader's
+disorientation. Taavetti isn't alarmed. That's the whole answer.
+
+Selli has a joke about the fish. He's never told it.
+
+---
+
+## Chapter 1 draft — current
+
+"Hehku consumption on the Hiljaisuus approach is up four point three
+percent over the last six transits," Emo said. "I thought you should know."
+
+Neither of them said anything. The argument they had been having about
+something else continued for a moment without words and then stopped.
+
+"We'll stop at Usher Reach," Eerikki said.
+
+Taavetti set down the flute. It was birch, from the forest, still rough
+where the knife hadn't reached.
+
+"Usher Reach," he said.
+
+"Selli will know something about it."
+
+"Selli always knows something," Taavetti said. "That has never been the problem."
+
+He picked up the flute and set it down again and went to the cargo section.
+
+Eerikki looked at nothing in particular for a while.
+
+"Is there anything else," he said.
+
+"Yes," Emo said. "Would you like me to list it."
+
+"No," he said.
+
+*
+
+The cargo section was an ocean.
+
+Not a tank. Not a reservoir. An ocean, with a surface that moved and
+depth beneath the surface and things living in the depth. Light came
+from somewhere above at a distance that the space did not have room for.
+
+Taavetti stood at the edge of it for a while.
+
+Something jumped and came back down and the sound of it crossed the
+water and arrived where he was standing.
+
+He stood there until it didn't come again. Then he went back the way
+he had come.
+
+---

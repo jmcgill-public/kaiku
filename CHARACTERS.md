@@ -200,8 +200,15 @@ her the right question. She has not volunteered the implications.
 That is not her function unless asked.
 
 **First line — Chapter 1**
-*"I don't need to stop for dinner."*
-Discovered accidentally. Her voice exactly. Flat. Precise. Not unkind.
+Discarded: *"I don't need to stop for dinner."* — proved Emo's voice,
+doesn't open the novel. Trite.
+
+The line that was already there:
+*"Hehku consumption on the Hiljaisuus approach is up four point three
+percent over the last six transits."*
+
+This is how a dispassionate autopilot says we really shouldn't be doing
+this. Flat. Precise. Complete. The understatement is the statement.
 
 ---
 
@@ -327,7 +334,10 @@ nothing about the actual reason, which he may not have examined closely.
 **The forest**
 Goes there to think. Stands very still next to a particular tree. Says
 nothing for a long time. Returns and says something that sounds unrelated
-but isn't.
+but isn't. Takes birch from the forest. Carves a flute from it.
+Not fixing something — making something that doesn't need to exist.
+Sets it down when something requires his attention. Picks it up after.
+The flute is never finished in any scene we've seen. Nobody mentions it.
 
 **Joyce knew**
 What people allow you to call them is the whole relationship in one gesture.
@@ -487,7 +497,7 @@ They all know Selli.
 ## Novel status
 
 **Working title:** *Eerikki muistaa* — Eerikki remembers.
-**First line, Chapter 1:** Emo: *"I don't need to stop for dinner."*
+**First line, Chapter 1:** Emo: *"Hehku consumption on the Hiljaisuus approach is up four point three percent over the last six transits."*
 **Chapters drafted:** 1, 2, 3, Aava lyric section (position TBD)
 **Plot:** Classical tragedy. Eerikki causes the disruption. Tries to
 fix it. Makes it worse for everyone except himself. Doesn't halt.
