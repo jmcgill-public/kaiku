@@ -235,7 +235,6 @@ Full name sounds like both simultaneously.
 - Her name: Eerikki knows it. Never told anyone. Reader never learns it.
   Ara is a placeholder worn smooth across many languages.
 - Cannot finish another person's song. Has been watching Eerikki try.
-- Private name from author: Erica.
 
 ### Emo
 - Ship intelligence. Descendant of Claude Sonnet AI.
@@ -254,7 +253,6 @@ Full name sounds like both simultaneously.
   Nobody has asked her the right question.
 - Also running a program that cannot determine its own halting.
   The mirror goes both ways.
-- First line Chapter 1: *"I don't need to stop for dinner."*
 
 ### Aava
 - *Aava* — Finnish: open, vast. Not empty — without the surface that
