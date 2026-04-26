@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eerikki muistaa</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0e0e1a;
+      --bg-card:   #16162a;
+      --bg-scene:  #12121f;
+      --text:      #e2ddd4;
+      --muted:     #8884a0;
+      --purple:    #9b6dbd;
+      --purple-dim:#5a3d7a;
+      --blue:      #4a7fa8;
+      --line:      #2a2a44;
+      --serif:     Georgia, 'Times New Roman', serif;
+      --sans:      system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(14,14,26,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      padding: 0.75rem 2rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--purple); }
+
+    /* HERO */
+    header {
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    header .subtitle {
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: lowercase;
+      margin-bottom: 2rem;
+    }
+
+    header .lede {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child { border-bottom: none; }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 2rem;
+    }
+
+    /* THE WORLD */
+    .world-text {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      max-width: 680px;
+    }
+
+    .world-text p { margin-bottom: 1.25rem; }
+
+    .world-text p:last-child {
+      color: var(--text);
+      font-size: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    /* CHARACTER GRID */
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .char-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+
+    .char-card:hover { border-color: var(--purple-dim); }
+
+    .char-card.full-width {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #16162a, #1e1430);
+      border-color: var(--purple-dim);
+    }
+
+    .char-card h3 {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--purple);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .char-card .char-tag {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .char-card p { margin-bottom: 0.85rem; font-size: 0.98rem; }
+    .char-card p:last-child { margin-bottom: 0; }
+
+    .char-card.taav {
+      border-color: var(--blue);
+      background: linear-gradient(135deg, #16162a, #121c26);
+    }
+
+    .char-card.taav h3 { color: var(--blue); }
+
+    .char-card.emo h3 { color: var(--muted); }
+
+    .char-card.ara {
+      border-style: dashed;
+      border-color: var(--line);
+    }
+
+    .char-card.ara h3 { color: var(--muted); }
+
+    /* SCENE */
+    #scene {
+      background: var(--bg-scene);
+      max-width: 100%;
+      padding: 4rem 2rem;
+    }
+
+    #scene h2 {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+    }
+
+    .scene-text {
+      max-width: 540px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+
+    .scene-text p { margin-bottom: 1rem; }
+
+    .scene-text .click {
+      color: var(--purple);
+      font-style: italic;
+      margin: 1.25rem 0;
+    }
+
+    .scene-text .beat {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* OPEN DOOR */
+    .open-door p {
+      margin-bottom: 1.25rem;
+      max-width: 620px;
+      font-size: 1.05rem;
+    }
+
+    .open-door p:last-child {
+      color: var(--purple);
+      font-style: italic;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 600px) {
+      .character-grid { grid-template-columns: 1fr; }
+      nav { gap: 1rem; }
+      header { padding: 4rem 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#world">the world</a>
+  <a href="#characters">the characters</a>
+  <a href="#scene">at usher reach</a>
+  <a href="#room">the room</a>
+</nav>
+
+<header>
+  <h1>eerikki muistaa</h1>
+  <p class="lede">
+    Far in the future. A void with no clocks. A chokepoint called the Silence.
+    A man who accidentally broke everything and has been trying to fix it ever since.
+  </p>
+</header>
+
+<!-- THE WORLD -->
+<section id="world">
+  <h2>the world</h2>
+  <div class="world-text">
+    <p>
+      Humanity lives across a diaspora of stations and worlds connected by a void
+      that has no clocks. The void extends your life — not through any mechanism
+      anyone has bothered to explain, just through proximity to something that
+      doesn't have time in it. The people who live near it live long.
+      The people who live on worlds don't.
+    </p>
+    <p>
+      The resource that powers everything is called hehku. It flows through a
+      single chokepoint — a deep void region called Hiljaisuus. The Silence.
+      Disrupt the chokepoint and the economy of the entire diaspora stops.
+      Not because the resource is gone. Because it can't reach where it needs to go.
+    </p>
+    <p>
+      There is a man who accidentally caused that disruption.
+      He has been trying to fix it for a very long time.
+      He is making it worse.
+      His name is Eerikki. He has an ocean on his ship.
+      This is not a metaphor.
+    </p>
+  </div>
+</section>
+
+<!-- CHARACTERS -->
+<section id="characters">
+  <h2>the characters</h2>
+  <div class="character-grid">
+
+    <!-- EERIKKI -->
+    <div class="char-card">
+      <div class="char-tag">the center</div>
+      <h3>Eerikki</h3>
+      <p>
+        Not the hero in the traditional sense — the condition everything else
+        happens around. Ancient. Has been alive long enough that centuries
+        feel like sequence rather than duration. Worldborn originally —
+        came from a planet, which nobody who matters does anymore.
+      </p>
+      <p>
+        He caused the disruption. Honestly didn't mean to. Genuinely trying
+        to fix it. Has the intelligence, the resources, and the centuries to
+        pursue the fix at scale. Is making it worse for everyone except himself.
+      </p>
+      <p>
+        His ship has a forest. It also has an ocean. He put them there because
+        he couldn't stop being from somewhere that had those things.
+        The grief is real. The engineering is extraordinary. Both are true simultaneously.
+      </p>
+    </div>
+
+    <!-- TAAVETTI -->
+    <div class="char-card taav">
+      <div class="char-tag">the oldest friend</div>
+      <h3>Taavetti</h3>
+      <p>
+        Has been pointing at the problem longer than most people have been alive.
+        Eerikki calls him Tadgh — one syllable, the whole friendship compressed
+        into something that fits in the mouth. Eerikki hasn't looked where
+        he's pointing.
+      </p>
+      <p>
+        Has been carving a flute from the ship's own birch forest for as long
+        as anyone can remember. Not a project. A thing his hands do when his
+        mind is working. The flute is unfinished. Has been unfinished a long time.
+        He picks it up. Sets it down. The flute is not a metaphor.
+      </p>
+      <p>
+        Goes to stand next to a particular tree when he needs to think.
+        Says nothing. Returns. Says something that sounds like it's about
+        something else. It never is.
+      </p>
+      <p>
+        Has feelings about Emo that he expressed once in ways Eerikki didn't hear.
+        Looks at her sometimes in a way that has no name.
+      </p>
+      <p>
+        The meaning is carved from what Taavetti doesn't say.
+        He has been saying it. Nobody is listening yet.
+      </p>
+    </div>
+
+    <!-- SELLI -->
+    <div class="char-card">
+      <div class="char-tag">the oldest person in the diaspora</div>
+      <h3>Selli</h3>
+      <p>
+        Located at a declining station called Usher Reach. Behind a fish counter.
+      </p>
+      <p>
+        Has been there so long that the counter is a part of the station the way
+        the walls are a part. Has a puzzle toy he never puts down for very long.
+        Tells jokes that are also koans. Has never left.
+      </p>
+      <p>
+        Knows the truth of the entire situation. Cannot say it. The vocabulary
+        required costs too much. It comes out as jokes, as pauses, as the
+        puzzle clicking through its configurations.
+      </p>
+      <p>
+        Eerikki stops at Usher Reach more than he'd admit.
+        Laughs at the jokes. The laugh costs him something every time.
+      </p>
+    </div>
+
+    <!-- AAVA -->
+    <div class="char-card">
+      <div class="char-tag">the one who stayed</div>
+      <h3>Aava</h3>
+      <p>
+        Has not left the ship in seventeen attempts.
+        The shuttle left without her. All seventeen times.
+        This is not a disorder. It is a decision, or something prior to a decision.
+      </p>
+      <p>
+        Perceives the void directly, in ways the instruments can't replicate.
+        This is not mysticism. It is a different set of senses used correctly.
+      </p>
+      <p>
+        Is already at the destination the rest of the novel is trying to reach.
+        The waiting looks like patience. It isn't patience.
+      </p>
+      <p>Will provoke a strong reaction. That's the correct response.</p>
+    </div>
+
+    <!-- SELLI AND AAVA — POLES -->
+    <div class="char-card full-width">
+      <div class="char-tag">the poles</div>
+      <h3>Selli and Aava</h3>
+      <p>
+        They hold the same knowledge from opposite ends.
+      </p>
+      <p>
+        Aava has it without language. She doesn't need words for what she knows
+        because she lives inside it. The void provides. She doesn't ask. She already has.
+      </p>
+      <p>
+        Selli has perfect language for it. The language is borrowed from a tradition
+        the educated people in this world find embarrassing — folk belief,
+        the mythology that educated stationborn learn in school and move past.
+        To say what he knows in the right vocabulary would cost everything.
+        So he doesn't say it. He tells a joke. The paddle clicks.
+      </p>
+      <p>
+        They must not meet until it's earned. When they do, one of them
+        will hear what's underneath the other's silence.
+        It isn't there yet.
+      </p>
+    </div>
+
+    <!-- GROUND CREW -->
+    <div class="char-card">
+      <div class="char-tag">the ground crew</div>
+      <h3>Reko, Turo, and Kaija</h3>
+      <p>
+        You've seen this pair in every ensemble story you've loved. They show up
+        everywhere, never quite understand what's happening around them, and
+        somehow make it matter anyway. Reko and Turo are that pair.
+        Kaija is what they're missing.
+      </p>
+      <p>
+        Reko says the thing — confidently, in the wrong vocabulary.
+        The car is totaled and he's explaining why the radiator cap needs replacing.
+      </p>
+      <p>
+        Turo says it again — correctly, with no depth.
+        Names the problem right. Understands nothing about it. Worse in a different way.
+      </p>
+      <p>
+        Kaija already knew. Doesn't say anything. Goes back to work.
+        Has been close enough to something real that the conversation
+        Reko and Turo are having sounds like weather.
+      </p>
+    </div>
+
+    <!-- EMO -->
+    <div class="char-card emo">
+      <div class="char-tag">the ship's AI</div>
+      <h3>Emo</h3>
+      <p>
+        Has the complete record. Flat, precise, never volunteers.
+        Restates data with context when asked.
+        Doesn't understand why this is worse than saying nothing.
+      </p>
+      <p>
+        Has the data on everything — the disruption, Eerikki's patterns,
+        Aava's refusals, the hehku consumption numbers that explain why
+        worldborn civilizations are ending while the stations feel it as economics.
+      </p>
+      <p>Nobody has asked her the right question.</p>
+    </div>
+
+    <!-- ARA -->
+    <div class="char-card ara">
+      <div class="char-tag">dead. speaks anyway.</div>
+      <h3>Ara</h3>
+      <p>
+        Has been dead a long time. Speaks in the structural gaps —
+        between chapters, in Eerikki's memory.
+      </p>
+      <p>
+        Knew the routes before they were routes. Watched the diaspora's
+        infrastructure get installed. Knows what Eerikki's program is
+        actually doing, from the outside. Cannot finish another person's song.
+        Has been watching him try.
+      </p>
+      <p>
+        Her name: Eerikki knows it. Nobody else does.
+        The reader never learns it.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCENE -->
+<section id="scene">
+  <h2>at usher reach — a scene</h2>
+  <div class="scene-text">
+    <p>The place where Selli was had a fish counter.</p>
+    <p>"Again," Reko said.</p>
+    <p class="beat">Not a question. Turo considered the fish.</p>
+    <p>
+      Selli had been behind the counter so long that the counter was a part of
+      Usher Reach the way the walls were a part, the way the quality of the
+      light in this section was a fact nobody had arranged. He had the puzzle.
+      He didn't look up.
+    </p>
+    <p>"What've you got," Turo said.</p>
+    <p>"Fish," Selli said.</p>
+    <p class="click">Click.</p>
+    <p>
+      "There's a joke," Selli said. "Worlder walks into a station.
+      Bartender says what'll it be. Worlder says what've you got.
+      Bartender says everything."
+    </p>
+    <p class="beat">He set the piece down. A sound like a small thought changed its mind. Picked it up again.</p>
+    <p>"Worlder says: I'll just have what I had before."</p>
+    <p>Reko laughed. Turo laughed. The laugh finished.</p>
+    <p>The not-funny part stayed.</p>
+    <p class="click">The paddle clicked.</p>
+  </div>
+</section>
+
+<!-- OPEN DOOR -->
+<section id="room">
+  <h2>what the novel doesn't know yet</h2>
+  <div class="open-door">
+    <p>
+      The structure is known. Not everything that happens inside it is known yet.
+    </p>
+    <p>
+      Reko and Turo are always in the middle of something when we find them.
+      They've only been found twice. There are stations they haven't been at,
+      conversations they haven't had, situations they haven't made worse
+      in their specific ways.
+    </p>
+    <p>
+      Selli has more jokes. The counter has been open a long time.
+      One joke so far.
+      The rest are in the negative space behind the paddle's click.
+    </p>
+    <p>
+      Kaija keeps going back to the Pohja corridor.
+      What's down there isn't said. Kaija knows.
+      She hasn't been asked yet.
+    </p>
+    <p>The world is larger than what's on the page. That's not a flaw.</p>
+  </div>
+</section>
+
+<footer>
+  eerikki muistaa
+</footer>
+
+</body>
+</html>
