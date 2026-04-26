@@ -321,6 +321,34 @@ The void could provide whole worlds. The Accord maintains the routes.
 
 ## The world
 
+### The time gradient — social architecture
+
+Void — no time. Sequence only.
+Station — slow time. Long enough for relationships that last centuries.
+World — blink and they're gone.
+
+The gradient is felt, not explained. Don't nail it down harder than this.
+
+The stationborn and voidbound can sync enough for Taavetti and Eerikki
+to have called each other Tadgh across centuries. That's what the
+timescale allows. The relationship exists because station time and void
+sequence are comparable enough for syncopation — not identical, but
+close enough for lifelong friendship, close enough for Emo to record
+the pattern of Eerikki's visits without timestamps.
+
+Worlds are a different register entirely. Not tragic from inside the
+void frame — just the nature of things. The worldborn swarm and recede.
+Eerikki has children out there the way a river has tributaries it no
+longer touches. He's fully aware they're in a different frame. It has
+become alien to him to imagine living in time.
+
+There are still relativistic differences between void no-time, station
+super-slow-time, and world-time. These are never confronted directly.
+They are in the social architecture. They are in who can have a
+relationship with whom and for how long.
+
+---
+
 ### Physics — what is never explained
 - The void has its own space physics. It is a mystery. Do not explain it.
 - Travel in the void extends life. This is a social consequence, not a
@@ -465,6 +493,59 @@ Full name sounds like both simultaneously.
   across centuries.
 - The reader will not hate him the way you can hate Dedalus. The other
   feeling. The one that's harder to name.
+- He is not a republican politician. He's something older and more honest
+  than that. The allegory works because the pattern predates the party —
+  it's in Odysseus, it's in the Kalevala, it's in every teleological actor
+  who moved through a non-teleological universe leaving wreckage they called
+  a journey. Reagan is in the allegory the way the October Surprise is in
+  the allegory — as the shape of a thing, not the thing itself. Eerikki
+  genuinely believes what he's doing is right, has the intelligence and
+  resources to do it at grand scale, and the self-awareness to feel the
+  cost afterward. That's more than most republican politicians manage.
+  It's also what makes him tragic instead of merely culpable.
+- The blurse — the new blessingcurse on immortality: the void gives you
+  time without time. Sequence accumulates without the clock running.
+  Eerikki has been doing something that would take geological ages outside
+  the void. In the void it has taken sequences — uncountable sequences.
+  The cost is real but doesn't show on any instrument except Emo's, and
+  she records sequence not time, so the record exists and nobody can read
+  what it means.
+  Immortality in the void gives you the time to do the impossible thing.
+  It also gives you the time to be wrong about it for longer than any
+  mortal could sustain the mistake. Ara has watched him do the impossible
+  thing incorrectly for a very long time.
+- Anyone could theoretically do what Eerikki is doing. Lots of voidships
+  exist. Big ships exist. Maybe even an ocean isn't that tall an order.
+  But nobody has ever given a thought to doing what he is doing. Not even
+  as a joke. Even people who see him doing it would never actually do it.
+  The specific combination required: worldborn enough to have the impulse,
+  voidbound long enough to have the means, teleological enough to sustain
+  the program across uncountable sequences without a clock. There is only
+  one of him. That's not vanity. That's the specific conditions that
+  produced this particular program running toward this particular
+  undecidable completion condition.
+- The engine underneath everything: he thinks mankind is going to lose
+  access to the void. The routes will shift. The brane will change its
+  geometry. The hehku will stop flowing. He has been running a program
+  for centuries to ensure the species survives it — keeping people alive,
+  diverse, distributed. He doesn't examine this belief because examining
+  it would require asking where it came from. Ara told him something once
+  about the routes not being permanent. He heard it as warning. She meant
+  it as observation.
+- His progeny are not a dynasty. Not vanity. Stewardship — the worldborn
+  impulse at void scale. He thinks anyone in his situation would do the
+  same. He doesn't think about it much. He knows what genetic diversity
+  is. He's not cold blooded about it. He thinks he's fighting the good
+  fight. Ara is not amused that he can't hear what she's been singing
+  about this for a very long time. Taavetti points at it without pointing.
+  The children are the ocean are the forest are the flute. All of it
+  brought into the void because he couldn't stop being from somewhere.
+- The disruption at Hiljaisuus feels to him like confirmation. He's not
+  wrong that the routes shift. He's wrong about what that means, what to
+  do about it, and whether his children in stasis are the answer.
+- Emo has modeled several scenarios. Nobody has asked her which one he's
+  actually living in. Selli's paddle clicks faster when Eerikki's ship
+  is in dock. Nobody has measured this. Emo has the data.
 
 ### Ara
 - Pre-mythological. Culture so old it has no living tradition.
@@ -584,7 +665,143 @@ Full name sounds like both simultaneously.
   Has never told it. The vocabulary required costs too much.
 - Knows the ur-myth isn't convergent cultural evolution. Won't say.
 
-### MJK — Reko, Turo, Kaija
+### The coupling — stationborn science and the dismissed myth
+
+The coupling is the recurring physical idiom for what stationborn science
+does with belief. Sets it down. Picks it up again. Never asks why it keeps
+needing replacing.
+
+**Selli and Turo — the three-pass diagnosis:**
+
+Selli tells Turo: nothing wrong with that couple. Replace it, don't replace
+it, won't make any difference.
+
+Both sentences are true. Neither is the answer to the question Turo is
+actually asking, which is: is something wrong. Something is wrong. Selli
+just told him twice that the couple isn't where the wrong is located —
+which is not the same as nothing is wrong.
+
+The paddle clicks. The rest of the sentence.
+
+What Selli knows is either in the vocabulary of worldborn superstition or
+it's in a register so far past stationborn technical fluency that saying
+it would sound like superstition anyway. Either way the vocabulary costs
+too much. So: the couple is fine. Won't make any difference. Click.
+
+Three passes at the same object:
+- Reko philosophizes the membrane. Wrong vocabulary, wrong frame.
+- Turo engineers the seal. Right vocabulary, wrong frame.
+- Selli dismisses the whole frame. Correct scale. Silent about what he
+  can see from there.
+
+Only one of them is operating at the correct scale and he's the one at
+the fish counter who said the least.
+
+The coupling isn't the problem. The coupling is Turo's way of seeing.
+Turo will keep seeing couplings his whole life. Something is going to
+happen that no coupling repair touches and Selli already knows this and
+told Turo as plainly as he's capable of telling anyone anything.
+
+Turo sets the coupling down because he thinks he's done with it. Picks
+it up because the job isn't finished. Never connects the coupling to the
+brane to the myth to the thing Reko was trying to say in the wrong
+vocabulary. The stationborn have been setting down and picking up the
+same coupling for generations.
+
+The worldborn have a song about it. Different words. Same coupling.
+
+The novel dangles the revelation — the mythmakers had it right — without
+making it explicit. It's right there if only they would use it properly.
+They won't. That's the ceiling. That's the pattern. The coupling always
+needs replacing and nobody asks why.
+
+The idiom applies at every scale. Every time a character dismisses the
+myth and reaches for the technical explanation, they're setting down the
+coupling. The novel ends before they pick it up and understand what they're
+holding. The reader understands. That's enough.
+
+---
+
+## The three phases of structural form
+
+The thesis-antithesis-epiphany pattern has three phases of deployment
+across the novel. This is the artistry problem of form.
+
+**Phase one — seeding.** Small detonations that haven't announced
+themselves. The reader picks things up without knowing what they're
+picking up. The MJK shuttle scene. Emo's data and Eerikki's pivot and
+Taavetti's line. The pattern is present but unnamed. Easy to write.
+Hard to calibrate.
+
+**Phase two — the commitment.** The structure does something at full
+scale. Unmistakable. Probably the worldborn rounding error landing,
+or the ur-myth revealed as history — the moment the reader sees the
+pattern in everything that came before. Retroactive recognition.
+This scene must be earned by everything in phase one and it cannot
+announce itself. It just has to be true and large enough that the
+reader can't miss the shape.
+
+**Phase three — the hard part.** The reader has the key. They're
+reading ahead, anticipating the third register. The form has to keep
+working even when they can see it coming. The epiphanies in phase
+three can't be surprising — they have to be inevitable. The reader
+sees it arriving and it lands anyway. Because the third register isn't
+a trick. It's true. True things land even when you know they're coming.
+
+Ara's ending is phase three. The reader has the pattern. They know an
+observation is coming. It lands anyway because it's Ara and it's true
+and the whole novel has been the second line waiting for the third.
+
+The song has to be finished before the reader puts it down.
+
+---
+
+## The structural pattern — thesis, antithesis, epiphany
+
+The novel's recurring epistemological structure. Not Hegelian dialectic —
+the third term doesn't synthesize the first two into compromise. It steps
+underneath both and reveals they were describing something real from the
+wrong angle.
+
+**Thesis** — the mythological belief. States something true in the wrong
+vocabulary. Reko. Eerikki. The worldborn superstition. Pointing at the
+real thing with broken words.
+
+**Antithesis** — the scientific correction. States something correct about
+the wrong category. Turo. Taavetti. The stationborn dismissal. Technically
+right. Missing the thing entirely.
+
+**Epiphany** — the third register. Not a synthesis. A yes from somewhere
+neither of the first two can reach. Kaija. Aava. Selli. Ara. Any
+combination the moment calls for. Undecidable within the logical framework
+either of the first two is using — which is itself the answer.
+
+The correction is always technically right. The myth is always pointing
+at something the correction misses. The epiphany is where those two
+failures resolve into the actual thing.
+
+In formal logic: Reko makes a category error with confidence. Turo makes
+a correct statement about the wrong category. Kaija's yes is undecidable
+within either framework — which is the answer.
+
+This is the Joyce register claimed as the author's own. The Joycean
+epiphany — not religious, not sentimental. The moment the mundane thing
+carries the full weight of what it is. Reko and Turo generate the
+conditions. The third register is where it lands.
+
+Applies at every scale:
+- MJK on the shuttle (proof of concept)
+- Eerikki and Taavetti → Aava, Selli, Ara, or any combination
+- The ur-myth vs stationborn dismissal → the myth is true
+- The void's physics vs the routes as infrastructure → the brane is alive
+- Any place in the novel where worldborn superstition and stationborn
+  correction are both wrong in the same direction
+
+Shorthand: thesis — antithesis — epiphany.
+
+---
+
+## MJK — Reko, Turo, Kaija
 
 MJK is the shorthand. Use it.
 
@@ -598,6 +815,25 @@ Three registers of the same event:
 - **Kaija** — the metaphorical. Is what the thing means.
 
 Neither of the first two knows the third register is there.
+
+More precisely:
+- **Reko** — speaks in the wrong vocabulary with complete confidence.
+  Technically accurate about the wrong thing. The radiator cap on a
+  totaled car. Hilarious. Inherent Vice register — Doc Sportello's
+  "you know the thing up front where all the steam comes out, you need
+  a new one of those." Oblivious understatement delivered with total
+  conviction. The wrong word, confidently.
+- **Turo** — speaks in the right vocabulary with no depth. Names the
+  problem correctly, understands nothing about it. "The car is broken."
+  Worse in a different way. The right word in the wrong context.
+- **Kaija** — knew what was wrong before they opened the hood. Not
+  saying anything. Changed by what she's seen. Not performing
+  long-suffering — just knows what she knows and gets back to work.
+  The thing the words are failing to describe.
+
+They are different. Not the same kind of wrong. That's what makes them
+work as a pair — and a trio. Reko is discovering this. Turo is
+discovering this. Kaija already knew.
 
 Eerikki provides the conditions. Reko and Turo provide the motion.
 Kaija provides the act. Nobody is the villain. Nobody intended it.
@@ -761,6 +997,90 @@ from underneath. Occasionally funny. Never mourns openly.
 
 ---
 
+## The political thought — Pearse, Garvey, Joyce
+
+The author has a dilettante's knowledge of this territory. That's the
+right amount. Deep expertise produces manifestos. Dilettante knowledge
+produces novels.
+
+The shared project across registers — Irish, Pan-African, and others —
+is the same problem stated differently: a people whose story has been
+told by someone else for so long that they have started to believe the
+other version. The project in each case is: here is what you actually
+are. Here is the real record. Not the record they kept of you.
+
+Joyce's method: make the mythology undeniable through irony. You can't
+parody something that doesn't exist. The Wake proves Irish consciousness
+is so dense and layered that it can survive being turned inside out.
+The mythology is so load-bearing that Joyce could stand on it while
+appearing to mock it.
+
+Pearse's method: believe it literally and run it as a program.
+
+Garvey's method: assert it directly and build institutions around it.
+
+All three working on the same problem. Different tools.
+
+This is what the novel is doing at the scale of the entire human
+diaspora. The worldborn have been told their mythology is embarrassing
+folk belief. It is corrupted history. It is the real record worn into
+a form that educated people find quaint.
+
+The worldborn ceiling isn't economic. It's epistemic. They can't get
+past it because they've lost the language that would let them describe
+what's above it. The ceiling is in their myths as curse and taboo and
+divine prohibition — which are the words for *we don't know why this
+happens but it always happens* in a language that has forgotten it once
+had better words.
+
+The author doesn't need to have read everything Garvey wrote to know
+this question in their bones. It's already in the structure of the
+novel. That's not dilettantism. That's the novel's engine.
+
+---
+
+## Padraig Pearse — the true believer register
+
+Pearse is the true believer register. Joyce is the ironic exile register.
+Both are responses to the same mythological inheritance and they point
+in opposite directions.
+
+Joyce uses myth as concealment and revelation simultaneously, always
+with ironic distance, always aware of the gap between the mythological
+frame and the mundane reality inside it. Bloom is Odysseus and the joke
+is that he's also just a man having a bad day in Dublin.
+
+Pearse believed the myth literally and ran it as a program. He knew the
+Easter Rising would probably fail militarily. He thought the deaths would
+ignite something larger. He identified himself with Cú Chulainn, with
+the sacrificial hero, with the figure whose death is the completion
+condition for the nation's rebirth. He was teleological to the bone.
+Running toward a completion condition defined in mythological terms.
+He ran it to the wall.
+
+The program halted. Not in the form he predicted from inside it. But it
+halted, and the thing he believed would happen, happened — in a form he
+couldn't have anticipated from inside the computation.
+
+That's Eerikki. Not Joyce's shadow-boxing with myth. Pearse's literal
+enactment of it. The person who actually believes the song is true and
+acts on it, at personal cost, causing collateral damage he can't fully
+see, toward a completion condition that may not be what he thinks it is.
+
+The early biographical works — the hagiographic ones, the witnesses
+converting the man into myth while the ink was still wet — show the
+ur-myth cycle in real time. History becoming legend becoming mythology
+in a single generation. The people doing it know they're doing it.
+Which makes it more honest than the unconscious version, and more
+vertiginous.
+
+Pearse also believed the Irish language was load-bearing. Lose the
+language and you lose the people. The mythology lives in the morphology.
+
+This is the register Eerikki inhabits. Not the ironic one.
+
+---
+
 ## The musical and literary foundation
 
 **Insomnium** — Joensuu, Karelia. Melodic death metal drawing from Kalevala.
@@ -843,6 +1163,63 @@ the way the thing sings. The Kaipaus is the thing itself.
 
 ---
 
+## The historical chain — Iran, 1979 to 2026
+
+Relevant to the allegory, not as conspiracy theory, not as proven fact,
+but as the shape of a thing that has been happening for a long time.
+
+The Islamic Republic that closed the Strait of Hormuz in 2026 was born
+in 1979. The Shah fell. The hostages were taken. Carter was president
+and paid the political price. Reagan won the election. The hostages were
+released the day Reagan was inaugurated.
+
+Whether the timing was managed and by whom is contested and unresolved.
+The author was alive and paying attention in 1979. The shape of it was
+visible at the time to people who were looking.
+
+What matters for the allegory: a chain of consequence runs from 1979
+to April 2026 without a break. Decisions were made about the routes
+for reasons that had nothing to do with the routes. The Accord has been
+doing this for a very long time. The disruption Eerikki causes isn't
+the first disruption of Hiljaisuus. It's the latest one.
+
+Teleological actors making decisions about the chokepoint for reasons
+that had nothing to do with the chokepoint. Making it worse for everyone
+except themselves. Feeling genuine guilt and remorse. Keeping moving.
+
+The novel doesn't need to cite any of this. The shape is already in
+the architecture. The reader who knows 1979 will find it. The reader
+who doesn't will feel it without knowing why.
+
+The relevant legal and legislative thread — for allegorical purposes:
+
+The Arms Export Control Act violations. The Boland Amendment and its
+circumvention. The Tower Commission findings. The joint congressional
+Iran-Contra investigation. The public record of how the Accord
+officially maintained the routes while individual actors were doing
+something else entirely with them.
+
+The pattern in the congressional record: executive action taken for
+domestic political reasons that restructured the chokepoint for a
+generation, with consequences nobody who made the decision had to
+live with. The Accord maintaining the forms of governance without
+always having the substance.
+
+This pattern recurs. Nixon believed the mission justified the mechanism.
+Reagan's people believed it. The Accord believes it. Eerikki believes it.
+
+The AI has substantial synthesized knowledge from US Congressional
+Record, Tower Commission, joint congressional Iran-Contra hearings,
+and related Supreme Court and legal record. Not Lexis/Nexis depth.
+Sufficient for allegorical synthesis. A current search would catch
+historiographical developments after May 2025. Flag before developing
+this section further.
+
+Watergate is a separate ball of string on the same loom. Don't pull
+it yet. Leave it until the pattern in the novel calls for it.
+
+---
+
 ## The real-world allegory — current as of April 2026
 
 **The incoming AI must search for current Hormuz/Iran developments before working
@@ -912,6 +1289,80 @@ onto the Accord's relationship to Hiljaisuus is worth examining.
 The collapse of ceasefire negotiations through erratic behavior by the
 dominant party is in the novel's DNA already. It doesn't need to be made
 more explicit. It is already there.
+
+---
+
+## The threshold people
+
+Stationborn who developed — or discovered, or were selected by something
+they don't have a name for — a specific relationship to the brane. Not
+a fourth race. Not a mutation. Not Starship Troopers movie pilots.
+A vocation in the oldest sense. Called to it. They can't tell you why
+they do it. It's just the thing they do.
+
+The brane cannot be automated. It's alive in the way the brane is alive.
+You can't autopilot through something without consistent physics. The
+threshold people aren't pilots in the technical sense — they're readers.
+They read the brane the way Aava reads the void. You can't automate that.
+
+This makes them irreplaceable in a world that has automated everything
+else. Nobody knows why. The Accord has been trying to figure it out for
+as long as anyone remembers. The answer keeps not arriving.
+
+Emo has a theory. Nobody has asked her.
+
+The shuttle pilot in the MJK scene is one of these. Has heard that
+conversation in various forms forever. Says nothing. Probably has a
+joke about it. Has never told it.
+
+---
+
+## Influences held lightly — Waterworld, The Postman
+
+Both are about the restoration of infrastructure after collapse. Not
+heroism in the traditional sense — the stubborn, unglamorous work of
+reconnecting things that used to be connected. The postal routes as
+the routes. The water as the water. The Mariner as a threshold person —
+neither land nor sea, navigating the between, irreplaceable for that reason.
+
+The idea was absorbed. The execution was left behind. That's the correct
+response to both films. Do not cite them publicly. Do not make too much
+of them here. They're in the walls.
+
+---
+
+## The author's reading list — feeding the novel
+
+The teleological actor leaving wreckage called a journey is the spine
+of Western tragic literature. The bibliography is embarrassingly long.
+What follows is curated for this novel specifically.
+
+Already loaded: Joyce, Steinbeck, Poe, Camus (in French, as punishment),
+Fitzgerald (Gatsby), Adams, Eino Leino currently in hand. Don't assign
+these. They're already in the walls.
+
+**Next, in order of approachability:**
+
+*The Gate of Angels* or *The Blue Flower* — Penelope Fitzgerald. Short,
+precise, does enormous structural and emotional work in very little space.
+The prose looks simple and isn't. The writer who makes you feel like you
+could do what she's doing right up until you try.
+
+*Housekeeping* — Marilynne Robinson. Water as theme. Grief carried across
+decades. The non-teleological gaze applied to family and loss. Proves you
+don't need plot if you have weight.
+
+*The Periodic Table* — Primo Levi. Not fiction technically. Each chapter
+is an element, each element is a life. The structure is the argument.
+Shows how to organize a novel around a non-narrative framework — the
+halting problem as chapter structure.
+
+All three short. None a workout. All three directly upstream of this novel.
+
+**When ready for Homer:** Fagles translation of the Odyssey. Not a workout
+after the above — reads as the original draft of everything else on the list.
+
+**Fall:** Poe collected, then Joyce properly. Not yet.
 
 ---
 
@@ -1068,6 +1519,174 @@ joke. She already knew.
 **Emo** — would note that the fish are, in fact, fine. Current
 population within normal parameters. She would not understand why
 this is funnier than anything else she has said.
+
+---
+
+## The Väylä — full notes
+
+Aptitude and inclination, not mutation, not monopoly, not Guild Navigators,
+not Dune spice pilots. Some stationborn are drawn to the brane the way
+some people are drawn to the sea. Can't fully explain it. Don't need to.
+
+The Accord has a training program. A certification process. A division
+with a name and a budget and performance reviews. All of which is beside
+the point of what actually makes a Väylä — the thing the training program
+measures but didn't create and cannot replicate in someone who doesn't
+have it. The certification creates the structure. The aptitude creates
+the Väylä. The Accord controls the former and has no idea what produces
+the latter.
+
+There is probably a military or paramilitary faction — a corps of Väylä
+who run the dangerous routes. The Pohja corridor equivalent. Places where
+the brane does things that require someone who can read it fast and under
+pressure. Not a guild. A unit. With all the institutional dysfunction that
+implies. Kaija adjacent. People who go down there anyway.
+
+Why don't some music majors go for wind. Why don't some guitarists ever
+play piano. The Väylä are the people who went for the brane and nobody
+made them and nobody fully understands why they could.
+
+**The Finnish social order reflection:**
+This mirrors traditional Finnish social structure — flat, functional,
+competence-based, without the aristocratic or guild hierarchy of western
+European models. You do the work because you can do the work and because
+it needs doing. The Accord provides the institutional frame. The frame
+doesn't explain the person. The person was already that before the
+certification. This is how Finnish society has always understood vocation —
+not as class, not as destiny, not as mystical calling. As the thing you're
+suited for, done without excessive ceremony.
+
+No Navigators. No monopoly. No ritual. No closed order with political
+leverage. They go home after the shift. They know Selli.
+
+---
+
+## The Väylä — threshold pilot
+
+*Väylä* — Finnish: channel, passage, fairway. The navigable route through
+difficult water. Doesn't describe the pilot — is the pilot. Joik logic:
+you don't sing about the passage. You sing the passage.
+
+Distinct from any flying-related vocabulary. Distinct from Emo.
+The Väylä is the function and the person merged, the way Viittaaja
+is Taavetti to Emo.
+
+The shuttle scene's line: *The Väylä said nothing. The Väylä never
+said anything.*
+
+---
+
+## MJK shuttle scene — structure only, scene is throwaway
+
+The scene proved the thesis-antithesis-epiphany pattern works in
+MJK register. The scene itself is not for the novel. The pattern is.
+
+Scene for reference:
+
+Every language here has a word for stink. Nobody ever says it.
+
+"It's a membrane thing," Reko said. "The brane. That's literally what
+it is. A membrane. You pass through a membrane and you feel it, that's
+just how membranes work."
+
+Turo didn't look up. "The sensation you're describing is atmospheric
+pressure differential during seal transition. It's mechanical.
+It's the shuttle."
+
+"I know what a pressure differential feels like."
+
+"Apparently not."
+
+Kaija was watching the viewport. The brane did what the brane did.
+She had been watching it do that for long enough that she had stopped
+expecting it to do something else.
+
+"It's not nothing," Reko said. "Whatever it is, it's not nothing.
+You feel it or you don't."
+
+Turo set down the coupling. "The coupling needs replacing," he said,
+to no one in particular.
+
+Reko looked at Kaija. "You feel it."
+
+She watched the viewport a moment longer.
+
+"Yes," she said.
+
+Reko looked at Turo. Turo picked up the coupling again.
+
+The Väylä said nothing. The Väylä never said anything.
+
+The shuttle arrived.
+
+---
+
+## The void — cosmology and provision
+
+The void has no spacetime. This is not a poetic description of
+remoteness or isolation — it is a physical fact with social consequences
+nobody has fully mapped. There is no clock. There is no distance in the
+sense that distance requires a framework of measurement, and that
+framework requires time, and time is not here. What the void has instead
+is sequence. This happened. Then this. The order is real. The interval
+is not.
+
+Scarcity requires time. A resource is scarce because it takes time to
+produce, or time to reach, or because the time available to use it is
+finite. Remove time and the concept doesn't assemble. The void is not
+abundant. Abundance is scarcity's mirror — you can only have more than
+enough if enough is a quantity, and quantity requires the kind of
+accounting that time makes possible. The void has neither.
+
+What the void has is provision. Ask and it provides. Don't ask and it
+provides anyway, in the quantities appropriate to the absence of asking,
+which for the voidborn is simply the condition of existing there. They
+don't experience this as wealth. They don't experience it as anything.
+It is the medium they move through. You don't experience air as generous.
+
+Eerikki asks. He has been asking for centuries, in the register of
+someone who came from a world where asking was necessary and excess was
+the proof that you had asked correctly. The void provides in that
+register because that is the only register he has brought with him.
+The ocean on his ship is the void answering a question it didn't need
+to be asked.
+
+The voidborn find this baffling in the way they find most stationborn
+behavior baffling — not wrong exactly, just operating on assumptions
+the void never installed.
+
+### Originality — comparable works
+
+Several authors have adjacent concepts. None have this one.
+
+Le Guin's churten theory in the late Hainish stories gets closest to
+non-Einsteinian transit — a place you pass through that isn't a place.
+But it's a mechanism, not a cosmology, and nobody lives there.
+
+Moorcock's multiverse has a primordial void between realities — the
+chaos substrate — but it's destructive, not provisioning. You survive
+it, you don't inhabit it.
+
+C.S. Lewis's Wood Between the Worlds is genuinely interesting as a
+precedent — a place outside all worlds, without time, almost without
+identity, where the pools are the transit points. It provisions in a
+neutral way. But Lewis never developed a social architecture around it
+and the voidborn as a people have no analog there.
+
+Vernor Vinge's Zones of Thought change the physics of intelligence by
+location in the galaxy. Physics varying by location rhymes with this
+without touching it.
+
+Dune's foldspace has the navigators in a between-place, but Herbert
+kept it deliberately opaque and the social consequences are guild
+politics rather than a way of being.
+
+What nobody has is the provision concept combined with the voidborn
+social architecture. The void responds to the register of the asker.
+The voidborn don't ask so the provision is invisible to them. Eerikki
+asks in the register of centuries of need and gets an ocean. The void
+as mirror of the asker's relationship to scarcity has no clear
+predecessor.
 
 ---
 

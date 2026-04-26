@@ -283,6 +283,63 @@ She has already completed the journey and is waiting for the world to
 catch up with what she knows. That waiting looks like patience from the
 outside. It is not patience.
 
+**Physical and relational life**
+The Helka Expanse is, by any reasonable measure, a highly sexualized
+society. This requires no elaboration. Aava participates in this society
+in the manner available to someone of her particular register, which is
+to say: entirely on her own terms, without the narrative apparatus
+stationborn apply to such matters, and with a frequency and variety that
+Emo has recorded and nobody has asked about. Her relations with voidborn
+specifically involve no category the stationborn vocabulary adequately
+covers. It was what it was. It is not discussed. It informs everything
+about how she understands physical existence without appearing on any page.
+
+Turo's attentions do not register in this context. This is not a judgment
+on Turo. It is a register incompatibility of considerable structural
+permanence.
+
+**The twin in relation**
+The twin is always present. Not as interference — as a second frequency
+in the same receiver. Any stationborn intimate would eventually feel the
+asymmetry without being able to name it. A voidborn wouldn't notice —
+not because they're incapable but because the twin is just another pattern
+in the field. The twin fits the voidborn register the way everything fits
+it. It simply is. The only configuration in which Aava is completely
+present without anyone having to not-notice something.
+
+**The complicated relationship**
+Aava has had at least one complicated relationship with a specific voidborn
+individual. Complicated in the way things are complicated when one party
+has a twin and the other party experiences individuality as a convention
+observed occasionally out of courtesy to the stationborn.
+
+The voidborn individual in question is probably a distant descendant of
+Eerikki. Aava probably is too — worldborn getting into the void is rare
+and Eerikki made a lot of initial conditions. Neither of them knows this.
+Neither would find it meaningful. The void doesn't keep that kind of record.
+
+Emo keeps that kind of record. Nobody has asked her to run the genealogy.
+
+The relationship was real. It's over in the way void things are over —
+no ending, just a different sequence. The twin was present throughout.
+This was not a complication.
+
+**What voidborn are**
+Not raised. Not conditioned. Not shaped by deprivation or reward.
+Skinner boxes with no stimulus and no deprivation — what grows in that
+condition isn't conditioned at all. Just what the organism is when nothing
+shapes it except itself. They continued. That's the complete description.
+
+Whether they have culture, technology, mythology — the question doesn't
+parse from outside their register. Asking what voidborn society looks like
+is asking what the ocean is organized into. It's organized into ocean.
+
+The ones nested in the Kaipaus forest are doing the thing. What the thing
+is doesn't resolve into a description. They're in the forest the way the
+mycorrhizal network is in the forest — present, functional, not available
+for taxonomy. Nobody knows how the voidborn came to be. Nobody cares.
+Ara probably knows. Emo has the sequence. Neither has been asked.
+
 ---
 
 ## Taavetti — the Viittaaja
@@ -431,6 +488,21 @@ not be words at all.
 Two stationborn males. Slightly too confident about their names.
 The specific male obliviousness that generates its own comedy by being
 completely convinced of its own charm.
+
+In a society that requires no elaboration regarding its attitudes toward
+physical congress, Turo experiences something functionally indistinguishable
+from love at first sight with a reliability that has become, over time,
+a known quantity. He is aware of this tendency in the way one is aware
+of a recurring administrative inconvenience. He attributes outcomes to
+circumstance. Reko has never mentioned it. This is the most considerate
+thing Reko has ever done and he is not aware he is doing it.
+
+Turo's relationship to Aava specifically represents an asymmetry of a
+more fundamental nature than he has the instruments to detect. She does
+not find him objectionable. She does not find him. He registers in her
+vicinity the way a weather system registers in the vicinity of a landscape
+feature that has been there considerably longer. The landscape feature
+does not take this personally. It is not personal.
 
 Not villains. Lovable jerks in the Rosencrantz and Guildenstern
 tradition. They exist in Selli's orbit the way the ventilation hum
