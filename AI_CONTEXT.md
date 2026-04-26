@@ -85,6 +85,12 @@ These are now separate. Do not conflate them.
   hierarchy, no Duncan Idaho loyalty archetypes, no Jeffries tubes.
 - Comedy influences: Douglas Adams, Monty Python, early Hanna-Barbera,
   1950s-60s joke books. Favorite TV: Elsbeth, Ghosts.
+- Red Dwarf register: the mundane bureaucratic texture of stationborn life.
+  The vast treated as routine. Reko and Turo especially. The ambient noise of
+  station existence. Three million years out and it's still a workplace.
+- Buckaroo Banzai register: extraordinary things with no fanfare. The
+  explanation never catching up with the event. Genius treated as simply
+  the situation. Both registers apply in different parts of the world.
 - Currently reading: Eino Leino Finnish poetry in translation, Maailman
   Kannel (Finnish edition).
 - Calls both Earwicker (Joyce) and Eerikki Harmaja "Erica" privately.
@@ -430,6 +436,12 @@ name in every worldborn tradition. Different words. The same silence.
 Eerikki's ship. Named for longing — for his first wife, without being
 named for her. He may not have decided that consciously.
 
+The ship's morphology is insectoid — aphid anatomy, nothing more concrete
+than that. Segmented. Each section with its own integrity, connected but
+not merged. The word "Section" (capital S) names itself correctly. The
+ship has sections the way an aphid has sections. The vocabulary was always
+carrying the architecture.
+
 Not a starship. An ecology. Has been moving long enough that things live
 in it Eerikki didn't put there. Contains:
 - A forest (Baltic birch, Karelian species, birds, mycological network
@@ -667,9 +679,15 @@ Full name sounds like both simultaneously.
   Has never told it. The vocabulary required costs too much.
 - Knows the ur-myth isn't convergent cultural evolution. Won't say.
 
-### The coupling — stationborn science and the dismissed myth
+### The Couple — stationborn science and the dismissed myth
 
-The coupling is the recurring physical idiom for what stationborn science
+"Couple" carries capital C like "Section" does. Not just hardware — the junction
+between two things that keeps needing replacing. A coupling is mechanical.
+A couple is two things joined. The Couple is what the stationborn keep setting
+down and picking up without asking what it's actually connecting, or why that
+connection keeps failing.
+
+The Couple is the recurring physical idiom for what stationborn science
 does with belief. Sets it down. Picks it up again. Never asks why it keeps
 needing replacing.
 
@@ -704,8 +722,8 @@ Turo will keep seeing couplings his whole life. Something is going to
 happen that no coupling repair touches and Selli already knows this and
 told Turo as plainly as he's capable of telling anyone anything.
 
-Turo sets the coupling down because he thinks he's done with it. Picks
-it up because the job isn't finished. Never connects the coupling to the
+Turo sets the Couple down because he thinks he's done with it. Picks
+it up because the job isn't finished. Never connects the Couple to the
 brane to the myth to the thing Reko was trying to say in the wrong
 vocabulary. The stationborn have been setting down and picking up the
 same coupling for generations.
@@ -918,6 +936,24 @@ her to overlay them.
 Eerikki is the only one who doesn't know. He is the cause.
 Emo has the data. Nobody has asked the right question.
 
+### What would enable better Selli jokes
+
+The template is established: setup in the worlder/stationborn frame, punchline
+that declines the expected absurdity and states the situation. The laugh comes
+from the refusal. What would generate more material:
+
+- The fish counter specifically. What does he sell. What do people come in for.
+  The mundane specifics are the joke material, not abstract comedy premises.
+- What people ask him. The category of question that arrives at the fish counter
+  that he answers in one register while knowing the answer lives in another.
+- The palapeli timing. When the paddle clicks relative to the sentence.
+  That's the physical comedy and it's everything.
+- One or two things he's seen that nobody else alive has seen. Not revealed —
+  just known to the writer. A day in the life of the fish counter on a slow day
+  at Usher Reach when nobody significant is in dock.
+
+This material cannot be manufactured. It arrives when it arrives.
+
 ### Pending characters
 - One named voidborn individual
 - A threshold person (shuttle pilot, lives in the brane between)
@@ -940,11 +976,30 @@ Nobody asks what she means by seventeen.
 
 **Chapter 3** — Usher Reach. Reko and Turo in the place where Selli is.
 Kaija on the Pohja corridor. Reko says *again* about it. Not a question.
-Selli tells the joke: *"A worlder walks into a station. Bartender says
-what'll it be. Worlder says what've you got. Bartender says everything.
-Worlder says: I'll just have what I had before."*
-Silence. Laughter. The not-funny part stays after the laughter stops.
+Selli tells the joke. The not-funny part stays after the laughter stops.
 The paddle clicks.
+
+*Draft:*
+
+The place where Selli was had a fish counter. [Finns eat a lot of fish, huh?]
+
+"Again," Reko said.
+Not a question. Turo considered the fish.
+Selli had been behind the counter so long that the counter was a part of Usher Reach
+the way the walls were a part, the way the quality of the light in this section was
+a fact nobody had arranged. He had the puzzle.
+He didn't look up.
+"What've you got," Turo said.
+"Fish," Selli said.
+Click.
+
+"There's a joke," Selli said. "Worlder walks into a station. Bartender says what'll it be.
+Worlder says what've you got. Bartender says everything."
+He set the piece down. A sound like a small thought changed its mind. Picked it up again.
+"Worlder says: I'll just have what I had before."
+Reko laughed. Turo laughed. The laugh finished.
+The not-funny part stayed.
+The paddle clicked.
 
 **Aava lyric section** — Forest section seven. The mycological variance.
 The smell that isn't quite the smell of a world. The twin. The frequency.
@@ -993,6 +1048,41 @@ in the white space.
 **Emo's voice:** Flat. Precise. Complete. No nicknames. No elision.
 No *I told you so*. Restates data with context if asked.
 The humor is in being right when everyone finds that inconvenient.
+Dialogue is stripped to the minimum. "Anything else" not "Is there anything else."
+"Would you like a list" not "Would you like me to list it."
+
+**The Section:** Capital S. The cargo ocean space. Not "cargo section," not "hold."
+
+**Bracketed asides:** A narrative device. The narrator steps into the frame and states
+the obvious thing nobody in the scene would say. "[Finns eat a lot of fish, huh?]"
+Red Dwarf register as active technique. Whether the brackets survive to final draft
+is TBD. The move itself is established.
+
+**Present tense intrusions:** Characterization can arrive as a present-tense observation
+inside a past-tense narrative. "Selli never puts that thing down for very long."
+Not description — aside. The narrator knows more than the scene does.
+
+**"Part of" not "fact of."** Simpler. Facts are argued about. Parts just are.
+
+**Palapeli timing:** The sound belongs to the action but the prose doesn't explain
+the connection. "He set the piece down. A sound like a small thought changed its mind."
+Not "making a sound" — the gerund insists on causality. The sequence is real.
+The mechanism is not the novel's business. Things happen in order. That's enough.
+
+**Causality in prose:** Don't explain the connection between consecutive events.
+State the sequence. The reader makes the link. This is the void's operating system
+applied to the sentence level — sequence not time, order not mechanism.
+
+**Taav:** The intimate form of Taavetti. Used when he is alone or the moment is private.
+Taavetti in dialogue and group scenes. Taav when the prose is close to him.
+
+**Time in the void:** The prose acknowledges obliquely that time is not a given.
+"He might have stood there for a while if there was time." Do not explain this.
+Let it land and move on. The indicative mood is deliberate — "if there was time,"
+not "if there were time." The uncertainty is real, not hypothetical. No subjunctive.
+
+**"the silence sustained":** This is the register. Not "it didn't come again."
+The silence is a thing that holds. Describe it actively.
 
 **Ara's voice:** Runolaulu form. Brief. The thing said then said again
 from underneath. Occasionally funny. Never mourns openly.
@@ -1462,6 +1552,56 @@ Search before writing. Then write.
 
 ---
 
+## The stasis colony — IMPORTANT FOR FUTURE DEVELOPMENT
+
+Eerikki has people in stasis on the Kaipaus. His insurance policy for the
+completion condition — genetic and cultural preservation against the day the
+routes shift and the hehku stops. He doesn't think about it much. That's
+already the indictment.
+
+Normal voidfarers don't hibernate. The void gives sequence without time.
+Stationborn already live long. Hibernation is a worldborn concept — a solution
+to a worldborn problem — that Eerikki carried into the void because he couldn't
+stop being from somewhere that needed it.
+
+The core tensions:
+
+- He gives them time by taking it away. He experiences the centuries. They don't.
+- Consent across incomprehensible power differential. To worldborn he is mythology —
+  a being from the ur-myth. Whatever they agreed to, they agreed to it from inside
+  that frame. The transaction looks like salvation from one side.
+- Ara's frame: she cannot finish another person's song. Eerikki is holding people
+  mid-note. The pause is indefinite because his completion condition is undecidable.
+- The stasis is a false *uni* — a contained timelessness he made, not the void's
+  own provision. They don't dream there. They're frozen while he figures out
+  what they're for.
+- Emo has the colony data. Nobody has asked if they're okay.
+
+**The Pohl parallel — load-bearing:**
+Frederik Pohl: a ship with Lucy and evolved australopithecans — ancient hominids,
+a distinct race of worldborn, accidentally brought into the future. If there's
+such a thing as the future in the timeless void.
+
+The colony in stasis may not be only Eerikki's children/wards. There may be
+something ancient aboard — pre-myth worldborn, people who predate the language
+that later forgot what it once described. Before the ceiling. Before the Accord.
+Before the ur-myth that stationborn find quaint.
+
+They don't have the ceiling because they predate the ceiling.
+
+In the timeless void, "accidentally into the future" is philosophically unstable.
+They're not in Eerikki's future. They're in sequence. The question of when they
+are is genuinely undecidable.
+
+This is a different guilt than the rounding error. The rounding error he caused.
+This he found. The responsibility was not chosen.
+
+Emo has the data on the colony. Nobody has asked what exactly is in there.
+
+Do not develop this until the novel calls for it. Hold it open. This is important.
+
+---
+
 ## Active practical threads — not novel-related
 
 **2011 Ford Edge SEL 3.5L power steering belt:**
@@ -1605,7 +1745,7 @@ said anything.*
 The scene proved the thesis-antithesis-epiphany pattern works in
 MJK register. The scene itself is not for the novel. The pattern is.
 
-Scene for reference:
+Scene — current draft:
 
 Every language here has a word for stink. Nobody ever says it.
 
@@ -1628,8 +1768,8 @@ expecting it to do something else.
 "It's not nothing," Reko said. "Whatever it is, it's not nothing.
 You feel it or you don't."
 
-Turo set down the coupling. "The coupling needs replacing," he said,
-to no one in particular.
+Turo set down the Couple. "We should replace this Couple at Usher," he said,
+to no one.
 
 Reko looked at Kaija. "You feel it."
 
@@ -1637,11 +1777,9 @@ She watched the viewport a moment longer.
 
 "Yes," she said.
 
-Reko looked at Turo. Turo picked up the coupling again.
+Reko looked at Turo. Turo picked up the Couple again.
 
 The Väylä said nothing. The Väylä never said anything.
-
-The shuttle arrived.
 
 ---
 
@@ -1733,8 +1871,10 @@ Selli has a joke about the fish. He's never told it.
 "Hehku consumption on the Hiljaisuus approach is up four point three
 percent over the last six transits," Emo said. "I thought you should know."
 
-Neither of them said anything. The argument they had been having about
-something else continued for a moment without words and then stopped.
+Neither of them said anything. Emo's mundane observations usually arrive without comment.
+
+They continued arguing, over what they couldn't explain because they argued without words.
+And then they stopped.
 
 "We'll stop at Usher Reach," Eerikki said.
 
@@ -1745,32 +1885,32 @@ where the knife hadn't reached.
 
 "Selli will know something about it."
 
-"Selli always knows something," Taavetti said. "That has never been the problem."
+"Selli always knows something," Taavetti said. "That's never the problem."
 
-He picked up the flute and set it down again and went to the cargo section.
+He picked up the flute, set it down again, and then proceeded toward the Section.
 
 Eerikki looked at nothing in particular for a while.
 
-"Is there anything else," he said.
+"Anything else," he said.
 
-"Yes," Emo said. "Would you like me to list it."
+"Yes," Emo said. "Would you like a list."
 
 "No," he said.
 
 *
 
-The cargo section was an ocean.
+The Section was an ocean.
 
 Not a tank. Not a reservoir. An ocean, with a surface that moved and
 depth beneath the surface and things living in the depth. Light came
-from somewhere above at a distance that the space did not have room for.
+from somewhere above at a distance that defied the size of the space.
 
-Taavetti stood at the edge of it for a while.
+Taavetti stood at the edge of this space. He might have stood there for a while if there was time.
 
-Something jumped and came back down and the sound of it crossed the
-water and arrived where he was standing.
+Something jumped up and back down and the sound of it crossed the
+water and arrived at Taav's ear.
 
-He stood there until it didn't come again. Then he went back the way
+He stood there until the silence sustained. Then he went back the way
 he had come.
 
 ---
