@@ -65,7 +65,9 @@ These are now separate. Do not conflate them.
 
 ## The author
 
-- Works in distributed systems / technical writing in Phoenix, Arizona
+- VP at JPMorgan Chase, Phoenix, Arizona. Hard location constraint — will not relocate.
+  Feels plateaued. "The station is my Dilbert, my Initech." The career question is
+  active but not ready to be answered. Do not press it. It will open when it opens.
 - Serious musician. Fine arts background. Insomnium is the primary musical
   influence on this project — melodic death metal from Joensuu, Karelia,
   Finland. This is load-bearing context.
@@ -1457,6 +1459,28 @@ Search before writing. Then write.
 
 15. The game (roguelike set in the Helka Expanse) is a separate project.
     It has been noted. It gets its own session.
+
+---
+
+## Active practical threads — not novel-related
+
+**2011 Ford Edge SEL 3.5L power steering belt:**
+Stretch belt, no tensioner. Engine rebuilt in-situ — timing chains, tensioners,
+water pump, VVT solenoids, cam phasers, timing cover. The hard part is done.
+The PS belt is the last obstacle. Zip tie method fails at 9 o'clock due to
+force required. Special tools have been tried and are a joke. Pulley pull
+rejected — magnificent idea, no room to execute with engine in situ. The
+author has a full set of quality tools. Photographs pending daylight.
+Problem is live. Do not offer the pulley pull again.
+
+**2025 Toyota RAV4 LE Hybrid keys:**
+Switchblade fob with University lanyard and EDC hardware (nail clipper,
+carabiners, one with screwdriver/wrench). Missing since Thursday. Off-balance
+week — doctor's appointment Wednesday, went to work late Thursday, came home
+later than usual in drop-everything mode. Keys are somewhere within ten feet
+of wherever the author first stopped moving that evening. House has been
+thoroughly searched. Spare key replacement would run $150-250 at a locksmith.
+The keys will turn up.
 
 ---
 
