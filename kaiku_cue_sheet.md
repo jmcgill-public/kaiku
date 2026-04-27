@@ -144,8 +144,8 @@ One verse. The silence after it is part of the verse.
 
 ## SECTION 6 — KUOLINVIHELLYS
 **Target duration:** ~0:15
-**Character:** Selli's death whistle. The threshold. Uninvited.
-editor's note: in the canon it's Tadgh's flute not Selli's.
+**Character:** Tadgh's death whistle. The threshold. Uninvited.
+
 ```
 Instrument:     Kuolinvihellys (death whistle registration — TO BE BUILT)
                 High FM index, near-noise, tonal center on C# (or F#)
@@ -166,13 +166,13 @@ The listener has to sit with what just happened before the flute arrives.
 
 ## SECTION 7 — KOIVUHUILU
 **Target duration:** ~0:45
-**Character:** Selli's birch flute. Sweet, sanguine. Drawing down.
+**Character:** Tadgh's birch flute. Sweet, sanguine. Drawing down.
 
 ```
 Instrument:     Koivuhuilu (birch flute registration — TO BE BUILT)
                 Warm, breathy, slightly flat — carved wood, not factory tolerance
 IR:             Kaipuus forest (TO BE BUILT) — not the station, the forest
-                The space Selli is from, not the space he works in
+                The space Tadgh is from, not the space he works in
 Melody:         The resolution tail, in the low register
                 A → G# → F# → F → E → F# (stepwise Phrygian descent)
                 Slow. One note at a time. Silence between notes.
@@ -195,7 +195,7 @@ That's what makes it sanguine.
 
 ```
 Section          Duration    Instruments                    IR
-─────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────[...]
 1. Hiljaisuus    ~0:40       Pohja                         Station 35%
 2. Condensation  ~0:50       Pohja + Kit + Lausuja/Kaiku   Station 25%
 3. Tyhjyydenkaiku ~0:45      All + Hurdy lead              Station 20%
@@ -204,7 +204,7 @@ Section          Duration    Instruments                    IR
 6. Kuolinvihellys ~0:15      Whistle only                  Dry / 5%
    [silence]     ~0:05       —                             —
 7. Koivuhuilu    ~0:45       Birch flute + Pohja           Forest (Kaipuus)
-─────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────[...]
 Total target:    ~4:35
 ```
 
