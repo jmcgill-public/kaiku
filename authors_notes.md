@@ -38,6 +38,22 @@ whether Selli is dead.
 
 ---
 
+GLYPH SPACE — April 2026. glyph_count.py.
+8 stations, radius-2 hex grid, BFS-constrained walks.
+109,600 sequences → 67,753 distinct base glyphs.
+Bell curve peaking at 16 edges. Fingerprint of this specific topology.
+Varied glyph upper bound: 20 billion (edge-labeled subgraphs, traversal direction).
+Potentially ACM-worthy as a combinatorics problem. Not publishing. Keeping.
+
+---
+
+GAME STRUCTURE — April 2026. Reko / Turo / Keijo.
+Same player. Same run. Three depths of understanding.
+Reko: spirograph game. Turo: glyph puzzle. Keijo: every death wrecks a world.
+The game doesn't change. The player gets closer. This is an original structure.
+
+---
+
 KaamOS. Kaamos = polar night. Kaa = Navajo for "arrow." Accidental symmetry.
 The Hollywood OS of the cinematic universe. Diegetic computer for the Expanse.
 Stationborn use the same OS as worldborn — läpikatse in software form.
