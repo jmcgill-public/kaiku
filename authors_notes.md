@@ -38,6 +38,25 @@ whether Selli is dead.
 
 ---
 
+KaamOS. Kaamos = polar night. Kaa = Navajo for "arrow." Accidental symmetry.
+The Hollywood OS of the cinematic universe. Diegetic computer for the Expanse.
+Stationborn use the same OS as worldborn — läpikatse in software form.
+Satirical: the most advanced civilization runs infrastructure buildable in 1982.
+It works. Nobody replaced it. This is how all infrastructure works.
+Author's real gnome variant would look like this. That is the brief.
+
+PIN: 6809 branch — future vintage asm target.
+Motorola 6809: hardware MUL instruction, two stack pointers (S and U), two index
+registers (X and Y), orthogonal instruction set, cleaner than Z-80 in every dimension.
+Position-independent code. Designed for real work.
+OS-9 by Microware (NOT Mac OS 9 — years before that nine).
+Targets: Frank Hogg Laboratory, Tandy CoCo OS-9, NASA shuttle payload systems.
+The shuttle used OS-9 on 6809 in support systems (primary flight = IBM AP-101).
+Bespoke OS-9 variant: our own, better. That's the brief.
+kaamos.asm pushed as discrete branch. 6809 branch is next when ready.
+
+---
+
 PIN: Moonsorrow — Jumalten Aika (2016). The Age of Gods. Finnish pagan metal.
 Mimisbrunn = Mimir's well = Emo. The well knows everything. Doesn't volunteer.
 Parallels between this album's vocabulary/spiritual context and the ur-myth:
