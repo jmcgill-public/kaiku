@@ -1,0 +1,19 @@
+# audio
+*.flac
+*.wav
+*.mp3
+*.aiff
+*.ogg
+
+# binaries
+*.com
+*.bin
+
+# python
+__pycache__/
+*.pyc
+*.raw
+
+# os
+.DS_Store
+Thumbs.db
