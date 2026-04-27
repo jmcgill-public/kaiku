@@ -143,8 +143,33 @@ hiljaisuus_ir.py — synthetic IR generator (--purple flag for threshold variant
 timbre_brief.md — FM operator specs for all three instruments + Mellotron integration
 moonsorrow_notes.md — Jumalten Aika analysis, melody transcription, production intent
 
+VST PROJECT — kaiku/ directory. JUCE 7.0.9, CMake.
+Primary target: REAPER Linux VST3. Stretch: macOS ARM64, CLAP, REAPER JS.
+Files: FMOperator, FMEngine, KaikuVoice, VoiceManager, PluginProcessor,
+PluginEditor, KaamOSLookAndFeel. 4 presets baked in C++:
+Tyhjyydenkaiku / Kuilunsikiö / Pohjankaiku / Kuilukaiku.
+GUI: amber on void black, hex grid, Hiljaisuus pulse at 0.15Hz void-violet.
+
+HARDWARE / MULTI-PLATFORM DEPLOYMENT:
+Arturia Pigments: Engine A = FM (4-op, 2 parallel stacks, unison 2v +8cents),
+Engine B = Sample/WT cello. Blend 60/40. Filter BP 700Hz + LP 8kHz.
+Velocity → FM index (consonant onset). Aftertouch → roughness.
+Voxengo Pristine Space: loads hiljaisuus_station.wav directly.
+Multiple IR slots: slot 1 station, slot 2 Kaipuus (pending), slot 3 purple (pending).
+Antiphonal deployment: Kaiku voice gets +8ms pre-delay offset (di Lasso physical register).
+Mooer GE-200: IR loader is cab sim (5-23ms max). NOT for room IR.
+Needs short body resonance IR — 512 samples, 44.1kHz 16-bit, birch-box character.
+Generate with hiljaisuus_ir.py variant. Cab on GE-200, room in DAW.
+Waldorf Blofeld: 3-osc patch. Osc1 formant wavetable, Osc2 +8 cents,
+Osc3 trompette (velocity-gated). Filter BP ~900Hz, Env2 drives cutoff.
+Blofeld SL waveset: 64 single-cycle waves. Positions 1-16 wheel FM index sweep,
+17-32 F1 formant vowel sweep, 33-48 F2 nasal, 49-56 trompette, 57-64 breath.
+One wavetable = all four patch characters as scan positions.
+Generate as 64× 16-bit 44.1kHz WAV for SL loader. NOT YET BUILT.
+
 PENDING: Finnish verse text. Phonetics brief. Koivuhuilu and Kuolinvihellys
-registrations. Kaipuus and purple IRs. JUCE project scaffold for VST3.
-Drum VST calibration (prompts ready).
+registrations. Kaipuus forest IR. Purple station IR. Blofeld SL waveset (64 waves).
+GE-200 body resonance IR (512 samples, 16-bit 44.1kHz). Drum VST calibration
+(prompts ready in prompts_all.ly). First JUCE compile pass (minor include fixes needed).
 
 ---
