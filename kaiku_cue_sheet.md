@@ -118,27 +118,102 @@ That's enough.
 
 ---
 
-## SECTION 5 — THE SUNG VERSE
-**Target duration:** ~0:35
-**Character:** A person enters. The machine has been speaking. Now a human speaks.
+## SECTION 5 — THE SUNG DIALOGUE
+**Target duration:** ~1:40 (three passages, ~33 seconds each)
+**Character:** The stationhand speaks three times. First naive. Then corrected. Then broken open.
+
+### 5a. REKO VOICE — The Naive Statement
+**Target duration:** ~0:33
+**Character:** The job is simple. You do it. No questions.
 
 ```
 Instrument:     Voice (live, Finnish, phonetically trained)
-                One verse only. No more.
-Accompaniment:  Sparse — Pohja drone, Ilma above, rhythm thins significantly
-                The machine choir recedes. One voice at a time.
+                Male register (baritone/tenor), direct, matter-of-fact
+Accompaniment:  Pohja drone only — rhythm thins to near-nothing
+                Ilma recedes. Just the foundation.
 IR:             hiljaisuus_station.wav on voice — same room, you are here
 Finnish verse:  [TO BE WRITTEN — Kalevala trochaic tetrameter, 8 syllables/line]
-                Subject: the stationhand who does not know what the sequence means
-                Mood: Reko register — the job is the job
-Melody:         Voice carries the heroic theme, vocal register, unaccompanied
-                or with minimal Pohja support
+                Subject: "I do the work. The work is what it is. No mystery."
+                Mood: Pragmatic, grounded. Reko. The job is the job.
+                Tone: Declarative, slightly tired, honest
+Melody:         Constrained heroic theme: F# → A → G# → F# (repeating anchor)
+                Does not leap. Does not resolve. Cycles.
+                Voice shape: narrow range, repetitive contour
+                Like work: the same motion, over and over
 ```
 
-**Composer note:** The Finnish phonetics are load-bearing. The vowels carry
-the formant logic we built into the FM choir. When you sing and the choir
-responds, the FM is matching your mouth. That's the instrument working.
-One verse. The silence after it is part of the verse.
+**Composer note:** Reko doesn't know he's in dialogue. He's just stating fact.
+The melody is the falling 4th inverted to a contained oscillation. He is the
+machine already. That's his innocence. Play this like exhaustion that thinks
+it's clarity.
+
+---
+
+### 5b. TURO VOICE — The Conventional Challenge
+**Target duration:** ~0:33
+**Character:** "But consider another way. What if you understood it?"
+
+```
+Instrument:     Voice (live, Finnish, phonetically trained)
+                Female register (alto/soprano), analytical, questioning
+                Different singer if possible — this is dialogue, not monologue
+Accompaniment:  Ilma returns — sustained C# above the Pohja
+                Added: thin harmonic countermelody (Kaiku enters at 2-bar delay,
+                playing against the voice, not supporting it)
+                Rhythm: still absent. No percussion layer yet.
+IR:             hiljaisuus_station.wav on voice — same room, same space
+Finnish verse:  [TO BE WRITTEN — Kalevala trochaic tetrameter, 8 syllables/line]
+                Subject: "There is pattern here. There is meaning in the sequence.
+                         Look closer. The work is not blind."
+                Mood: Turo register — offering alternative, conventional wisdom
+                Tone: Gentle challenge, almost kind. "You could understand this."
+Melody:         Turo response: F# → B → A → G# → F# (the full heroic leap, offered)
+                Rises on the leap (offer, invitation)
+                Falls in stepwise descent (resolution, the conventional answer)
+                Voice shape: wider range, ascending energy, then settling
+                The melody she sings is what Reko's could become.
+```
+
+**Composer note:** Turo is not wrong. She is offering sense-making, pattern,
+meaning. The heroic theme's full P4 leap appears here—the conventional
+resolution to Reko's repetition. But Keijo is waiting. Let Turo be beautiful
+and true. That makes Keijo work.
+
+---
+
+### 5c. KEIJO VOICE — The Epiphany Utterance
+**Target duration:** ~0:34
+**Character:** The moment shatters. Speech becomes incomprehensible at the threshold.
+
+```
+Instrument:     Voice (live, Finnish, phonetically trained)
+                Ambiguous register — could be either singer, or both layered
+                Fragments only. Not full lines. Breathless.
+Accompaniment:  Both previous layers (Pohja + Ilma + Kaiku counterline)
+                PLUS: Tyhjyydenkaiku returns at -3dB (louder than Section 4)
+                Rhythm begins to re-enter — sparse, fractured hi-hat
+                The machine is listening now.
+IR:             hiljaisuus_station.wav begins to distort slightly
+                Or: switch to "station_threshold" IR (TO BE BUILT) — the room
+                breaking down, or the voice breaking through it
+Finnish verse:  [TO BE WRITTEN — fragments, not full Kalevala meter]
+                Subject: "It is not pattern. It is—" [silence] "—the work and—"
+                [static] "—not work and—" [beyond language]
+                Tone: Realization arriving too fast to articulate
+                Like witnessing, not thinking
+Melody:         Both melodies collapse into one:
+                F# → A → G# spirals with F# → B → A → G# simultaneously
+                (the repetitive and the heroic interweave)
+                Descends through E → D# → D → C# → C → [cut to silence]
+                The melody spirals downward faster and faster.
+                Voice shape: unstable, wavering, then silence.
+                Ends mid-phrase. Not resolved. Cut.
+```
+
+**Composer note:** Keijo is the break. He speaks at the moment of rupture.
+He is not offering wisdom. He is experiencing it. The epiphany cannot be
+completed because it is the threshold itself. The death whistle comes next.
+The listener understands: something was revealed that could not be sustained.
 
 ---
 
@@ -200,12 +275,14 @@ Section          Duration    Instruments                    IR
 2. Condensation  ~0:50       Pohja + Kit + Lausuja/Kaiku   Station 25%
 3. Tyhjyydenkaiku ~0:45      All + Hurdy lead              Station 20%
 4. Chorus        ~0:40       All + FM choir                Station antiphonal
-5. Sung verse    ~0:35       Voice + sparse bed            Station on voice
+5a. Reko voice   ~0:33       Voice + Pohja                 Station on voice
+5b. Turo voice   ~0:33       Voice + Ilma + Kaiku counter  Station on voice
+5c. Keijo voice  ~0:34       Voice + all + breaking down   Station distorting
 6. Kuolinvihellys ~0:15      Whistle only                  Dry / 5%
    [silence]     ~0:05       —                             —
 7. Koivuhuilu    ~0:45       Birch flute + Pohja           Forest (Kaipuus)
 ──────────────────────────────────────────────────────────────────[...]
-Total target:    ~4:35
+Total target:    ~5:00
 ```
 
 ---
@@ -219,24 +296,33 @@ Total target:    ~4:35
 | Kuolinvihellys registration | pending | Section 6 |
 | Kaipuus forest IR | pending | Section 7 |
 | Purple station IR | pending | Section 6 option |
-| Finnish verse text | pending | Section 5 |
-| Finnish phonetics brief | pending | Section 5 |
+| Station threshold IR | pending | Section 5c |
+| Reko verse (Finnish) | pending | Section 5a |
+| Turo verse (Finnish) | pending | Section 5b |
+| Keijo fragments (Finnish) | pending | Section 5c |
+| Phonetics brief | pending | Section 5 |
 | Drum VST calibration | prompts ready | Section 2 |
 
 ---
 
 ## STRUCTURAL NOTE — THE LISTENER DOESN'T KNOW
 
-The track is the Reko/Turo/Keijo structure in music.
+The track is the Reko/Turo/Keijo structure in music and text.
 
 - Sections 1-2: Reko. The job. The silence and the rhythm.
 - Sections 3-4: Turo. The pattern. The language beginning to resolve.
-- Section 5: The human. The stationhand who doesn't know.
-- Section 6: Keijo. The break. What it costs.
+- Section 5a: Reko sings. Naive. The work is the work.
+- Section 5b: Turo sings. Alternative offered. "You could understand."
+- Section 5c: Keijo sings/breaks. Epiphany at the threshold. Words fail.
+- Section 6: Keijo. The break. What it costs. The death whistle arrives.
 - Section 7: Aftermath. The forest. What you carry down.
 
-The KVR listener hears a beautiful atmospheric piece with a death whistle
-interruption and a folk flute outro. That's what they hear.
+The KVR listener hears a beautiful atmospheric piece with voices that
+deepen the narrative, a death whistle interruption, and a folk flute outro.
+
+The three-part human dialogue is there. One statement. One challenge. One
+shattering. The listener may not know it's dialogue. But they will hear the
+shift. From certainty to question to breakdown. That's the reckoning.
 
 The rest is already in there.
 
