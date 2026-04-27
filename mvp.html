@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaamos — MVP</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #070711;
+    color: #a0a0c0;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    color: #3a3a6a;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  canvas {
+    display: block;
+    cursor: pointer;
+  }
+
+  canvas.watching {
+    cursor: default;
+  }
+
+  #status {
+    font-size: 0.75rem;
+    color: #4a4a7a;
+    letter-spacing: 0.15em;
+    min-height: 1.2em;
+    text-align: center;
+  }
+
+  #sequence-display {
+    display: flex;
+    gap: 0.4rem;
+    min-height: 1.5rem;
+    align-items: center;
+  }
+
+  .token {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2a2a5a;
+    border: 1px solid #3a3a7a;
+  }
+
+  .token.lit {
+    background: #6060ff;
+    border-color: #8080ff;
+    box-shadow: 0 0 6px #6060ff;
+  }
+</style>
+</head>
+<body>
+
+<h1>kaamos</h1>
+<canvas id="grid" width="500" height="500"></canvas>
+<div id="sequence-display"></div>
+<div id="status">initializing</div>
+
+<script>
+// ─── HEX MATH (cube coordinates) ───────────────────────────────────────────
+
+const HEX_DIRECTIONS = [
+  {q:1,r:-1,s:0}, {q:1,r:0,s:-1}, {q:0,r:1,s:-1},
+  {q:-1,r:1,s:0}, {q:-1,r:0,s:1}, {q:0,r:-1,s:1}
+];
+
+function hexAdd(a, b) { return {q:a.q+b.q, r:a.r+b.r, s:a.s+b.s}; }
+function hexDistance(a, b) {
+  return Math.max(Math.abs(a.q-b.q), Math.abs(a.r-b.r), Math.abs(a.s-b.s));
+}
+function hexKey(h) { return `${h.q},${h.r},${h.s}`; }
+
+// cube → pixel (flat-top)
+function hexToPixel(h, size, origin) {
+  const x = size * (3/2 * h.q);
+  const y = size * (Math.sqrt(3)/2 * h.q + Math.sqrt(3) * h.r);
+  return { x: origin.x + x, y: origin.y + y };
+}
+
+// pixel → cube (flat-top)
+function pixelToHex(px, py, size, origin) {
+  const x = (px - origin.x) / size;
+  const y = (py - origin.y) / size;
+  const q = (2/3) * x;
+  const r = (-1/3) * x + (Math.sqrt(3)/3) * y;
+  const s = -q - r;
+  return hexRound({q, r, s});
+}
+
+function hexRound(h) {
+  let q = Math.round(h.q), r = Math.round(h.r), s = Math.round(h.s);
+  const dq = Math.abs(q - h.q), dr = Math.abs(r - h.r), ds = Math.abs(s - h.s);
+  if (dq > dr && dq > ds) q = -r - s;
+  else if (dr > ds) r = -q - s;
+  else s = -q - r;
+  return {q, r, s};
+}
+
+function hexNeighbors(h) {
+  return HEX_DIRECTIONS.map(d => hexAdd(h, d));
+}
+
+// ─── PATHFINDING (BFS) ─────────────────────────────────────────────────────
+
+function bfsPath(start, end, validHexes) {
+  const startKey = hexKey(start);
+  const endKey = hexKey(end);
+  if (startKey === endKey) return [start];
+
+  const queue = [[start]];
+  const visited = new Set([startKey]);
+
+  while (queue.length > 0) {
+    const path = queue.shift();
+    const current = path[path.length - 1];
+    for (const neighbor of hexNeighbors(current)) {
+      const nKey = hexKey(neighbor);
+      if (nKey === endKey) return [...path, neighbor];
+      if (!visited.has(nKey) && validHexes.has(nKey)) {
+        visited.add(nKey);
+        queue.push([...path, neighbor]);
+      }
+    }
+  }
+  return [start, end]; // fallback — direct if grid fails
+}
+
+// ─── MAP DEFINITION ────────────────────────────────────────────────────────
+
+// Hiljaisuus at center (0,0,0)
+// Stations within radius 2
+const HILJAISUUS = {q:0, r:0, s:0};
+
+const STATION_NAMES = [
+  'Pohja', 'Väylä', 'Grilli', 'Kaamos', 'Aava', 'Hehku',
+  'Solmu', 'Pohjanmeri', 'Taivas'
+];
+
+// Place stations at specific hexes around center
+const STATION_HEXES = [
+  {q:2,  r:-1, s:-1},
+  {q:1,  r:-2, s:1},
+  {q:-1, r:-1, s:2},
+  {q:-2, r:1,  s:1},
+  {q:-1, r:2,  s:-1},
+  {q:1,  r:1,  s:-2},
+  {q:2,  r:-2, s:0},
+  {q:0,  r:-2, s:2},
+  {q:-2, r:0,  s:2},
+];
+
+// Build station map
+const stations = {};
+STATION_HEXES.forEach((hex, i) => {
+  const key = hexKey(hex);
+  stations[key] = {
+    hex,
+    name: STATION_NAMES[i],
+    index: i
+  };
+});
+
+const stationList = Object.values(stations);
+
+// All hexes to render (stations + boss + filler ring)
+const allHexes = new Set();
+allHexes.add(hexKey(HILJAISUUS));
+stationList.forEach(s => allHexes.add(hexKey(s.hex)));
+
+// Add intermediate hexes for visual density (radius 2 grid)
+for (let q = -2; q <= 2; q++) {
+  for (let r = -2; r <= 2; r++) {
+    const s = -q - r;
+    if (Math.abs(s) <= 2) allHexes.add(hexKey({q,r,s}));
+  }
+}
+
+// ─── STATE ─────────────────────────────────────────────────────────────────
+
+const STATE = {
+  phase: 'idle',          // idle | boss_pointing | player_input | result
+  bossSequence: [],       // array of station indices the boss is showing
+  bossStep: 0,            // current step in boss animation
+  highlightedHex: null,   // currently lit hex (boss animation)
+  pathTrail: [],          // accumulated hex traces (q,r,s) for spirograph
+  tokens: [],             // earned tokens
+};
+
+// Player hex (starts at a random station)
+let playerStation = stationList[Math.floor(Math.random() * stationList.length)];
+
+// ─── CANVAS ────────────────────────────────────────────────────────────────
+
+const canvas = document.getElementById('grid');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+const ORIGIN = { x: W/2, y: H/2 };
+const HEX_SIZE = 46;
+
+// ─── DRAW ──────────────────────────────────────────────────────────────────
+
+function hexCorners(center, size) {
+  const corners = [];
+  for (let i = 0; i < 6; i++) {
+    const angle = Math.PI / 180 * (60 * i); // flat-top
+    corners.push({
+      x: center.x + size * Math.cos(angle),
+      y: center.y + size * Math.sin(angle)
+    });
+  }
+  return corners;
+}
+
+function drawHex(hex, opts = {}) {
+  const center = hexToPixel(hex, HEX_SIZE, ORIGIN);
+  const corners = hexCorners(center, HEX_SIZE - 2);
+
+  ctx.beginPath();
+  ctx.moveTo(corners[0].x, corners[0].y);
+  for (let i = 1; i < 6; i++) ctx.lineTo(corners[i].x, corners[i].y);
+  ctx.closePath();
+
+  ctx.fillStyle = opts.fill || '#0d0d1f';
+  ctx.fill();
+  ctx.strokeStyle = opts.stroke || '#1a1a3a';
+  ctx.lineWidth = opts.lineWidth || 1;
+  ctx.stroke();
+}
+
+function drawTrail() {
+  if (STATE.pathTrail.length < 2) return;
+  ctx.save();
+  for (let i = 1; i < STATE.pathTrail.length; i++) {
+    const a = hexToPixel(STATE.pathTrail[i-1], HEX_SIZE, ORIGIN);
+    const b = hexToPixel(STATE.pathTrail[i], HEX_SIZE, ORIGIN);
+    const alpha = Math.min(1, 0.1 + (i / STATE.pathTrail.length) * 0.5);
+    ctx.strokeStyle = `rgba(60, 60, 180, ${alpha})`;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function render() {
+  ctx.clearRect(0, 0, W, H);
+
+  // Draw all background hexes
+  allHexes.forEach(key => {
+    const parts = key.split(',').map(Number);
+    const hex = {q:parts[0], r:parts[1], s:parts[2]};
+    drawHex(hex);
+  });
+
+  // Draw trail
+  drawTrail();
+
+  // Draw Hiljaisuus (boss hex)
+  const bossPulse = 0.5 + 0.5 * Math.sin(Date.now() / 800);
+  drawHex(HILJAISUUS, {
+    fill: `rgba(20, 0, 40, ${0.8 + bossPulse * 0.2})`,
+    stroke: `rgba(80, 0, 120, ${0.4 + bossPulse * 0.6})`,
+    lineWidth: 2
+  });
+
+  // Boss label
+  const bossCenter = hexToPixel(HILJAISUUS, HEX_SIZE, ORIGIN);
+  ctx.fillStyle = `rgba(100, 0, 160, ${0.3 + bossPulse * 0.5})`;
+  ctx.font = '9px Courier New';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('hiljaisuus', bossCenter.x, bossCenter.y);
+
+  // Draw stations
+  stationList.forEach(s => {
+    const isHighlighted = STATE.highlightedHex &&
+      hexKey(STATE.highlightedHex) === hexKey(s.hex);
+    const isPlayer = hexKey(playerStation.hex) === hexKey(s.hex);
+
+    let fill = '#0e0e22';
+    let stroke = '#252550';
+    let labelColor = '#2a2a5a';
+
+    if (isHighlighted) {
+      // Boss pointing — violet. Means: watch, not click.
+      fill = '#1a0a30';
+      stroke = '#9040c0';
+      labelColor = '#c080ff';
+    }
+    if (isPlayer) {
+      fill = '#0a2a1a';
+      stroke = '#40c080';
+      labelColor = '#60e0a0';
+    }
+    if (isHighlighted && isPlayer) {
+      fill = '#1a0a30';
+      stroke = '#9040c0';
+      labelColor = '#c080ff';
+    }
+
+    drawHex(s.hex, { fill, stroke, lineWidth: isHighlighted || isPlayer ? 2 : 1 });
+
+    const center = hexToPixel(s.hex, HEX_SIZE, ORIGIN);
+    ctx.fillStyle = labelColor;
+    ctx.font = '8px Courier New';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(s.name, center.x, center.y);
+
+    // Player dot
+    if (isPlayer) {
+      ctx.beginPath();
+      ctx.arc(center.x, center.y - 14, 3, 0, Math.PI * 2);
+      ctx.fillStyle = '#60e0a0';
+      ctx.fill();
+    }
+  });
+}
+
+// ─── SEQUENCE DISPLAY ──────────────────────────────────────────────────────
+
+function updateSequenceDisplay() {
+  const el = document.getElementById('sequence-display');
+  el.innerHTML = '';
+  STATE.bossSequence.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'token' + (i < STATE.bossStep ? ' lit' : '');
+    el.appendChild(dot);
+  });
+}
+
+// ─── STATUS ────────────────────────────────────────────────────────────────
+
+function setStatus(msg) {
+  document.getElementById('status').textContent = msg;
+}
+
+// ─── BOSS SEQUENCE GENERATION ──────────────────────────────────────────────
+
+function generateSequence(length) {
+  const seq = [];
+  let last = -1;
+  for (let i = 0; i < length; i++) {
+    let pick;
+    do { pick = Math.floor(Math.random() * stationList.length); }
+    while (pick === last);
+    seq.push(pick);
+    last = pick;
+  }
+  return seq;
+}
+
+// ─── BOSS ANIMATION ────────────────────────────────────────────────────────
+
+function runBossSequence() {
+  STATE.phase = 'boss_pointing';
+  STATE.bossStep = 0;
+  canvas.classList.add('watching');
+  setStatus('watch — the silence speaks');
+
+  // Build the full path: Hiljaisuus → station[0] → station[1] → ...
+  // Each leg is a BFS path through the hex grid.
+  const legs = [];
+  let cursor = HILJAISUUS;
+  for (const stationIdx of STATE.bossSequence) {
+    const dest = stationList[stationIdx].hex;
+    const leg = bfsPath(cursor, dest, allHexes);
+    legs.push({ stationIdx, path: leg });
+    cursor = dest;
+  }
+
+  // Flatten into a sequence of { hex, isStation, stationIdx } steps
+  const steps = [];
+  legs.forEach(({ stationIdx, path }) => {
+    path.forEach((hex, i) => {
+      const atDest = i === path.length - 1;
+      steps.push({ hex, isStation: atDest, stationIdx: atDest ? stationIdx : null });
+    });
+  });
+
+  let stepIdx = 0;
+
+  const advance = () => {
+    if (stepIdx >= steps.length) {
+      STATE.highlightedHex = null;
+      STATE.bossStep = STATE.bossSequence.length; // mark all shown
+      STATE.phase = 'player_input';
+      canvas.classList.remove('watching');
+      setStatus('your turn — click stations in order');
+      STATE.bossStep = 0;
+      updateSequenceDisplay();
+      return;
+    }
+
+    const { hex, isStation, stationIdx } = steps[stepIdx];
+    STATE.highlightedHex = hex;
+    STATE.pathTrail.push({...hex});
+
+    if (isStation) {
+      STATE.bossStep++;
+      updateSequenceDisplay();
+      // Pause longer at station destinations so player can register them
+      stepIdx++;
+      setTimeout(() => {
+        STATE.highlightedHex = null;
+        setTimeout(advance, 200);
+      }, 600);
+    } else {
+      // Brief flash on transit hexes
+      stepIdx++;
+      setTimeout(() => {
+        STATE.highlightedHex = null;
+        setTimeout(advance, 60);
+      }, 180);
+    }
+  };
+
+  setTimeout(advance, 600);
+}
+
+// ─── PLAYER INPUT ──────────────────────────────────────────────────────────
+
+let playerInputStep = 0;
+
+canvas.addEventListener('click', e => {
+  if (STATE.phase !== 'player_input') return;
+
+  const rect = canvas.getBoundingClientRect();
+  const px = (e.clientX - rect.left) * (W / rect.width);
+  const py = (e.clientY - rect.top) * (H / rect.height);
+  const clicked = pixelToHex(px, py, HEX_SIZE, ORIGIN);
+  const key = hexKey(clicked);
+
+  if (stations[key]) {
+    const stationIdx = stations[key].index;
+    const expected = STATE.bossSequence[playerInputStep];
+
+    if (stationIdx === expected) {
+      playerStation = stationList[stationIdx];
+      playerInputStep++;
+      STATE.highlightedHex = clicked;
+      setTimeout(() => { STATE.highlightedHex = null; }, 300);
+
+      if (playerInputStep >= STATE.bossSequence.length) {
+        playerInputStep = 0;
+        STATE.phase = 'result';
+
+        // Earn token
+        STATE.tokens.push(STATE.bossSequence.slice());
+        setStatus(`sequence complete — token earned (${STATE.tokens.length} total)`);
+
+        setTimeout(nextRound, 1800);
+      }
+    } else {
+      // Wrong
+      playerInputStep = 0;
+      STATE.phase = 'result';
+      setStatus('wrong station — the silence resets');
+      setTimeout(nextRound, 1500);
+    }
+  }
+});
+
+// ─── ROUNDS ────────────────────────────────────────────────────────────────
+
+let roundNumber = 0;
+
+function nextRound() {
+  roundNumber++;
+  const length = Math.min(roundNumber + 1, 8);
+  STATE.bossSequence = generateSequence(length);
+  STATE.bossStep = 0;
+  updateSequenceDisplay();
+  runBossSequence();
+}
+
+// ─── LOOP ──────────────────────────────────────────────────────────────────
+
+function loop() {
+  render();
+  requestAnimationFrame(loop);
+}
+
+// ─── INIT ──────────────────────────────────────────────────────────────────
+
+setStatus('click to begin');
+STATE.phase = 'idle';
+loop();
+
+canvas.addEventListener('click', function startOnce() {
+  if (STATE.phase === 'idle') {
+    canvas.removeEventListener('click', startOnce);
+    nextRound();
+  }
+}, { once: false });
+
+</script>
+</body>
+</html>
