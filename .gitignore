@@ -4,6 +4,33 @@
 *.mp3
 *.aiff
 *.ogg
+*.opus
+*.wma
+*.m4a
+*.aac
+*.wv
+*.ape
+*.dsf
+*.dff
+*.mid
+*.midi
+
+# DAW project files
+*.rpp
+*.rpp-bak
+*.als
+*.alp
+*.logic
+*.ptx
+*.ptf
+*.cpr
+*.npr
+*.fpl
+*.flp
+
+# rendered / stems
+*.stem.mp4
+*.stems
 
 # binaries
 *.com

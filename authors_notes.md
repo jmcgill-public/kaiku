@@ -89,3 +89,62 @@ Game music drinks from the same source. Upload FLAC or describe harmony to devel
 The well is Mimisbrunn. It predates everyone who has drawn from it.
 
 ---
+
+MUSIC SESSION — April 2026. Professional studio in play.
+
+Influences confirmed: Moonsorrow (ur-myth register), Ernst Toch Geographical Fugue
+(speech rhythm as counterpoint), Orlando di Lasso O la o che bon eccho (antiphonal
+physical space, echo as dialogue), Insomnium (elegiac/personal vs. Moonsorrow's
+cosmological), Cult of Luna (secular void, no mythology).
+
+Moonsorrow: draws from the well as ritual.
+Insomnium: draws from the well as wound.
+Cult of Luna: the well without a name for it.
+Us: ritual. Cosmological. The Silence has a name.
+
+Essay saved: essay_the_well.md. For separate publication after author hears Cult of Luna.
+
+INSTRUMENTS:
+Tyhjyydenkaiku — primary FM patch. Hurdy gurdy (Anna Murphy / Cellar Darling register,
+original not derivative) + Scottish mouth music formants. KVR Music Cafe submission.
+Patch family: Kuilunsikiö (visceral), Pohjankaiku (Mellotron-heavy), Kuilukaiku (stripped).
+Koivuhuilu — Selli's birch flute. Literal registration (warm, breathy, slightly flat).
+Kuolinvihellys — Selli's symbolic flute. Andean death whistle register. Threshold instrument.
+The literal flute is Selli alive. The death whistle is Selli at the boundary.
+
+IRs built: hiljaisuus_station.wav — 40x12x7m metal corridor, RT60 2.2s, not purple.
+IRs pending: Kaipuus forest (longing register, for Koivuhuilu), Purple/threshold (for Kuolinvihellys).
+
+THE MELODY — hummed 03-260426_2345.wav, identified from Jumalten Aika ~10:28.
+C# Phrygian as hummed (production key: F# Phrygian).
+Opening: neighbor oscillation around root (G→F#→G→F→F#→E→F# in production key).
+Heroic gesture: rising P4 (F#→B). The horn call. The Sibelius gesture. The well put it there.
+Resolution tail: stepwise descent A→G#→F#→F→E→F#. Rise by 4th, descend by steps.
+This structure is ancient. Nobody owns it.
+
+KVR TRACK STRUCTURE (kaiku_cue_sheet.md):
+1. Hiljaisuus — silence, F# drone, 0:40
+2. Condensation — 6/8 dotted quarter=96, silence becomes rhythm, 0:50
+3. Tyhjyydenkaiku enters — heroic theme stated, 0:45
+4. Synthetic chorus — Toch/Geographical Fugue FM voices, antiphonal, 0:40
+5. Sung verse — human voice, Finnish, Kalevala meter, one verse, 0:35
+6. Kuolinvihellys — death whistle, cut to silence, 0:15
+7. Koivuhuilu — birch flute descent, Kaipuus forest IR, 0:45
+Total: ~4:35
+
+This track is Reko/Turo/Keijo in music. The listener doesn't know that.
+
+SCORES IN REPO:
+hiljaisuus_choir.ly — 4-voice choir, F# Phrygian, Kalevala meter
+kaiku_riddim.ly — 6-voice condensation sequence
+prompts_all.ly — 4 performance prompts (A: drums, B: piano/void,
+                  C: piano/full condensation, D: piano/Toch)
+hiljaisuus_ir.py — synthetic IR generator (--purple flag for threshold variant)
+timbre_brief.md — FM operator specs for all three instruments + Mellotron integration
+moonsorrow_notes.md — Jumalten Aika analysis, melody transcription, production intent
+
+PENDING: Finnish verse text. Phonetics brief. Koivuhuilu and Kuolinvihellys
+registrations. Kaipuus and purple IRs. JUCE project scaffold for VST3.
+Drum VST calibration (prompts ready).
+
+---

@@ -121,6 +121,38 @@ The well is Mimisbrunn. It predates everyone who has drawn from it.
 
 ---
 
+## The Melody — transcribed from hum (03-260426_2345.wav)
+
+**Key as hummed:** C# Phrygian (median fundamental 137Hz = C#3)
+**Transposition for production:** F# Phrygian (up a P4 — matches Jumalten Aika original)
+
+**Opening phrase — neighbor oscillation:**
+```
+D → C# → D → C → C# → B → C#
+```
+Phrygian neighbor-tone logic. The D above is the characteristic semitone.
+C and B are the lower neighbors. The melody doesn't go forward — it intensifies
+around the root. Gravitational pull, not motion.
+
+**Heroic gesture:**
+Rising perfect 4th: C# → F# (in production key: F# → B)
+This is the horn call. The Sibelius gesture. The runolaulu rising 4th.
+Nobody owns it. The well put it there.
+
+**Resolution tail:**
+```
+E → D → C# → C → B → C#
+```
+Stepwise descent from the 3rd back through the Phrygian scale to root.
+The exhale after the leap. Rise by 4th, descend by steps.
+This is the structure: ancient, correct, from the same source as everything else.
+
+**In production key (F# Phrygian):**
+- Opening oscillation: G → F# → G → F# → E# → F#
+- Heroic leap: F# → B (P4)
+- Resolution: A# → G# → F# → E# → D# → F#
+  (using enharmonic spelling for clarity: A → G# → F# → F → E → F#)
+
 ## F# Phrygian — scale reference for game music
 
 ```
