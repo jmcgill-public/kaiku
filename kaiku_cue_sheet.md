@@ -145,7 +145,7 @@ One verse. The silence after it is part of the verse.
 ## SECTION 6 — KUOLINVIHELLYS
 **Target duration:** ~0:15
 **Character:** Selli's death whistle. The threshold. Uninvited.
-
+editor's note: in the canon it's Tadgh's flute not Selli's.
 ```
 Instrument:     Kuolinvihellys (death whistle registration — TO BE BUILT)
                 High FM index, near-noise, tonal center on C# (or F#)
