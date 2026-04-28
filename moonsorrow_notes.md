@@ -116,14 +116,13 @@ The fear is anticipatory. The Silence never attacks. It makes you aware that it 
 Jumalten main theme likely derives from runolaulu / Kalevala melodic tradition —
 pentatonic, narrow range, incantatory. Same well as Sibelius. Nobody owns it.
 
-Upload FLAC or describe harmony to develop.
 The well is Mimisbrunn. It predates everyone who has drawn from it.
 
 ---
 
-## The Melody — transcribed from hum (03-260426_2345.wav)
+## The Melody — transcribed from rehearsal
 
-**Key as hummed:** C# Phrygian (median fundamental 137Hz = C#3)
+**Key as rehearsed:** C# Phrygian (median fundamental 137Hz = C#3)
 **Transposition for production:** F# Phrygian (up a P4 — matches Jumalten Aika original)
 
 **Opening phrase — neighbor oscillation:**
