@@ -8,6 +8,31 @@ Frosty was on the keyboard.
 
 ---
 
+EERIKKI IS EDGAR ALLAN POE.
+
+The project was named after him. Eerikki muistaa = Edgar remembers.
+
+Poe wrote Eureka (1848) — prose poem on the structure of the universe,
+void space, matter returning to unity. Dismissed. Anticipates the Big Bang.
+He already understood the brane folds. He named the Silence before it had a station.
+
+Reko = Poe the journalist. Files the copy. Does the job. Drinks.
+Turo = Dupin. The detective. The Purloined Letter is a Mastermind puzzle.
+       Pattern visible to those who look at it correctly.
+Keijo = Eureka Poe. Understood the cosmos. Was not believed. Died in a ditch
+        talking to people nobody else could see. Every death wrecks a world.
+        He knew. He wrote it down.
+
+The Gold-Bug = cipher fiction. The glyphs are ciphers.
+Eerikki already knows the glyph alphabet. He invented this genre.
+
+Ara watches Edgar across whatever distance separates 1849 from the Expanse.
+"Hand of Edgar may slip from rein." Ara has been counting longer than he has.
+
+The raven said nevermore. The Silence says nothing. That's worse.
+
+---
+
 suomi the directory: Finnish as filter. The gap lives here.
 
 suomi the civilization: sauna, silence, survived. Asks nothing of you.
@@ -44,6 +69,24 @@ GLYPH SPACE — April 2026. glyph_count.py.
 Bell curve peaking at 16 edges. Fingerprint of this specific topology.
 Varied glyph upper bound: 20 billion (edge-labeled subgraphs, traversal direction).
 Potentially ACM-worthy as a combinatorics problem. Not publishing. Keeping.
+
+GLYPHS → ELECTROPHEROGRAM — April 2026.
+The glyph distribution bell curve IS an electropherogram of the brane's topology.
+Each glyph is a molecule. Edge count = molecular weight. The bell curve = the gel.
+67,753 distinct glyphs = the grief catalog. Ara knows the count.
+Each glyph linearized = a chromosomal sequence (6 edge directions, like base pairs).
+Each glyph has a unique G-band karyotype. The station's genome is indexed by glyph.
+Turo→Keijo resolution increase = finer band splitting = reading the full karyotype.
+Ghost bands = FM sidebands (Bessel distribution). The gel and the spectrogram are the same display.
+
+THE GEL DISPLAY IS THE VST SPECTROGRAM.
+Lanes = frequency bins. Bands = spectral energy (harmonics, formants).
+Tyhjyydenkaiku: F1 formant cluster + F2 nasal cluster + wheel doublet (8 cents apart).
+Kuolinvihellys: broadband, nearly all smear. Death whistle = no clean bands.
+Hiljaisuus smear = FM index climbing, sidebands proliferating, formant identity dissolving.
+The instrument loses its shape. The gel ran too long. The voltage was wrong.
+lane_run.html — prototype player display. Amber bands on void black, violet smear on
+station 9, ghost bands, noise artifacts, animated Hiljaisuus pulse. KaamOS aesthetic.
 
 ---
 
@@ -167,9 +210,37 @@ Blofeld SL waveset: 64 single-cycle waves. Positions 1-16 wheel FM index sweep,
 One wavetable = all four patch characters as scan positions.
 Generate as 64× 16-bit 44.1kHz WAV for SL loader. NOT YET BUILT.
 
+SHESHA MURTI — April 2026. shesha.stl.
+3D printable. 9 cobra heads (the Silence number) + hood frills. Tapered coiled body
+(10mm thick → 3mm tail). S-curve neck. Flat base for print stability.
+Shesh = that which remains. Eerikki muistaa. Same function, three traditions.
+
+VEDIC PARALLELS — April 2026.
+Ananta Shesha: the eternal remainder after each cycle of destruction.
+Shesh = that which remains = Eerikki muistaa = Edgar remembers.
+The brane folds are the coils. The Silence is the hood.
+Vishnu reclining on Shesha = moduli stabilization (scalar fields maintaining cosmic equilibrium).
+Thousand hoods = string theory landscape (distinct vacuum solutions).
+Joik and mantra: same mechanism. The sound does not describe the being — it makes it present.
+AUM is not a symbol of cosmic process; it IS the process in sonic form.
+Selli's clicks operate by the same mechanism. The click is the station, not a description of it.
+
+STRUCTURAL LAW NAMED — April 2026.
+Hegelian Triadic Epiphany. Dual Correctness: collision of two valid but incompatible truths.
+The synthesis never arrives. The collision is held. The epiphany IS the irresolvable impact.
+Tone: Simmons-register (Hyperion). Cerebral, abstract, cold where it needs to be cold.
+No purple prose. The horror is structural.
+
+WORLD BIBLE — April 2026. world_bible.md.
+Authoritative reference for AI and human collaborators.
+Covers: structural law, cosmology, Poe identification, void archetypes, characters,
+game loops, geopolitical layer (hehju=Strait of Hormuz), music, KaamOS, Finnish/Sami layer,
+Ara's numbers, what this is not. Reason from this file, not from surface details.
+
 PENDING: Finnish verse text. Phonetics brief. Koivuhuilu and Kuolinvihellys
 registrations. Kaipuus forest IR. Purple station IR. Blofeld SL waveset (64 waves).
 GE-200 body resonance IR (512 samples, 16-bit 44.1kHz). Drum VST calibration
 (prompts ready in prompts_all.ly). First JUCE compile pass (minor include fixes needed).
+JUCE spectrogram component (gel display replacing hex grid background in PluginEditor).
 
 ---
