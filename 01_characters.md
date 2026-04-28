@@ -83,8 +83,71 @@ Reko says the thing — confidently, in the wrong vocabulary. Technically
 accurate about the wrong category. The car is totaled and he's explaining
 why the radiator cap needs replacing.
 
+*"Se on mitä se on. Se on samaa kuin aina ennenkin."*
+It is what it is. It is the same as it always has been before.
+That's his line. That's the whole register.
+
+*"Say 'on', mitta. Say 'on',"* Reko chided. *"Say 'on'. Samaa."*
+
+He teaches the verb to be. Confidently. To someone learning.
+The irony is structural: Reko uses *on* — is — to assert things
+that are not quite true, in a universe where *is* is the hardest
+word to earn. He doesn't know this. He teaches it anyway.
+That's the most Reko thing he does.
+
 Turo says it again — correctly, with no depth. Names the problem right.
 Understands nothing about it. Worse in a different way.
+
+*"It is what it is, Reek. It is the same as it always has been before."*
+
+Turo is the translation layer. The Finnish reader is already far ahead —
+they heard Reko and understood. The English reader gets Turo.
+Which means the English reader's guide through this novel
+is the character who names everything correctly and understands nothing.
+That is not an accident.
+
+---
+
+REKO AND TURO — THE DAY JOB.
+Tedious routing. Playing Simon. Mitta is the game, not a person.
+Reko coaches the pattern like a slow student. Warmly. Certain repetition will work.
+Kindergarten cognition of spirographs. *Say 'on'. Samaa.*
+Turo reads the same session as a 1800+ chess problem. Twelve moves ahead
+into a position Reko hasn't noticed is a position.
+
+When Reko misses a sequence he swears into the fabric of the cubicle wall.
+Full force. The curses are real. The harm is real.
+He has no language for harm — none of them do — so the expletive
+lands in the cubicle foam and goes nowhere.
+The foam has heard it before. The foam will hear it again.
+*Se on samaa kuin aina ennenkin.*
+
+Missing a sequence causes incalculable harm to the least detectable party
+in their universe. Reko knows this the way he knows his chair has four legs.
+Not thought about. Not felt. Known. Filed under *on*.
+The harm has already happened to something he has no instruments to detect,
+in a register he has no vocabulary for, at a scale that would wreck him
+if he could see it. He can't see it. The job continues.
+
+Turo knows exactly which move failed. Logs it. Does not know what it costs.
+Is not curious about what it costs.
+
+Keijo knew what it costs. That's why Keijo is gone.
+
+IN THE GAME: missing a sequence is literal and complete. Missile Command register.
+World saved. World destroyed. Binary. Clean. Score on screen.
+Reko's cognitive register made mechanical. You reset. You try again.
+
+IN THE EXPANSE: harm is a question of degrees.
+Most errors cause a minor inconvenience to some worlder who never knows.
+The big fuckups are rare. They are earned.
+The gradations were always there. The binary was a mercy.
+
+The Keijo tier is when you understand that somewhere in your play history,
+before you knew the stakes, you earned one of the big ones.
+The game didn't tell you. The sequence just reset.
+The horror isn't the Missile Command moment.
+The horror is the audit.
 
 Kaija already knew. Doesn't say anything. Goes back to work. Has been
 close enough to something real that the conversation Reko and Turo are

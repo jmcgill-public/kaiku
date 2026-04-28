@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kaamos — template</title>
+<link rel="stylesheet" href="kaamos.css">
+<style>
+/* Page-specific overrides go here */
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="kaamos-nav">
+  <span class="nav-title">kaamos</span>
+  <a href="#prose">prose</a>
+  <a href="#cards">cards</a>
+  <a href="#scene">scene</a>
+  <a href="#tables">tables</a>
+  <a href="#components">components</a>
+</nav>
+
+<!-- HERO -->
+<header class="kaamos-hero hex-bg">
+  <p class="hero-sub">mcgill enterprises — kaamos product family</p>
+  <h1>page title here</h1>
+  <p class="hero-lede">
+    Lede text goes here. One or two sentences. Muted, orienting.
+    The world is larger than what's on the page.
+  </p>
+</header>
+
+<!-- PROSE SECTION -->
+<section class="kaamos-section" id="prose">
+  <span class="kh">prose</span>
+  <div class="prose">
+    <p>
+      Body text in <code>var(--font-serif)</code>. 1.1rem, line-height 1.9.
+      The default voice of the project. Use for world-building, narrative,
+      documentation that earns its length.
+    </p>
+    <p>
+      Emphasis in <em>amber italic</em> for names, Finnish terms, titles.
+      <strong>Mono-weight amber</strong> for technical terms, KaamOS labels.
+      <span class="violet">Violet for threshold content</span> — Hiljaisuus,
+      the unmapped station, the things that cost a world.
+    </p>
+  </div>
+
+  <div class="dual-callout" style="margin-top: 2rem;">
+    <span class="callout-label">dual correctness</span>
+    <p>
+      Two truths collide. Both are valid. Neither resolves.
+      Use this box for the load-bearing images, the structural law,
+      the moments that contain the whole cosmology.
+    </p>
+    <p>The last paragraph is muted italic. It is complete.</p>
+  </div>
+
+  <div class="dual-callout violet" style="margin-top: 1.5rem;">
+    <span class="callout-label">hiljaisuus — station nine</span>
+    <p>
+      Violet variant for void-adjacent content.
+      The fold that precedes all others. The Silence that breathes here.
+    </p>
+    <p>The gel ran too long. The voltage was wrong.</p>
+  </div>
+
+  <blockquote class="kaamos-quote" style="margin-top: 2rem;">
+    <em>Se on mitä se on.</em> Se on samaa kuin aina ennenkin.
+  </blockquote>
+
+  <blockquote class="kaamos-quote violet" style="margin-top: 1rem;">
+    <em>Hand of Edgar may slip from rein.</em>
+  </blockquote>
+</section>
+
+<!-- CHARACTER CARDS -->
+<section class="kaamos-section" id="cards">
+  <span class="kh">character cards</span>
+  <div class="char-grid">
+
+    <div class="char-card voidbound">
+      <div class="char-tag">voidbound — standard card</div>
+      <h3>Character Name</h3>
+      <p>Card body text at 0.98rem. The char-tag names the void archetype or role.</p>
+      <p>Second paragraph. <em>Amber emphasis.</em> Use for key lines, Finnish terms.</p>
+    </div>
+
+    <div class="char-card void-called">
+      <div class="char-tag">void called — threshold card</div>
+      <h3>Threshold Name</h3>
+      <p>Violet heading for void-called characters and threshold content.</p>
+      <p class="violet">Violet body text for hard structural constraints and void-adjacent facts.</p>
+    </div>
+
+    <div class="char-card mimir">
+      <div class="char-tag">mimir's well — the record</div>
+      <h3>Emo</h3>
+      <p>Muted heading for the non-volunteering recorder. Flat, precise, never interprets.</p>
+      <p class="muted">Muted body text for data, records, things stated without commentary.</p>
+    </div>
+
+    <div class="char-card dead">
+      <div class="char-tag">dead. speaks anyway.</div>
+      <h3>Ara</h3>
+      <p>Dashed border. Muted heading. For the voices that speak from structural gaps.</p>
+      <p class="muted">Her name: known. Never spoken. The reader never learns it.</p>
+    </div>
+
+    <div class="char-card full-width">
+      <div class="char-tag">the poles — full width card</div>
+      <h3>Full Width Card</h3>
+      <p>
+        Spans the full grid. Violet-gradient background.
+        Use for poles, pairs, the structural relationships that hold everything else.
+      </p>
+      <p class="violet">Hard constraints and void-adjacent facts go in violet.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCENE TEXT -->
+<div class="kaamos-section-full" id="scene">
+  <span class="kh">scene text — at usher reach</span>
+  <div class="scene-text">
+    <p>The place where Selli was had a fish counter.</p>
+    <p>"Again," Reko said.</p>
+    <p class="scene-beat">Not a question. Turo considered the fish.</p>
+    <p>
+      Selli had been behind the counter so long that the counter was a part of
+      Usher Reach the way the walls were a part.
+    </p>
+    <p>"What've you got," Turo said.</p>
+    <p>"Fish," Selli said.</p>
+    <span class="scene-click">// click</span>
+    <p>The not-funny part stayed.</p>
+    <p class="scene-void">The Silence noted the frequency.</p>
+    <span class="scene-click">// click</span>
+  </div>
+</div>
+
+<!-- TABLES -->
+<section class="kaamos-section" id="tables">
+  <span class="kh">kaamos table — mono register</span>
+  <table class="kaamos-table">
+    <thead>
+      <tr>
+        <th>station</th>
+        <th>status</th>
+        <th>glyph density</th>
+        <th>notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-accent">1 — KAUNO</td>
+        <td class="col-green">clear</td>
+        <td>nominal</td>
+        <td class="col-muted">routing stable</td>
+      </tr>
+      <tr>
+        <td class="col-accent">8 — KEIJO</td>
+        <td style="color: var(--hehku);">degraded</td>
+        <td>smearing</td>
+        <td class="col-muted">adjacent to nine</td>
+      </tr>
+      <tr>
+        <td class="col-violet">9 — HILJAISUUS</td>
+        <td class="col-violet">unmapped</td>
+        <td>—</td>
+        <td class="col-violet">the fold. do not route.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- INLINE COMPONENTS -->
+<section class="kaamos-section" id="components">
+  <span class="kh">inline components</span>
+
+  <div class="prose">
+    <p>
+      Status indicators:
+      <span class="status-dot green"></span><span class="mono-label">BFS clear</span>
+      &nbsp;&nbsp;
+      <span class="status-dot amber"></span><span class="mono-label">routing</span>
+      &nbsp;&nbsp;
+      <span class="status-dot hehku"></span><span class="mono-label">hehku flow</span>
+      &nbsp;&nbsp;
+      <span class="status-dot violet"></span><span class="mono-label">hiljaisuus</span>
+    </p>
+
+    <p style="margin-top: 1.5rem;">
+      Inline terminal strings: <span class="k">kaiku</span> /
+      <span class="k">tyhjyydenkaiku</span> /
+      <span class="h">hiljaisuus</span> /
+      <span class="h">station_nine</span>
+    </p>
+
+    <p style="margin-top: 1.5rem;">
+      Mono labels:
+      <span class="mono-label">edge count</span> ·
+      <span class="mono-label">67,753 distinct</span> ·
+      <span class="mono-label">peak: 16</span>
+    </p>
+  </div>
+
+  <div style="margin-top: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+    <span class="hiljaisuus-pulse"></span>
+    <span class="mono-label">hiljaisuus</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="kaamos-footer">
+  <span class="hiljaisuus-pulse"></span>
+  <span class="amber">kaamos</span>
+  <span class="sep">·</span>
+  mcgill enterprises
+  <span class="sep">·</span>
+  eerikki muistaa
+</footer>
+
+</body>
+</html>

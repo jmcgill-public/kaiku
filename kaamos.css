@@ -1,0 +1,735 @@
+/*
+ * KAAMOS DESIGN SYSTEM
+ * McGill Enterprises — Kaamos product family
+ *
+ * Color names are drawn from the ur-myth vocabulary.
+ * Do not rename them to generic values.
+ * The names are load-bearing.
+ *
+ * Primary pulse: 0.15Hz (6.67s) — the Hiljaisuus frequency.
+ * Do not change this value.
+ */
+
+/* ─────────────────────────────────────────────
+   TOKENS
+   ───────────────────────────────────────────── */
+
+:root {
+
+  /* VOID — backgrounds, depth */
+  --void:        #070711;   /* deepest background — the space between stations */
+  --void-1:      #0c0c1a;   /* card surface */
+  --void-2:      #12121f;   /* scene / inset background */
+  --void-3:      #1a1a2e;   /* borders, dividers */
+  --void-4:      #2a2a44;   /* hover borders, emphasis lines */
+
+  /* KAIKU — amber, the primary voice */
+  --kaiku:       #c8a050;   /* echo of the void — primary accent, text, glow */
+  --kaiku-mid:   #8a6030;   /* mid amber — secondary elements */
+  --kaiku-dim:   #5a4420;   /* dim amber — subtle borders, backgrounds */
+  --kaiku-ghost: #2a1e0a;   /* ghost amber — near-invisible warmth */
+
+  /* HILJAISUUS — violet, the Silence */
+  --hiljaisuus:  #8030c0;   /* station nine — threshold, danger, the unmapped */
+  --hiljaisuus-mid: #5020a0;
+  --hiljaisuus-dim: #3d1660; /* violet dim — adjacent, bleeding */
+  --hiljaisuus-ghost: #1a0830;
+
+  /* HEHKU — ember, the resource, the chokepoint */
+  --hehku:       #c85020;   /* the thing that flows through Hiljaisuus */
+  --hehku-dim:   #6b2810;
+
+  /* POHJA — void blue, the deep north */
+  --pohja:       #3030a0;   /* depth, the far stations */
+  --pohja-dim:   #181850;
+
+  /* ASEMA — station green, safe routing, go */
+  --asema:       #40c080;   /* BFS clear path — green = go */
+  --asema-dim:   #1a5035;
+
+  /* TEXT */
+  --text:        #e2ddd4;   /* primary — warm off-white */
+  --text-mid:    #a09890;   /* secondary */
+  --muted:       #7a7890;   /* muted — labels, captions */
+  --muted-dim:   #404058;   /* very muted — disabled */
+
+  /* TYPOGRAPHY */
+  --font-serif:  Georgia, 'Times New Roman', serif;
+  --font-sans:   system-ui, -apple-system, sans-serif;
+  --font-mono:   'Courier New', Courier, monospace;  /* KaamOS terminal register */
+
+  /* MOTION */
+  --pulse-duration: 6.67s;  /* 0.15Hz — do not change */
+  --transition-fast: 0.15s ease;
+  --transition-mid:  0.3s ease;
+
+  /* GEOMETRY */
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --hex-size:    28px;
+}
+
+/* ─────────────────────────────────────────────
+   RESET & BASE
+   ───────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* ─────────────────────────────────────────────
+   ANIMATIONS
+   ───────────────────────────────────────────── */
+
+@keyframes hiljaisuus-pulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1.0; }
+}
+
+@keyframes hiljaisuus-smear {
+  0%   { transform: scaleY(1.0); opacity: 0.6; }
+  50%  { transform: scaleY(1.4); opacity: 0.9; }
+  100% { transform: scaleY(1.0); opacity: 0.6; }
+}
+
+@keyframes asema-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* ─────────────────────────────────────────────
+   HEX GRID TEXTURE
+   ───────────────────────────────────────────── */
+
+.hex-bg {
+  background-image:
+    repeating-linear-gradient(
+      60deg,
+      transparent, transparent calc(var(--hex-size) - 1px),
+      rgba(200,160,80,0.04) calc(var(--hex-size) - 1px), rgba(200,160,80,0.04) var(--hex-size)
+    ),
+    repeating-linear-gradient(
+      -60deg,
+      transparent, transparent calc(var(--hex-size) - 1px),
+      rgba(200,160,80,0.04) calc(var(--hex-size) - 1px), rgba(200,160,80,0.04) var(--hex-size)
+    );
+}
+
+.hex-bg-violet {
+  background-image:
+    repeating-linear-gradient(
+      60deg,
+      transparent, transparent calc(var(--hex-size) - 1px),
+      rgba(128,48,192,0.06) calc(var(--hex-size) - 1px), rgba(128,48,192,0.06) var(--hex-size)
+    ),
+    repeating-linear-gradient(
+      -60deg,
+      transparent, transparent calc(var(--hex-size) - 1px),
+      rgba(128,48,192,0.06) calc(var(--hex-size) - 1px), rgba(128,48,192,0.06) var(--hex-size)
+    );
+}
+
+/* ─────────────────────────────────────────────
+   NAVIGATION
+   ───────────────────────────────────────────── */
+
+.kaamos-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(7,7,17,0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--void-3);
+  padding: 0.75rem 2rem;
+  display: flex; gap: 2rem; flex-wrap: wrap;
+  align-items: center;
+}
+
+.kaamos-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  transition: color var(--transition-fast);
+}
+.kaamos-nav a:hover { color: var(--kaiku); }
+
+.kaamos-nav .nav-title {
+  color: var(--kaiku);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  margin-right: auto;
+}
+
+/* ─────────────────────────────────────────────
+   HEADER / HERO
+   ───────────────────────────────────────────── */
+
+.kaamos-hero {
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--void-3);
+  position: relative; overflow: hidden;
+}
+
+.kaamos-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: var(--kaiku);
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.kaamos-hero .hero-sub {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+  margin-bottom: 2rem;
+}
+
+.kaamos-hero .hero-lede {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  position: relative;
+}
+
+/* ─────────────────────────────────────────────
+   SECTIONS
+   ───────────────────────────────────────────── */
+
+.kaamos-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--void-3);
+}
+.kaamos-section:last-of-type { border-bottom: none; }
+
+.kaamos-section-full {
+  background: var(--void-2);
+  width: 100%;
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--void-3);
+  border-top: 1px solid var(--void-3);
+}
+.kaamos-section-full > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─────────────────────────────────────────────
+   SECTION HEADINGS
+   ───────────────────────────────────────────── */
+
+.kh {  /* kaamos heading — section label */
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--kaiku);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.kh-violet {
+  color: var(--hiljaisuus);
+}
+
+/* ─────────────────────────────────────────────
+   PROSE
+   ───────────────────────────────────────────── */
+
+.prose {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  max-width: 680px;
+}
+.prose p { margin-bottom: 1.25rem; }
+.prose p:last-child { margin-bottom: 0; }
+.prose em { color: var(--kaiku); font-style: italic; }
+.prose strong {
+  color: var(--kaiku);
+  font-weight: normal;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+.prose .violet { color: var(--hiljaisuus); }
+
+/* ─────────────────────────────────────────────
+   CALLOUT — DUAL CORRECTNESS BOX
+   ───────────────────────────────────────────── */
+
+.dual-callout {
+  background: var(--void-1);
+  border: 1px solid var(--kaiku-dim);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  margin: 2rem 0;
+  max-width: 580px;
+}
+.dual-callout.violet {
+  border-color: var(--hiljaisuus-dim);
+  background: linear-gradient(135deg, var(--void-1), var(--hiljaisuus-ghost));
+}
+
+.dual-callout .callout-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--kaiku);
+  display: block;
+  margin-bottom: 1rem;
+}
+.dual-callout.violet .callout-label { color: var(--hiljaisuus); }
+
+.dual-callout p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 0.85rem;
+  color: var(--text);
+}
+.dual-callout p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* ─────────────────────────────────────────────
+   CHARACTER CARDS
+   ───────────────────────────────────────────── */
+
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+.char-card {
+  background: var(--void-1);
+  border: 1px solid var(--void-3);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  transition: border-color var(--transition-mid);
+}
+.char-card:hover { border-color: var(--kaiku-dim); }
+
+.char-card.full-width {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--void-1), var(--hiljaisuus-ghost));
+  border-color: var(--hiljaisuus-dim);
+}
+
+/* Void archetype variants */
+.char-card.voidbound    { border-color: var(--kaiku-dim); }
+.char-card.void-called  { border-color: var(--hiljaisuus-dim); }
+.char-card.threshold    { border-color: var(--hiljaisuus-dim); background: linear-gradient(135deg, var(--void-1), var(--hiljaisuus-ghost)); }
+.char-card.dead         { border-style: dashed; border-color: var(--void-3); }
+.char-card.mimir        { border-color: var(--void-4); }
+
+.char-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.char-card h3 {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: var(--kaiku);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+.char-card.void-called h3  { color: var(--hiljaisuus); }
+.char-card.threshold h3    { color: var(--hiljaisuus); }
+.char-card.mimir h3        { color: var(--muted); }
+.char-card.dead h3         { color: var(--muted); }
+
+.char-card p {
+  margin-bottom: 0.85rem;
+  font-size: 0.98rem;
+}
+.char-card p:last-child { margin-bottom: 0; }
+.char-card em     { color: var(--kaiku); font-style: italic; }
+.char-card .violet { color: var(--hiljaisuus); font-style: italic; }
+.char-card .muted  { color: var(--muted); }
+
+/* ─────────────────────────────────────────────
+   SCENE TEXT
+   ───────────────────────────────────────────── */
+
+.scene-text {
+  max-width: 540px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+.scene-text p { margin-bottom: 1rem; }
+
+.scene-click {  /* the paddle */
+  color: var(--kaiku);
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin: 1.25rem 0;
+  display: block;
+}
+
+.scene-beat {   /* stage direction register */
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.scene-void {   /* Hiljaisuus-adjacent lines */
+  color: var(--hiljaisuus);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────
+   GEL / SPECTROGRAM DISPLAY
+   (Lane Run — see lane_run.html for full impl)
+   ───────────────────────────────────────────── */
+
+.gel-container {
+  background: var(--void);
+  border: 1px solid var(--void-3);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  overflow: hidden;
+  position: relative;
+}
+
+.gel-header {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--void-3);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--kaiku);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gel-lane {
+  padding: 0.4rem 1rem;
+  border-bottom: 1px solid var(--void-3);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+.gel-lane:last-child { border-bottom: none; }
+.gel-lane.station-nine {
+  background: rgba(128,48,192,0.06);
+  color: var(--hiljaisuus);
+}
+.gel-lane .lane-label {
+  color: var(--muted);
+  min-width: 80px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+.gel-lane.station-nine .lane-label { color: var(--hiljaisuus); }
+
+/* ─────────────────────────────────────────────
+   TABLES — KaamOS register
+   ───────────────────────────────────────────── */
+
+.kaamos-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.kaamos-table th {
+  color: var(--muted);
+  text-align: left;
+  padding: 0.5rem 1rem 0.5rem 0;
+  border-bottom: 1px solid var(--void-3);
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.kaamos-table td {
+  padding: 0.7rem 1rem 0.7rem 0;
+  border-bottom: 1px solid var(--void-3);
+  vertical-align: top;
+  color: var(--text);
+}
+.kaamos-table tr:last-child td { border-bottom: none; }
+.kaamos-table .col-accent { color: var(--kaiku); }
+.kaamos-table .col-muted  { color: var(--muted); }
+.kaamos-table .col-violet { color: var(--hiljaisuus); }
+.kaamos-table .col-green  { color: var(--asema); }
+
+/* ─────────────────────────────────────────────
+   INLINE COMPONENTS
+   ───────────────────────────────────────────── */
+
+/* The Hiljaisuus pulse — use on status indicators */
+.hiljaisuus-pulse {
+  display: inline-block;
+  width: 7px; height: 7px;
+  background: var(--hiljaisuus);
+  border-radius: 50%;
+  animation: hiljaisuus-pulse var(--pulse-duration) ease-in-out infinite;
+  vertical-align: middle;
+}
+
+/* Station status indicators */
+.status-dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+.status-dot.green  { background: var(--asema); animation: asema-blink 2s ease-in-out infinite; }
+.status-dot.violet { background: var(--hiljaisuus); animation: hiljaisuus-pulse var(--pulse-duration) ease-in-out infinite; }
+.status-dot.amber  { background: var(--kaiku); }
+.status-dot.hehku  { background: var(--hehku); }
+
+/* Mono label — KaamOS terminal register */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Amber emphasis — inline terminal string */
+.k { color: var(--kaiku); font-family: var(--font-mono); font-size: 0.9em; }
+.h { color: var(--hiljaisuus); font-family: var(--font-mono); font-size: 0.9em; }
+
+/* Border accent — left-rule blockquote */
+.kaamos-quote {
+  border-left: 2px solid var(--kaiku-dim);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+.kaamos-quote em { color: var(--kaiku); font-style: normal; }
+.kaamos-quote.violet { border-color: var(--hiljaisuus-dim); }
+.kaamos-quote.violet em { color: var(--hiljaisuus); }
+
+/* ─────────────────────────────────────────────
+   FOOTER
+   ───────────────────────────────────────────── */
+
+.kaamos-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  border-top: 1px solid var(--void-3);
+}
+.kaamos-footer .amber { color: var(--kaiku); }
+.kaamos-footer .sep { margin: 0 0.75rem; color: var(--void-4); }
+
+/* ─────────────────────────────────────────────
+   GAME-SUGGESTIVE GEOMETRY
+   Backgrounds and borders that imply the topology
+   without showing the gameplay.
+   ───────────────────────────────────────────── */
+
+/* BFS grid — the routing substrate */
+.bfs-bg {
+  background-image:
+    linear-gradient(var(--void-3) 1px, transparent 1px),
+    linear-gradient(90deg, var(--void-3) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center center;
+}
+
+/* Station ring — circular topology suggestion */
+.station-ring {
+  position: relative;
+}
+.station-ring::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1px solid var(--kaiku-dim);
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Nine-point border — one corner per station, ninth missing */
+.nine-border {
+  border: 1px solid var(--void-3);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+.nine-border::before {
+  content: '';
+  position: absolute;
+  top: -1px; right: -1px;
+  width: 12px; height: 12px;
+  background: var(--void);
+  border-left: 1px solid var(--hiljaisuus-dim);
+  border-bottom: 1px solid var(--hiljaisuus-dim);
+}
+
+/* BFS path border — amber trace on left, violet terminus on bottom */
+.bfs-border {
+  border: 1px solid var(--void-3);
+  border-left: 2px solid var(--kaiku-dim);
+  border-bottom: 2px solid var(--hiljaisuus-dim);
+  border-radius: var(--radius-md);
+}
+
+/* Station card — implies a node in the routing graph */
+.station-card {
+  background: var(--void-1);
+  border: 1px solid var(--void-3);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  position: relative;
+  transition: border-color var(--transition-mid);
+}
+.station-card::after {
+  content: '';
+  position: absolute;
+  top: 8px; right: 8px;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--kaiku-dim);
+  transition: background var(--transition-mid);
+}
+.station-card:hover { border-color: var(--kaiku-dim); }
+.station-card:hover::after { background: var(--kaiku); }
+.station-card.nine::after {
+  background: var(--hiljaisuus);
+  animation: hiljaisuus-pulse var(--pulse-duration) ease-in-out infinite;
+}
+.station-card.nine { border-color: var(--hiljaisuus-dim); }
+
+/* Route line — horizontal BFS path connector */
+.route-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--kaiku-dim),
+    var(--kaiku),
+    var(--kaiku-dim)
+  );
+  margin: 1rem 0;
+  position: relative;
+}
+.route-line::before,
+.route-line::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--kaiku);
+}
+.route-line::before { left: 0; }
+.route-line::after  { right: 0; }
+
+/* Glyph frame — the cipher box, edge-count aware */
+.glyph-frame {
+  border: 1px solid var(--kaiku-dim);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--kaiku);
+  background: var(--void);
+  display: inline-block;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+.glyph-frame::before {
+  content: attr(data-edges);
+  position: absolute;
+  top: -8px; right: 6px;
+  font-size: 0.65rem;
+  color: var(--muted);
+  background: var(--void);
+  padding: 0 4px;
+  letter-spacing: 0.15em;
+}
+
+/* Void corridor — the full-width section that feels like a station hallway */
+.void-corridor {
+  background: var(--void-2);
+  border-top: 1px solid var(--void-3);
+  border-bottom: 1px solid var(--void-3);
+  position: relative;
+  overflow: hidden;
+}
+.void-corridor::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--kaiku-dim) 30%,
+    var(--kaiku-dim) 70%,
+    transparent
+  );
+}
+.void-corridor::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--hiljaisuus-dim) 30%,
+    var(--hiljaisuus-dim) 70%,
+    transparent
+  );
+}
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .char-grid { grid-template-columns: 1fr; }
+  .kaamos-nav { gap: 1rem; }
+  .kaamos-hero { padding: 4rem 1.5rem 3rem; }
+  .kaamos-section { padding: 3rem 1.5rem; }
+}
