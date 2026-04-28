@@ -180,7 +180,7 @@ One verse. The silence after it is part of the verse.
 
 ## SECTION 6 — KUOLINVIHELLYS
 **Target duration:** ~0:15
-**Character:** Tadgh's death whistle. The threshold. Uninvited.
+**Character:** Taav's death whistle. The threshold. Uninvited.
 
 ```
 Instrument:     Kuolinvihellys (death whistle registration — TO BE BUILT)
@@ -202,13 +202,13 @@ The listener has to sit with what just happened before the flute arrives.
 
 ## SECTION 7 — KOIVUHUILU
 **Target duration:** ~0:45
-**Character:** Tadgh's birch flute. Sweet, sanguine. Drawing down.
+**Character:** Taav's birch flute. Sweet, sanguine. Drawing down.
 
 ```
 Instrument:     Koivuhuilu (birch flute registration — TO BE BUILT)
                 Warm, breathy, slightly flat — carved wood, not factory tolerance
 IR:             Kaipuus forest (TO BE BUILT) — not the station, the forest
-                The space Tadgh is from, not the space he works in
+                The space Taav is from, not the space he works in
 Melody:         The resolution tail, in the low register
                 A → G# → F# → F → E → F# (stepwise Phrygian descent)
                 Slow. One note at a time. Silence between notes.
