@@ -63,6 +63,102 @@ whether Selli is dead.
 
 ---
 
+TAAV IS KRISHNA. Not literally. Structurally.
+The flute player who makes things present by playing them. The warmth, the loquacity — surface.
+Underneath: the flute is calling, not describing. Same tradition.
+Koivuhuilu calls the world into being. Kuolinvihellys dissolves it.
+Same hands. Same gesture. Different point in the cycle.
+
+THE DEATH WHISTLE — carved once, never played again.
+Taav carved it, found it wanting, blamed his knife.
+Emo noted the frequency domain. Didn't comment.
+The Voidborn registered a structural anomaly. Filed it under maintenance.
+Aava heard Shesha exhale. Understood the cycle had been marked.
+Taav thinks he made a bad whistle. Put it down. Went back to the birch flute.
+The Kuolinvihellys is Kali Ma's mantra. The dark emanation of the Green Tara process.
+The compassionate act completed. The fierce face is not a different deity.
+It is the same gesture at the end of the cycle. Taav doesn't know this.
+
+FINNEGANS WAKE — the sound of the bricks tumbling back into the hod.
+The fall is the beginning. The craftsman goes down. The cosmos marks it.
+The craftsman gets up, blames the knife, makes tea.
+The Wake ends mid-sentence. Begins mid-sentence. They are the same sentence.
+Taav's whistle is one note — the note the universe makes when it folds back on itself.
+Already in Emo's record. Already in Aava's understanding. Already in the Voidborn's log.
+Selli's paddle keeps clicking.
+
+LITERARY REGISTER — three simultaneous traditions:
+Joyce: polyphonic witness. Same event, every character a different frequency domain.
+       The end feeds the beginning. The structure is the meaning.
+Ibsen: the pressure of the unsaid. The thing in the room nobody names.
+       The Silence is not a monster — it is a fact everyone is organized around.
+       The paddle Reko stopped hearing. The flute Taav put down. The whistle on a shelf.
+Poe:   the cipher that rewards the patient reader. The gold bug at the end of the string.
+       Eerikki is Poe. The code is underneath everything.
+
+REM: "It's the end of the world as we know it." Taav feels fine.
+
+---
+
+THE INCITING IMAGE — the structural law in one moment.
+Protagonist. Last moment of death by hanging.
+Sees a bird with a broken wing.
+Laments that she could have saved the bird using the string she used to hang herself.
+Two valid truths. Both true. Neither resolves.
+She had the string. The bird needed the string. She needed the string.
+The epiphany is the collision. Held at the last moment of consciousness.
+Not guilt. Not regret. Pure Keijo clarity arriving exactly too late to be useful.
+The bird with the broken wing contains the entire cosmology.
+Do not add to this image. It is complete.
+
+---
+
+THE WHISTLE IN THE TREE.
+Kuolinvihellys hangs from a birch tree in Eerikki's forest.
+Taav didn't throw it away. Didn't keep it. Hung it.
+The hanging is not a metaphor for death. It is a metaphor for suicide.
+This is never stated. It lives beneath all surfaces.
+
+In void or void-adjacent life, conventional death may not be available.
+The brane doesn't release you the way a body does.
+The only exit is chosen. The only door is the one you make.
+
+The Finnish register on this: not shame, not moral horror, not tragedy in the
+operatic sense. Something closer to sovereignty. A stark personal fact.
+Sauna, silence, survived — and sometimes didn't, and the forest knows,
+and the forest doesn't make a speech about it.
+This is not glorification. It is the specific gravity of a culture that has
+lived inside kaamos long enough to develop a different relationship
+with the question.
+
+Taav hung the whistle. Nobody asked why. Nobody will.
+Reko checks whether Selli is dead. Same register. Practical. No drama.
+The Stationborn have no language for harm but they have this:
+the thing hung in the tree that everyone has noticed and nobody mentions.
+Ibsen beneath the Ibsen.
+
+The whistle hangs because Taav understood something the day he carved it
+and chose to put that understanding somewhere external to himself,
+in the birch that gave the living flute its voice,
+where it can hang between roots and moons and be what it is
+without being spoken.
+
+MUSICAL/LYRICAL REFERENCES:
+Cellar Darling — "Hang". "from roots to moons."
+The whistle hangs where roots meet the reach toward sky.
+Odin on Yggdrasil: the hanging that receives knowledge, costs an eye.
+The whistle is hanging because it has already done its work.
+It doesn't need to be played again. It just needs to be where it is.
+
+---
+
+NOTE ON AUTHORSHIP.
+This subject matter is carried by someone with a long and complicated relationship to it.
+That is not a disclaimer. It is a credential.
+Write from inside. Not about.
+
+---
+
 GLYPH SPACE — April 2026. glyph_count.py.
 8 stations, radius-2 hex grid, BFS-constrained walks.
 109,600 sequences → 67,753 distinct base glyphs.
@@ -151,9 +247,10 @@ INSTRUMENTS:
 Tyhjyydenkaiku — primary FM patch. Hurdy gurdy (Anna Murphy / Cellar Darling register,
 original not derivative) + Scottish mouth music formants. KVR Music Cafe submission.
 Patch family: Kuilunsikiö (visceral), Pohjankaiku (Mellotron-heavy), Kuilukaiku (stripped).
-Koivuhuilu — Selli's birch flute. Literal registration (warm, breathy, slightly flat).
-Kuolinvihellys — Selli's symbolic flute. Andean death whistle register. Threshold instrument.
-The literal flute is Selli alive. The death whistle is Selli at the boundary.
+Koivuhuilu — Taav's birch flute. Literal registration (warm, breathy, slightly flat).
+Kuolinvihellys — Taav's symbolic flute. Andean death whistle register. Threshold instrument.
+The literal flute is Taav alive. The death whistle is Taav at the boundary.
+Selli slings fish. The paddle is his instrument. The flutes are Taav's.
 
 IRs built: hiljaisuus_station.wav — 40x12x7m metal corridor, RT60 2.2s, not purple.
 IRs pending: Kaipuus forest (longing register, for Koivuhuilu), Purple/threshold (for Kuolinvihellys).

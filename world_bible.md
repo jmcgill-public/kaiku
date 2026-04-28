@@ -11,6 +11,9 @@
 
 Two truths collide. Both are valid. Neither resolves. The epiphany IS the collision held in permanent tension, not a synthesis that follows it. Every major element of this project — cosmological, narrative, musical, ludic — is an instantiation of this law.
 
+**The load-bearing image:**
+Protagonist. Last moment of death by hanging. Sees a bird with a broken wing. Laments that she could have saved the bird using the string she used to hang herself. She had the string. The bird needed the string. She needed the string. Both true. Neither resolves. The epiphany is the collision, held at the last possible moment of consciousness. Not guilt. Keijo clarity arriving exactly too late. Do not add to this image. It is complete.
+
 The game does not resolve. The novel does not explain. The music does not comfort. The Silence does not attack. These are not omissions. They are the form.
 
 **Tone:** Cerebral, abstract. Simmons-register (Hyperion / The Fall of Hyperion). Erudite, layered, cold where it needs to be cold. No purple prose. The horror is structural, not atmospheric. The beauty is precise, not ornamental.
@@ -86,9 +89,11 @@ Native to brane logic. They did not cross — they were already there. They perc
 
 **Keijo** — Eureka Poe. Cosmological register. Understood the structure. Was not believed. Every death wrecks a world. He knew. He wrote it down.
 
-**Selli** — The conduit. His joik is *Selli-Grilli* — a sonic painting, an identity record, the alliteration itself is the joik. His paddle clicks are a phonological anchor; he stopped hearing them as sound. They are now rhythm. He has two flutes:
-- *Koivuhuilu* — the literal birch flute. Warm, breathy, slightly flat. Selli alive.
-- *Kuolinvihellys* — the symbolic flute. Andean death whistle register. Selli at the threshold.
+**Selli** — The conduit. His joik is *Selli-Grilli* — a sonic painting, an identity record, the alliteration itself is the joik. His paddle clicks are a phonological anchor; he stopped hearing them as sound. They are now rhythm. He slings fish. The paddle is his instrument. The click is the station.
+
+**Taav** — The flute player. Two instruments:
+- *Koivuhuilu* — the literal birch flute. Warm, breathy, slightly flat. Taav alive.
+- *Kuolinvihellys* — the symbolic flute. Andean death whistle register. Taav at the threshold.
 
 **Emo** — Mimir's well. Non-volunteering recorder. Detached, minimalist. Knows everything; does not volunteer. Recognizes the Selli-Grilli joik as valid brane-frequency data. The well predates everyone who has drawn from it.
 
@@ -96,7 +101,7 @@ Native to brane logic. They did not cross — they were already there. They perc
 
 **Kaija** — Her hands go toward the improvised thing. Reflex, not criticism.
 
-**Taav** — Loquacious, cobbler's register, warm. No one gets a word in when Taav gets started. Except Eerikki. Taav's conversations with Eerikki are monosyllabic. This contrast is a characterization instrument. Keep it.
+**Taav** — Loquacious, cobbler's register, warm. No one gets a word in when Taav gets started. Except Eerikki. Taav's conversations with Eerikki are monosyllabic. This contrast is a characterization instrument. Keep it. The flute player. Koivuhuilu and Kuolinvihellys are his. Structurally Krishna — the flute calls, doesn't describe. The death whistle is Kali Ma's mantra; the fierce emanation is the compassionate act completed. Taav doesn't know any of this. He carved the death whistle once, found it wanting, blamed his knife, put it down. Has not played it since. Thinks he made a bad whistle. He did not make a bad whistle.
 
 ---
 
@@ -153,9 +158,9 @@ This track is Reko/Turo/Keijo in music. The listener doesn't know that.
 
 **Patch family:** Tyhjyydenkaiku (primary) / Kuilunsikiö (visceral) / Pohjankaiku (Mellotron-heavy) / Kuilukaiku (stripped).
 
-**Koivuhuilu** — Selli's literal birch flute. Warm, breathy, slightly flat.
+**Koivuhuilu** — Taav's literal birch flute. Warm, breathy, slightly flat.
 
-**Kuolinvihellys** — Selli's symbolic flute. Andean death whistle register. Threshold instrument.
+**Kuolinvihellys** — Taav's symbolic flute. Andean death whistle register. Threshold instrument.
 
 ---
 
@@ -202,7 +207,19 @@ Ara counts. These are not symbolic. They are operational.
 
 ---
 
-## XII. WHAT THIS IS NOT
+## XII. LITERARY REGISTER
+
+Three simultaneous traditions. All active at once.
+
+**Joyce** — polyphonic witness. The same event refracted through every character's frequency domain. No authoritative account. The end feeds the beginning; the structure is the meaning. Finnegans Wake: the fall is the beginning, the craftsman gets up and blames the knife, the bricks tumble back into the hod. Taav's whistle is that note.
+
+**Ibsen** — the pressure of the unsaid. The thing in the room that everyone is organized around without naming. The Silence is not a monster; it is a fact. The paddle Reko stopped hearing. The whistle on a shelf that Emo has catalogued and nobody will ask about. Entire scenes built around the object nobody mentions.
+
+**Poe** — the cipher underneath. The gold bug at the end of the string. Patient readers are rewarded. Eerikki is Poe; the project is named after him; he invented this genre. The glyph alphabet is the Gold-Bug. The pattern is visible to those who look correctly.
+
+---
+
+## XIII. WHAT THIS IS NOT
 
 This is not Dune (no messianic arc, no ecology-as-political-allegory).
 This is not Roadside Picnic (no inexplicable artifact mystery).
