@@ -2,6 +2,32 @@
 
 *Echo of the void.*
 
+---
+
+## A note on v0.1
+
+The architecture is documented. The sound design is intentional.
+The build may not survive contact with your system.
+
+This instrument was designed with AI assistance. It was not vibe coded —
+the FM architecture, the patch design, the acoustic spaces, and the
+production ethic are deliberate. The code describes how far the vision
+has gotten. The README describes what it is trying to be. Those are not
+the same document yet.
+
+Kaiku exists in service to a real project: a novel, a video game, and
+a desktop environment that share a visual and sonic vocabulary. These
+will be produced. The record will be mixed. The game will ship. The
+instrument was built because the project needed it.
+
+If you find it broken: noted. If you find it interesting despite that:
+welcome. KVR gods and worldborn alike — contributions are open.
+
+*Pieni tuli lämmittää, jos sydän on auki.*
+A small fire warms, if the heart is open.
+
+---
+
 A free FM synthesizer for Linux, macOS, and Windows.
 VST3. REAPER-tested. KVR Music Cafe.
 
