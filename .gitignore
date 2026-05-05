@@ -45,3 +45,5 @@ __pycache__/
 .DS_Store
 Thumbs.db
 deploy_games.sh
+PR.md
+COMMIT.md
