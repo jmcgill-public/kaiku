@@ -19,10 +19,3 @@ They can hold it with you.
 *This book was written by someone who knows the territory.*
 *That is why it was written.*
 
----
-
-# Acknowledgements
-
-Dr. Bryan, for punching me in the gut to teach me how to sing.
-
-Nick O., for teaching me JavaScript.
