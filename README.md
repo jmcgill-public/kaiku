@@ -18,8 +18,8 @@ KVR: [kvraudio.com/forum/viewtopic.php?t=629750](https://kvraudio.com/forum/view
 
 You will regret playing either of these. If you want to hear Kaiku in her first iteration, she's there. You were warned.
 
-- kuule — [rebraining.org/kuule.html](https://rebraining.org/kuule.html)
-- birch — [rebraining.org/birch.html](https://rebraining.org/birch.html)
+- kuule — [rebraining.org/kuule](https://rebraining.org/kuule)
+- birch — [rebraining.org/birch](https://rebraining.org/birch)
 
 Both render in fosfori. Void black. No chrome. Bring headphones.
 
