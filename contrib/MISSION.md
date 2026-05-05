@@ -25,3 +25,11 @@ All three, or it does not ship.
 ---
 
 Finnish language and Finnish culture are structural to this project — not decorative. You do not have to speak Finnish to contribute. You have to respect that the language is doing load-bearing work.
+
+---
+
+## before you build
+
+This universe does not have clocks. It has seasons. The distinction is not cosmetic — it changes what the software is doing and why.
+
+[From Shadow to Caesium](https://rebraining.org/essays/clocks) — a short history of clocks, and the question they have always been asking. Read this before touching anything temporal. The `arch/time.md` document in this repo is the technical implementation of what the essay establishes philosophically. Neither is optional context.

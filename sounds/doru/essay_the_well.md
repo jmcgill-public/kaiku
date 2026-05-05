@@ -1,0 +1,15 @@
+# The Well and Those Who Find It
+
+Both Moonsorrow and Insomnium are Finnish. Both are drawing from the same landscape — the lake light, the long dark, the birch forest that keeps its own counsel. That is where the similarity ends and where the comparison becomes interesting.
+
+Moonsorrow approaches the ur-myth as cosmological fact. The subject of their music is the universe — its age, its indifference, its memory. The well knows everything. Moonsorrow builds music that sounds like the well sounds to itself: vast, patient, pre-verbal. The structures are epic not for drama but because the thing being described is actually large. Jumalten Aika runs nearly thirteen minutes because that is how long it takes to say what it says. The black metal substrate — the tremolo, the blast, the cold production register — isn't aggression. It's distance. The music is cold because space is cold. The pagan framework isn't nostalgia. It's the most accurate vocabulary available for describing forces that predate human naming.
+
+Insomnium is personal. The subject is grief — specific, felt, embodied. The loss of someone. The loss of something. The winter that doesn't lift. Where Moonsorrow is cosmological, Insomnium is elegiac. The melodic death metal structure serves this: riffs that carry melody because melody is how humans process loss, vocals that push between singing and tearing because grief moves between those registers. *Winter's Gate* is the exception that proves the rule — their forty-minute single-track experiment is their most Moonsorrow-adjacent work, and notably it's the one where the subject scales up from personal grief to mythological journey. When Insomnium reaches for the cosmic, they reach for Kalevala. When they step back, they're at a graveside in November.
+
+The distinction that matters for our purposes: Moonsorrow draws from the well as ritual. Insomnium draws from the well as wound. Both found the same water. They arrived differently and they left carrying different things.
+
+For the third comparison: consider Cult of Luna, Swedish, post-metal. They share Moonsorrow's ambition of scale and Insomnium's weight of grief, but they approach the void without mythology. No runic vocabulary. No pagan framework. Just industrial texture, long-form structures, and the honest acknowledgment that the cosmos doesn't have a name for what it's doing to you. Where Moonsorrow says *the gods drew the circle*, Cult of Luna says *there is a circle* — and stops there. The Swedish post-metal tradition is the secular version of the same recognition. Colder in a different way. Not the cold of ancient distance but the cold of the contemporary sublime: the universe is large and you are not equipped for it and there is no ritual that helps.
+
+The Hiljaisuus soundtrack lives in Moonsorrow's register — cosmological, mythological, incantatory. Not Insomnium's wound. Not Cult of Luna's secular abyss. The Silence has a name in this world. The circle was drawn by something. The well is Emo and Emo remembers.
+
+That's the brief. That's which well we're drinking from.

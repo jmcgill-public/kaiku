@@ -66,6 +66,8 @@ Timing:
 --pulse:        6.67s     /* 0.15Hz — Hiljaisuus */
 ```
 
+The pulse is not decorative. The 0.15Hz rate is the Hiljaisuus breath — the only motion in the interface that is permitted without communicating information. Time in this universe runs on the KAAMOS arc (3 spring + 1 summer + 11 winter positions), not on a clock. If you are making something that moves or progresses, read [`arch/time.md`](../arch/time.md) and [From Shadow to Caesium](https://rebraining.org/essays/clocks) before you decide how it counts.
+
 The full KaamOS token set — season colors, sky, lake, grey — exists but does not belong to Kaiku. It belongs to the universe. Kaiku is one instrument in that universe. Its palette reflects that scope.
 
 ### typography
