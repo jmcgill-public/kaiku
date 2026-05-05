@@ -33,7 +33,7 @@ comp/     scores, notes, prose from the universe
 ir/       impulse responses and provenance
 arch/     technical commons
 vsti/     synthesizer design and source
-contrib/  style guide, conduct, mission
+contrib/  how to read this, style guide, conduct, mission
 ```
 
 ---
@@ -52,7 +52,7 @@ The spec is in `vsti/SPEC.md`. Source is in the feature branch, as-is, uncompile
 
 ## contributing
 
-Read `contrib/` before you touch anything. Make a PR.
+Start with [contrib/READING.md](contrib/READING.md) — it will tell you what's load-bearing and what's depth. Make a PR.
 
 ---
 
