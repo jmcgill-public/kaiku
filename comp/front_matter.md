@@ -14,8 +14,3 @@ You do not have to explain yourself first.
 The people who answer have heard the complicated version.
 They can hold it with you.
 
----
-
-*This book was written by someone who knows the territory.*
-*That is why it was written.*
-
