@@ -1111,4 +1111,169 @@ function handleInput(hex) {
   } else {
     // Disruption — reset sequence, wipe tray, log quietly in Finnish
     STATE.phase = 'idle';
-    canvas.class
+    canvas.classList.add('watching');
+    STATE.disruptions++;
+    vaaraSound();
+
+    const word = FI[Math.min(STATE.disruptions, FI.length - 1)];
+    document.getElementById('log-line').textContent = word + '.';
+
+    setTimeout(() => {
+      STATE.sequence  = [];
+      STATE.trail     = [];
+      STATE.glyphs    = [];
+      STATE.playerHex = STATIONS[Math.floor(Math.random() * STATIONS.length)].hex;
+
+      const tray = document.getElementById('glyph-tray');
+      tray.innerHTML = '<span class="tray-empty" id="tray-empty">—</span>';
+
+      setStatus('');
+      devReadout();
+      setTimeout(newRound, 500);
+    }, 900);
+  }
+}
+
+
+// --- GLYPH TRAY ---
+
+function pushGlyph(station) {
+  STATE.glyphs.push({
+    key: station.key,
+    sem: station.sem,
+    n:   STATE.glyphs.length + 1,
+  });
+  renderTray();
+}
+
+function renderTray() {
+  const tray  = document.getElementById('glyph-tray');
+  const empty = document.getElementById('tray-empty');
+  if (empty) empty.remove();
+
+  STATE.glyphs.forEach((g, i) => {
+    const fresh  = i === STATE.glyphs.length - 1;
+    const tile   = document.createElement('div');
+    tile.className = 'glyph-tile' + (fresh ? ' fresh' : '');
+
+    const n = document.createElement('div');
+    n.className   = 'glyph-n';
+    n.textContent = g.n;
+
+    const sprite = document.createElement('canvas');
+    sprite.className = 'glyph-sprite';
+    sprite.width  = 28;
+    sprite.height = 28;
+    drawSemaphore(sprite, g.sem[0], g.sem[1], '#f0a030');
+
+    const key = document.createElement('div');
+    key.className   = 'glyph-key';
+    key.textContent = g.key;
+
+    tile.appendChild(n);
+    tile.appendChild(sprite);
+    tile.appendChild(key);
+    tray.appendChild(tile);
+
+    if (fresh) {
+      setTimeout(() => tile.classList.remove('fresh'), 2500);
+    }
+  });
+}
+
+// --- UI HELPERS ---
+
+function setStatus(text, cls) {
+  const el = document.getElementById('status');
+  el.textContent = text;
+  el.className   = 'status-line' + (cls ? ` ${cls}` : '');
+}
+
+function devReadout() {
+  if (!DEV) return;
+  const el = document.getElementById('dev-readout');
+  el.textContent = STATE.sequence.length ? `seq ${STATE.sequence.length}` : '';
+}
+
+// --- INPUT ---
+
+canvas.addEventListener('click', e => {
+  if (STATE.phase !== 'input') return;
+  const rect   = canvas.getBoundingClientRect();
+  const scaleX = canvas.width  / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = (e.clientX - rect.left) * scaleX;
+  const y = (e.clientY - rect.top)  * scaleY;
+  const hex = pixelToHex(x, y, HEX_SIZE, ORIGIN);
+  if (!stationByKey[hexKey(hex)]) return;
+  handleInput(hex);
+});
+
+// ─── DISCORDIAN DATE ───────────────────────────────────────────────────────
+// Discordian calendar with KaamOS idiomatic translation.
+// Five seasons. Five days. The year measured in disruptions.
+//
+// Season translations:
+//   Chaos          → repäisy       (tearing — the brane tears)
+//   Discord        → riitasointu   (dissonance — the musical register)
+//   Confusion      → hämyys        (dimness — the half-dark, kaamos-adjacent)
+//   Bureaucracy    → rekisteri     (the registry — the archive, the controllers)
+//   The Aftermath  → jälkimaine    (the afterglow — from the author's notes)
+//
+// Day translations:
+//   Sweetmorn      → heleähetki    (bright-moment — first warmth, spring register)
+//   Boomtime       → pamaus        (boom — compressed, like the vaara sound)
+//   Pungenday      → pistopäivä    (sting-day — the phrygian blade)
+//   Prickle-Prickle→ piikkipiikki  (cognate Finnification — keeps the doubled structure)
+//   Setting Orange → meripihka-lasku (amber-descent — the signal going dark)
+//
+// YOLD → h.v. (häiriön vuosi — year of disruption — echoes STATE.disruptions)
+// St. Tib's Day → tibsenhetki · asematon (the brane fold outside all seasons)
+
+function discordianDate(date) {
+  const d    = date || new Date();
+  const yr   = d.getFullYear();
+  const yold = yr + 1166;
+
+  const y0   = new Date(yr, 0, 1);
+  const doy  = Math.floor((d - y0) / 86400000) + 1;
+  const isLp = (yr % 4 === 0 && yr % 100 !== 0) || yr % 400 === 0;
+
+  if (isLp && doy === 60) {
+    return {
+      en: `st. tib's day, ${yold} yold`,
+      km: `tibsenhetki · asematon · ${yold} h.v.`,
+    };
+  }
+
+  const dd = (isLp && doy > 60) ? doy - 1 : doy;
+
+  const SEA_EN = ['chaos',      'discord',      'confusion', 'bureaucracy', 'the aftermath'];
+  const SEA_KM = ['repäisy',    'riitasointu',  'hämyys',    'rekisteri',   'jälkimaine'  ];
+  const DAY_EN = ['sweetmorn',  'boomtime',     'pungenday', 'prickle-prickle', 'setting orange' ];
+  const DAY_KM = ['heleähetki', 'pamaus',       'pistopäivä','piikkipiikki',    'meripihka-lasku'];
+
+  const si = Math.floor((dd - 1) / 73);
+  const ds = ((dd - 1) % 73) + 1;
+  const dw = (dd - 1) % 5;
+
+  return {
+    en: `${DAY_EN[dw]}, ${SEA_EN[si]} ${ds}, ${yold} yold`,
+    km: `${DAY_KM[dw]} · ${SEA_KM[si]} ${ds} · ${yold} h.v.`,
+  };
+}
+
+// --- INIT ---
+
+render();
+setTimeout(newRound, 1500);
+
+(function () {
+  const disc = discordianDate();
+  document.getElementById('disc-en').textContent = disc.en;
+  document.getElementById('disc-km').textContent = disc.km;
+})();
+
+</script>
+</body>
+</html>
