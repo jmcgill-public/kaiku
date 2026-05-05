@@ -288,7 +288,7 @@
     <button class="mute-btn" id="btn-syke"     onclick="toggleSyke()">syke</button>
     <button class="mute-btn green" id="btn-reg" onclick="toggleRegister()">rekisteri</button>
   </div>
-  <a class="version-link" id="dev-readout" href="https://github.com/jmcgill-public/kaiku" target="_blank" rel="noopener">frites</a>
+  <a class="version-link" id="dev-readout" href="https://github.com/jmcgill-public/kaiku/blob/main/games/kuule.html" target="_blank" rel="noopener">frites</a>
 </header>
 
 <div class="canvas-wrap">
@@ -654,11 +654,11 @@ function render() {
 
   // ── Season ring scrobble ─────────────────────────────────────────────────
   // 11 segments, counterclockwise from top. Entry = SEASON_START. Current = lit.
-  // Way underneath the inner ring. Thin. Legible. Not distracting.
+  // Mapped to the inner hex ring — radius = HEX_SIZE * √3. Through glass.
   {
-    const cx  = W / 2;
-    const cy  = H - 28;
-    const r   = 28;
+    const cx  = ORIGIN.x;
+    const cy  = ORIGIN.y;
+    const r   = HEX_SIZE * Math.sqrt(3);
     const seg = NUM_SEASONS;
     const arc = (2 * Math.PI) / seg;
     const cur = currentSeasonIndex();
@@ -672,30 +672,31 @@ function render() {
       '#280d30',                          // 10 hiljaisuus
     ];
 
+    // Rotate the whole dial so today's SEASON_START sits at the top.
+    const dialOffset = SEASON_START * arc;
+
     ctx.save();
     for (let i = 0; i < seg; i++) {
-      // Counterclockwise: start at top (-π/2), go negative
-      const startA = -Math.PI / 2 - i * arc;
-      const endA   = startA - arc + 0.04;  // 0.04 gap between segments
+      // Counterclockwise: start at top (-π/2), rotated by today's Discordian date.
+      const startA = -Math.PI / 2 - i * arc - dialOffset;
+      const endA   = startA - arc + 0.03;  // 0.03 gap — tighter at larger radius
 
       const isPast    = i < cur;
       const isCurrent = i === cur;
-      const isFuture  = i > cur;
 
       let color, lw;
       if (isCurrent) {
         color = segColors[i];
-        lw    = 3.5;
+        lw    = 4;
+        ctx.globalAlpha = 0.72;
       } else if (isPast) {
-        color = segColors[i].replace(/^#/, '');
-        // dim past segments
         color = segColors[i];
-        lw    = 1.5;
-        ctx.globalAlpha = 0.35;
+        lw    = 2;
+        ctx.globalAlpha = 0.22;
       } else {
         color = '#1a1820';
-        lw    = 1.5;
-        ctx.globalAlpha = 0.5;
+        lw    = 2;
+        ctx.globalAlpha = 0.18;
       }
 
       ctx.beginPath();
@@ -971,11 +972,17 @@ const KESA_TONES_AMBER = [740, 784, 988, 1109, 1319, 1480, 1568, 1976, 2217, 263
 const KESA_TONES_GREEN  = [370, 392, 494,  554,  660,  740,  784,  988, 1109, 1319];
 //                        F#4  G4   B4   C#5   E5    F#5   G5    B5    C#6   E6
 
+// Season index driven by game progress (sequence length), not elapsed time.
+// seq 1 → 0 (kevät-1), seq 4 → 3 (kesä), seq 5 → 4 (talvi-1, dark start), …
+function seasonIndexForSound() {
+  return Math.min(Math.max(STATE.sequence.length - 1, 0), NUM_SEASONS - 1);
+}
+
 function seasonalSound() {
   if (vaylaMuted) return;
   const ctx = getAudioCtx();
   const t   = ctx.currentTime;
-  const pos = currentSeasonIndex();
+  const pos = seasonIndexForSound();
 
   let f1, f2, gain, decay;
 
