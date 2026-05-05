@@ -46,8 +46,6 @@ target_sources(Kaiku PRIVATE
     Source/Synth/KaikuVoice.cpp
     Source/Synth/VoiceManager.cpp
     Source/GUI/KaamOSLookAndFeel.cpp
-    Source/GUI/OperatorPanel.cpp
-    Source/Presets/PresetManager.cpp
 )
 
 target_include_directories(Kaiku PRIVATE Source)

@@ -23,7 +23,6 @@ namespace ParamID
 
     // Voice / global
     static const char* MASTER_LEVEL     = "masterLevel";
-    static const char* DETUNE_AMOUNT    = "detuneAmount";
     static const char* TROMPETTE_LEVEL  = "trompetteLevel";
     static const char* TROMPETTE_THRESH = "trompetteThresh";
 }
@@ -68,9 +67,6 @@ juce::AudioProcessorValueTreeState::ParameterLayout KaikuProcessor::createParame
 
     layout.add (std::make_unique<juce::AudioParameterFloat>
         (ParamID::MASTER_LEVEL,    "Master Level",      pct,    0.8f));
-    layout.add (std::make_unique<juce::AudioParameterFloat>
-        (ParamID::DETUNE_AMOUNT,   "Detune (Hz)",
-         juce::NormalisableRange<float>(0.0f, 30.0f, 0.1f), 8.0f));
     layout.add (std::make_unique<juce::AudioParameterFloat>
         (ParamID::TROMPETTE_LEVEL, "Trompette Level",   pct,    0.15f));
     layout.add (std::make_unique<juce::AudioParameterFloat>

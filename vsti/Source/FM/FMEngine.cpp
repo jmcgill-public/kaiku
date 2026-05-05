@@ -31,10 +31,11 @@ FMPatch FMPatch::makeTyhjyydenkaiku()
                  .attackMs=2.0f, .decayMs=80.0f, .sustainLevel=0.30f, .releaseMs=120.0f };
 
     // ops[4] — Wheel/breath carrier: hurdy texture
-    p.ops[4] = { .ratio=1.008f, .index=0.0f, .level=0.75f,
-                 // 1.008 ratio = ~8 cents sharp — the second hurdy string
+    p.ops[4] = { .ratio=1.004629f, .index=0.0f, .level=0.75f,
+                 // 1.004629 = 2^(8/1200) — exactly 8 cents sharp, per world bible spec
                  // This beating against ops[0] is the instrument's defining roughness.
                  // Do not tune it out. The imperfection is the instrument.
+                 // Revisit after first audio test: if 8¢ is too subtle, 1.008 (~13.8¢) is rougher.
                  .attackMs=5.0f, .decayMs=500.0f, .sustainLevel=1.0f, .releaseMs=80.0f };
 
     // ops[5] — Wheel modulator
