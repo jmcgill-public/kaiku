@@ -39,7 +39,6 @@ void KaikuVoice::configureTrompette()
     tp.ops[3].level = 0.0f;
     tp.ops[4].level = 0.0f;
     tp.ops[5].level = 0.0f;
-    tp.masterLevel = trompetteLevel;
 
     trompette.applyPatch (tp);
 }
