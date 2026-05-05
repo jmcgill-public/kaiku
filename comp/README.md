@@ -61,3 +61,13 @@ Acoustic objects used as reverb sources live in `ir/`. References from `comp/` d
 Character names, story content, world-bible material. That is not this directory.
 Nothing that reads like a technical spec.
 Nothing that explains the universe.
+
+---
+
+## pinned — mobius audio
+
+Not for web audio. DAW, when the tools are there.
+
+Simulate a Mobius surface and its inverted surface. Magnetic soundtrack
+on 16mm running forwards then backwards through the base. The join is
+the composition. The inversion is the other side of the same thing.

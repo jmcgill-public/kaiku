@@ -117,6 +117,7 @@
 
     .mute-btn:hover          { color: var(--amber-mid); }
     .mute-btn.muted          { color: var(--amber-dim); text-decoration: line-through; }
+    .mute-btn.green          { color: var(--green); }
 
     /* ─── CANVAS ───────────────────────────────────────────────────────────── */
 
@@ -283,8 +284,9 @@
 <header class="page-header">
   <span class="wordmark">kuule</span>
   <div class="mute-controls">
-    <button class="mute-btn" id="btn-vayla" onclick="toggleVayla()">väylä</button>
-    <button class="mute-btn" id="btn-syke"  onclick="toggleSyke()">syke</button>
+    <button class="mute-btn" id="btn-vayla"    onclick="toggleVayla()">väylä</button>
+    <button class="mute-btn" id="btn-syke"     onclick="toggleSyke()">syke</button>
+    <button class="mute-btn green" id="btn-reg" onclick="toggleRegister()">rekisteri</button>
   </div>
   <a class="version-link" id="dev-readout" href="https://github.com/jmcgill-public/kaiku" target="_blank" rel="noopener">frites</a>
 </header>
@@ -385,6 +387,11 @@ const HILJAISUUS = {q:0, r:0, s:0};
 // sem: [leftArmDeg, rightArmDeg] — angles from 12 o'clock, clockwise.
 // These are real flag semaphore positions for letters A–H.
 // The player is reading a cipher and doesn't know it yet.
+
+// FUTURE: station labels need to be semantic and connect to the mastermind mechanic.
+// The Mastermind read: each station should carry meaning about sequence position
+// or deduction state — not just names. Birch branches considered as visual form.
+// Current names (Pohja, Väylä, etc.) are good and stay until the semantic layer is ready.
 
 const STATIONS = [
   { key:'POH', name:'Pohja',  hex:{q:2,  r:-1, s:-1}, sem:[315,  90] }, // A
@@ -645,6 +652,62 @@ function render() {
     }
   });
 
+  // ── Season ring scrobble ─────────────────────────────────────────────────
+  // 11 segments, counterclockwise from top. Entry = SEASON_START. Current = lit.
+  // Way underneath the inner ring. Thin. Legible. Not distracting.
+  {
+    const cx  = W / 2;
+    const cy  = H - 28;
+    const r   = 28;
+    const seg = NUM_SEASONS;
+    const arc = (2 * Math.PI) / seg;
+    const cur = currentSeasonIndex();
+
+    // Season colors: kevät amber, kesä bright, talvi sliding to violet-dim
+    const segColors = [
+      '#9a6820', '#c07828', '#f0a030',  // 0-2 kevät
+      '#f5c060',                          // 3 kesä
+      '#7a6050', '#604858', '#4a3858',   // 4-6 talvi early
+      '#3a2848', '#2a1838', '#1e1028',   // 7-9 talvi deep
+      '#280d30',                          // 10 hiljaisuus
+    ];
+
+    ctx.save();
+    for (let i = 0; i < seg; i++) {
+      // Counterclockwise: start at top (-π/2), go negative
+      const startA = -Math.PI / 2 - i * arc;
+      const endA   = startA - arc + 0.04;  // 0.04 gap between segments
+
+      const isPast    = i < cur;
+      const isCurrent = i === cur;
+      const isFuture  = i > cur;
+
+      let color, lw;
+      if (isCurrent) {
+        color = segColors[i];
+        lw    = 3.5;
+      } else if (isPast) {
+        color = segColors[i].replace(/^#/, '');
+        // dim past segments
+        color = segColors[i];
+        lw    = 1.5;
+        ctx.globalAlpha = 0.35;
+      } else {
+        color = '#1a1820';
+        lw    = 1.5;
+        ctx.globalAlpha = 0.5;
+      }
+
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, startA, endA, true);
+      ctx.strokeStyle = color;
+      ctx.lineWidth   = lw;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+    ctx.restore();
+  }
+
   requestAnimationFrame(render);
 }
 
@@ -660,8 +723,45 @@ let pulseStarted   = false;
 let ambientStarted = false;
 let kaikuMaster    = null;
 let hiljaisuusMaster = null;
-let vaylaMuted     = false;
-let sykeMuted      = false;
+let vaylaMuted       = false;
+let sykeMuted        = false;
+let toneRegister     = 'green';  // 'green' (default) or 'amber'
+let compositionT0    = null;     // set when ambient starts; ring scrobble reads this
+
+// ─── DISCORDIAN CALENDAR ───────────────────────────────────────────────────
+// 11-position arc: 0-2 kevät, 3 kesä, 4-10 talvi (3-1-7)
+// Entry position = today's Discordian day-of-year mod 11.
+// The 13 minutes runs forward from there. Time is the master clock.
+
+const NUM_SEASONS = 11;
+
+function discordianDoy() {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diff = now - start;
+  const oneDay = 1000 * 60 * 60 * 24;
+  const doy = Math.floor(diff / oneDay);
+  // Discordian year starts on the Gregorian new year for our purposes.
+  // St. Tib's Day (leap day) is absorbed without disrupting the count.
+  return doy;
+}
+
+const SEASON_START = discordianDoy() % NUM_SEASONS;
+
+function currentSeasonIndex() {
+  if (!compositionT0 || !audioCtx) return SEASON_START;
+  const elapsed  = audioCtx.currentTime - compositionT0;
+  const total    = 13 * 60;
+  const fraction = Math.min(elapsed / total, 1);
+  const remaining = NUM_SEASONS - SEASON_START;
+  return Math.min(SEASON_START + Math.floor(fraction * remaining), NUM_SEASONS - 1);
+}
+
+function toggleRegister() {
+  toneRegister = toneRegister === 'green' ? 'amber' : 'green';
+  const btn = document.getElementById('btn-reg');
+  btn.classList.toggle('green', toneRegister === 'green');
+}
 
 function toggleVayla() {
   vaylaMuted = !vaylaMuted;
@@ -693,6 +793,7 @@ function startKaikuAmbient() {
 
   const ctx    = audioCtx;
   const t0     = ctx.currentTime + 3.0;
+  compositionT0 = t0;
   const master = ctx.createGain();
   master.gain.value = 0.055;
   master.connect(ctx.destination);
@@ -831,40 +932,64 @@ function startHiljaisuusPulse() {
   });
 }
 
-const SOUND_TOKENS = [
-  null,                                                              // 0 — unused
-  { f1: 2820, f2: 2833, gain: 0.45, decay: 0.55 },  // 1 — kevät-1  first warmth
-  { f1: 2805, f2: 2819, gain: 0.50, decay: 1.10 },  // 2 — kevät-2  three days
-  { f1: 2790, f2: 2805, gain: 0.55, decay: 2.20 },  // 3 — kevät-3  last day before summer
-  null,                                              // 4 — kesä: drawn from KESA_TONES
-  { f1: 2200, f2: 2218, gain: 0.40, decay: 4.00 },  // 5 — purppura-1
-  { f1: 1600, f2: 1622, gain: 0.25, decay: 3.20 },  // 6 — purppura-2
-  { f1: 1100, f2: 1122, gain: 0.13, decay: 3.00 },  // 7 — purppura-3
-  { f1:  900, f2:  918, gain: 0.05, decay: 2.50 },  // 8 — hiljaisuus  near silence
+// Season tokens — 11 positions, 0-indexed. 0-2 kevät, 3 kesä (null), 4-10 talvi.
+// Time-driven: position is read from elapsed composition time, not sequence length.
+
+const SEASON_TOKENS_AMBER = [
+  { f1: 2820, f2: 2833, gain: 0.45, decay: 0.55 },  // 0 — kevät-1  first warmth
+  { f1: 2805, f2: 2819, gain: 0.50, decay: 1.10 },  // 1 — kevät-2  three days
+  { f1: 2790, f2: 2805, gain: 0.55, decay: 2.20 },  // 2 — kevät-3  last day before summer
+  null,                                               // 3 — kesä: drawn from KESA_TONES
+  { f1: 2200, f2: 2218, gain: 0.45, decay: 4.00 },  // 4 — talvi-1
+  { f1: 1800, f2: 1814, gain: 0.38, decay: 4.50 },  // 5 — talvi-2
+  { f1: 1400, f2: 1411, gain: 0.30, decay: 5.00 },  // 6 — talvi-3
+  { f1: 1100, f2: 1109, gain: 0.22, decay: 5.50 },  // 7 — talvi-4
+  { f1:  800, f2:  806, gain: 0.15, decay: 6.00 },  // 8 — talvi-5
+  { f1:  600, f2:  605, gain: 0.09, decay: 7.00 },  // 9 — talvi-6
+  { f1:  450, f2:  454, gain: 0.04, decay: 8.00 },  // 10 — talvi-7 / hiljaisuus
+];
+
+const SEASON_TOKENS_GREEN = [
+  { f1: 1410, f2: 1417, gain: 0.45, decay: 0.55 },  // 0 — kevät-1
+  { f1: 1403, f2: 1410, gain: 0.50, decay: 1.10 },  // 1 — kevät-2
+  { f1: 1395, f2: 1403, gain: 0.55, decay: 2.20 },  // 2 — kevät-3
+  null,                                               // 3 — kesä
+  { f1: 1100, f2: 1109, gain: 0.45, decay: 4.00 },  // 4 — talvi-1
+  { f1:  900, f2:  907, gain: 0.38, decay: 4.50 },  // 5 — talvi-2
+  { f1:  700, f2:  706, gain: 0.30, decay: 5.00 },  // 6 — talvi-3
+  { f1:  550, f2:  556, gain: 0.22, decay: 5.50 },  // 7 — talvi-4
+  { f1:  400, f2:  403, gain: 0.15, decay: 6.00 },  // 8 — talvi-5
+  { f1:  300, f2:  302, gain: 0.09, decay: 7.00 },  // 9 — talvi-6
+  { f1:  225, f2:  227, gain: 0.04, decay: 8.00 },  // 10 — talvi-7 / hiljaisuus
 ];
 
 // kesä — F# Phrygian pentatonic: F#, G, B, C#, E
 // Two octaves in the triangle register. The b2 (G) is the Phrygian blade.
 // Random draw each time. Paho can write the sequence when he's ready.
-const KESA_TONES = [740, 784, 988, 1109, 1319, 1480, 1568, 1976, 2217, 2637];
-//                  F#5  G5   B5   C#6   E6    F#6   G6    B6    C#7   E7
+const KESA_TONES_AMBER = [740, 784, 988, 1109, 1319, 1480, 1568, 1976, 2217, 2637];
+//                        F#5  G5   B5   C#6   E6    F#6   G6    B6    C#7   E7
+const KESA_TONES_GREEN  = [370, 392, 494,  554,  660,  740,  784,  988, 1109, 1319];
+//                        F#4  G4   B4   C#5   E5    F#5   G5    B5    C#6   E6
 
 function seasonalSound() {
   if (vaylaMuted) return;
   const ctx = getAudioCtx();
-  const len = Math.min(STATE.sequence.length, 8);
   const t   = ctx.currentTime;
+  const pos = currentSeasonIndex();
 
   let f1, f2, gain, decay;
 
-  if (len === 4) {
-    // kesä — random pentatonic draw, shimmer beat held at 15Hz
-    f1    = KESA_TONES[Math.floor(Math.random() * KESA_TONES.length)];
+  const TOKENS = toneRegister === 'amber' ? SEASON_TOKENS_AMBER : SEASON_TOKENS_GREEN;
+  const KESA   = toneRegister === 'amber' ? KESA_TONES_AMBER    : KESA_TONES_GREEN;
+
+  if (pos === 3) {
+    // kesä — random pentatonic draw, shimmer beat
+    f1    = KESA[Math.floor(Math.random() * KESA.length)];
     f2    = f1 + 15;
     gain  = 0.55;
     decay = 6.00;
   } else {
-    const tok = SOUND_TOKENS[len];
+    const tok = TOKENS[pos];
     if (!tok) return;
     f1 = tok.f1; f2 = tok.f2; gain = tok.gain; decay = tok.decay;
   }
@@ -899,7 +1024,7 @@ function vaaraSound() {
   src.buffer = buf;
   const filt = ctx.createBiquadFilter();
   filt.type  = 'bandpass';
-  filt.frequency.value = 3500;
+  filt.frequency.value = toneRegister === 'amber' ? 3500 : 1750;
   filt.Q.value = 0.6;
   const gain = ctx.createGain();
   gain.gain.value = 0.7;
@@ -986,169 +1111,4 @@ function handleInput(hex) {
   } else {
     // Disruption — reset sequence, wipe tray, log quietly in Finnish
     STATE.phase = 'idle';
-    canvas.classList.add('watching');
-    STATE.disruptions++;
-    vaaraSound();
-
-    const word = FI[Math.min(STATE.disruptions, FI.length - 1)];
-    document.getElementById('log-line').textContent = word + '.';
-
-    setTimeout(() => {
-      STATE.sequence  = [];
-      STATE.trail     = [];
-      STATE.glyphs    = [];
-      STATE.playerHex = STATIONS[Math.floor(Math.random() * STATIONS.length)].hex;
-
-      const tray = document.getElementById('glyph-tray');
-      tray.innerHTML = '<span class="tray-empty" id="tray-empty">—</span>';
-
-      setStatus('');
-      devReadout();
-      setTimeout(newRound, 500);
-    }, 900);
-  }
-}
-
-
-// --- GLYPH TRAY ---
-
-function pushGlyph(station) {
-  STATE.glyphs.push({
-    key: station.key,
-    sem: station.sem,
-    n:   STATE.glyphs.length + 1,
-  });
-  renderTray();
-}
-
-function renderTray() {
-  const tray  = document.getElementById('glyph-tray');
-  const empty = document.getElementById('tray-empty');
-  if (empty) empty.remove();
-
-  STATE.glyphs.forEach((g, i) => {
-    const fresh  = i === STATE.glyphs.length - 1;
-    const tile   = document.createElement('div');
-    tile.className = 'glyph-tile' + (fresh ? ' fresh' : '');
-
-    const n = document.createElement('div');
-    n.className   = 'glyph-n';
-    n.textContent = g.n;
-
-    const sprite = document.createElement('canvas');
-    sprite.className = 'glyph-sprite';
-    sprite.width  = 28;
-    sprite.height = 28;
-    drawSemaphore(sprite, g.sem[0], g.sem[1], '#f0a030');
-
-    const key = document.createElement('div');
-    key.className   = 'glyph-key';
-    key.textContent = g.key;
-
-    tile.appendChild(n);
-    tile.appendChild(sprite);
-    tile.appendChild(key);
-    tray.appendChild(tile);
-
-    if (fresh) {
-      setTimeout(() => tile.classList.remove('fresh'), 2500);
-    }
-  });
-}
-
-// --- UI HELPERS ---
-
-function setStatus(text, cls) {
-  const el = document.getElementById('status');
-  el.textContent = text;
-  el.className   = 'status-line' + (cls ? ` ${cls}` : '');
-}
-
-function devReadout() {
-  if (!DEV) return;
-  const el = document.getElementById('dev-readout');
-  el.textContent = STATE.sequence.length ? `seq ${STATE.sequence.length}` : '';
-}
-
-// --- INPUT ---
-
-canvas.addEventListener('click', e => {
-  if (STATE.phase !== 'input') return;
-  const rect   = canvas.getBoundingClientRect();
-  const scaleX = canvas.width  / rect.width;
-  const scaleY = canvas.height / rect.height;
-  const x = (e.clientX - rect.left) * scaleX;
-  const y = (e.clientY - rect.top)  * scaleY;
-  const hex = pixelToHex(x, y, HEX_SIZE, ORIGIN);
-  if (!stationByKey[hexKey(hex)]) return;
-  handleInput(hex);
-});
-
-// ─── DISCORDIAN DATE ───────────────────────────────────────────────────────
-// Discordian calendar with KaamOS idiomatic translation.
-// Five seasons. Five days. The year measured in disruptions.
-//
-// Season translations:
-//   Chaos          → repäisy       (tearing — the brane tears)
-//   Discord        → riitasointu   (dissonance — the musical register)
-//   Confusion      → hämyys        (dimness — the half-dark, kaamos-adjacent)
-//   Bureaucracy    → rekisteri     (the registry — the archive, the controllers)
-//   The Aftermath  → jälkimaine    (the afterglow — from the author's notes)
-//
-// Day translations:
-//   Sweetmorn      → heleähetki    (bright-moment — first warmth, spring register)
-//   Boomtime       → pamaus        (boom — compressed, like the vaara sound)
-//   Pungenday      → pistopäivä    (sting-day — the phrygian blade)
-//   Prickle-Prickle→ piikkipiikki  (cognate Finnification — keeps the doubled structure)
-//   Setting Orange → meripihka-lasku (amber-descent — the signal going dark)
-//
-// YOLD → h.v. (häiriön vuosi — year of disruption — echoes STATE.disruptions)
-// St. Tib's Day → tibsenhetki · asematon (the brane fold outside all seasons)
-
-function discordianDate(date) {
-  const d    = date || new Date();
-  const yr   = d.getFullYear();
-  const yold = yr + 1166;
-
-  const y0   = new Date(yr, 0, 1);
-  const doy  = Math.floor((d - y0) / 86400000) + 1;
-  const isLp = (yr % 4 === 0 && yr % 100 !== 0) || yr % 400 === 0;
-
-  if (isLp && doy === 60) {
-    return {
-      en: `st. tib's day, ${yold} yold`,
-      km: `tibsenhetki · asematon · ${yold} h.v.`,
-    };
-  }
-
-  const dd = (isLp && doy > 60) ? doy - 1 : doy;
-
-  const SEA_EN = ['chaos',      'discord',      'confusion', 'bureaucracy', 'the aftermath'];
-  const SEA_KM = ['repäisy',    'riitasointu',  'hämyys',    'rekisteri',   'jälkimaine'  ];
-  const DAY_EN = ['sweetmorn',  'boomtime',     'pungenday', 'prickle-prickle', 'setting orange' ];
-  const DAY_KM = ['heleähetki', 'pamaus',       'pistopäivä','piikkipiikki',    'meripihka-lasku'];
-
-  const si = Math.floor((dd - 1) / 73);
-  const ds = ((dd - 1) % 73) + 1;
-  const dw = (dd - 1) % 5;
-
-  return {
-    en: `${DAY_EN[dw]}, ${SEA_EN[si]} ${ds}, ${yold} yold`,
-    km: `${DAY_KM[dw]} · ${SEA_KM[si]} ${ds} · ${yold} h.v.`,
-  };
-}
-
-// --- INIT ---
-
-render();
-setTimeout(newRound, 1500);
-
-(function () {
-  const disc = discordianDate();
-  document.getElementById('disc-en').textContent = disc.en;
-  document.getElementById('disc-km').textContent = disc.km;
-})();
-
-</script>
-</body>
-</html>
+    canvas.class

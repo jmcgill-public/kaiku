@@ -10,6 +10,8 @@ You don't have to count in Finnish. birch counts your moves for you in Finnish, 
 
 But if you do know — if *kolme* lands when you've just made your third move, and something clicks — that's the good version. The language is there for people who want to meet it. It won't chase you if you don't.
 
+Learning Finnish is considered torture even by Finns. This is not an invitation to learn Finnish. This is an invitation to hear it.
+
 The numbers you'll see: *yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän kymmenen.* One through ten. After that it gets compositional and interesting, but the game probably won't go that well for you anyway.
 
 ---

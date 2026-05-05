@@ -38,6 +38,18 @@ contrib/  style guide, conduct, mission
 
 ---
 
+## why vsti/ has no code
+
+The instrument's scope is still changing to meet the composer's needs. The proof of concept lives in the web audio implementations in `games/` — that is what Kaiku sounds like right now, at this minute, and it is enough to work from. The third reason is left as an exercise.
+
+AI assistance is being used in the development of this instrument. This is not vibe coding.
+
+*(It is, though.)*
+
+The spec is in `vsti/SPEC.md`. Source is in the feature branch, as-is, uncompiled. Main holds the contract.
+
+---
+
 ## contributing
 
 Read `contrib/` before you touch anything. Make a PR.
