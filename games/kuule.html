@@ -318,7 +318,7 @@
 <header class="page-header">
   <span class="wordmark" title="listen">kuule</span>
   <div class="mute-controls">
-    <button class="mute-btn" id="btn-vayla"    onclick="toggleVayla()" title="channel — mutes the ambient layer">väylä</button>
+    <button class="mute-btn" id="btn-vayla"    onclick="toggleVayla()" title="channel — mutes the hex tones">väylä</button>
     <button class="mute-btn" id="btn-syke"     onclick="toggleSyke()"  title="pulse — mutes the drone">syke</button>
     <button class="mute-btn" id="btn-mode" onclick="toggleMode()" title="child's play — new station always last">lasten leikkiä</button>
     <button class="mute-btn green" id="btn-reg" onclick="toggleRegister()" title="register — tone color">rekisteri</button>
@@ -816,7 +816,7 @@ function toggleRegister() {
 function toggleVayla() {
   vaylaMuted = !vaylaMuted;
   document.getElementById('btn-vayla').classList.toggle('muted', vaylaMuted);
-  if (kaikuMaster) kaikuMaster.gain.setTargetAtTime(vaylaMuted ? 0 : 0.055, audioCtx.currentTime, 0.3);
+  // väylä mutes hex tones only — kaikuMaster (ambient) runs independently
 }
 
 function toggleSyke() {
