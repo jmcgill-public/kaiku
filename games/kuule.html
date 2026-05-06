@@ -132,6 +132,8 @@
       max-width: 100%;
       height: auto;
       cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
 
     canvas.watching { cursor: default; }
@@ -232,6 +234,38 @@
       padding: 0 0.25rem;
     }
 
+    /* ─── SEQUENCE COUNTER ────────────────────────────────────────────────── */
+
+    .seq-count {
+      width: 100%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .seq-n {
+      font-size: 2rem;
+      color: var(--amber);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .seq-fi {
+      font-size: 0.65rem;
+      color: var(--text);
+      letter-spacing: 0.18em;
+    }
+
+    .seq-best {
+      font-size: 0.52rem;
+      color: var(--text-muted);
+      letter-spacing: 0.2em;
+      min-height: 1em;
+    }
+
     /* ─── LOG ──────────────────────────────────────────────────────────────── */
 
     .log-line {
@@ -282,13 +316,14 @@
 <body>
 
 <header class="page-header">
-  <span class="wordmark">kuule</span>
+  <span class="wordmark" title="listen">kuule</span>
   <div class="mute-controls">
-    <button class="mute-btn" id="btn-vayla"    onclick="toggleVayla()">väylä</button>
-    <button class="mute-btn" id="btn-syke"     onclick="toggleSyke()">syke</button>
-    <button class="mute-btn green" id="btn-reg" onclick="toggleRegister()">rekisteri</button>
+    <button class="mute-btn" id="btn-vayla"    onclick="toggleVayla()" title="channel — mutes the ambient layer">väylä</button>
+    <button class="mute-btn" id="btn-syke"     onclick="toggleSyke()"  title="pulse — mutes the drone">syke</button>
+    <button class="mute-btn" id="btn-mode" onclick="toggleMode()" title="child's play — new station always last">lasten leikkiä</button>
+    <button class="mute-btn green" id="btn-reg" onclick="toggleRegister()" title="register — tone color">rekisteri</button>
   </div>
-  <a class="version-link" id="dev-readout" href="https://github.com/jmcgill-public/kaiku/blob/main/games/kuule.html" target="_blank" rel="noopener">frites</a>
+  <a class="version-link" id="dev-readout" href="https://github.com/jmcgill-public/kaiku/blob/main/README.md" target="_blank" rel="noopener" title="v0.1 — grilli name for what's currently shipping">frites</a>
 </header>
 
 <div class="canvas-wrap">
@@ -298,6 +333,11 @@
 <div class="status-line" id="status"></div>
 
 <div class="glyph-wrap">
+  <div class="seq-count">
+    <span class="seq-n"  id="seq-n">0</span>
+    <span class="seq-fi" id="seq-fi">nolla</span>
+    <span class="seq-best" id="seq-best"></span>
+  </div>
   <span class="glyph-label">sequence record</span>
   <div class="glyph-tray" id="glyph-tray">
     <span class="tray-empty" id="tray-empty">—</span>
@@ -727,6 +767,7 @@ let hiljaisuusMaster = null;
 let vaylaMuted       = false;
 let sykeMuted        = false;
 let toneRegister     = 'green';  // 'green' (default) or 'amber'
+let gameMode         = 'lasten'; // 'lasten' (append) or 'asema' (random insert)
 let compositionT0    = null;     // set when ambient starts; ring scrobble reads this
 
 // ─── DISCORDIAN CALENDAR ───────────────────────────────────────────────────
@@ -756,6 +797,14 @@ function currentSeasonIndex() {
   const fraction = Math.min(elapsed / total, 1);
   const remaining = NUM_SEASONS - SEASON_START;
   return Math.min(SEASON_START + Math.floor(fraction * remaining), NUM_SEASONS - 1);
+}
+
+function toggleMode() {
+  gameMode = gameMode === 'lasten' ? 'asema' : 'lasten';
+  const btn = document.getElementById('btn-mode');
+  btn.textContent = gameMode === 'lasten' ? 'lasten leikkiä' : 'asemavalmiina';
+  btn.title       = gameMode === 'lasten' ? "child's play — new station always last" : 'station ready — new station anywhere';
+  btn.classList.toggle('muted', gameMode === 'asema');
 }
 
 function toggleRegister() {
@@ -1055,7 +1104,12 @@ function newRound() {
 
   // Extend sequence by one
   const pick = STATIONS[Math.floor(Math.random() * STATIONS.length)];
-  STATE.sequence.push(pick.hex);
+  if (gameMode === 'asema') {
+    const pos = Math.floor(Math.random() * (STATE.sequence.length + 1));
+    STATE.sequence.splice(pos, 0, pick.hex);
+  } else {
+    STATE.sequence.push(pick.hex);
+  }
 
   setStatus('');
   devReadout();
@@ -1110,6 +1164,7 @@ function handleInput(hex) {
 
       const newStation = stationByKey[hexKey(STATE.sequence[STATE.sequence.length - 1])];
       if (newStation) pushGlyph(newStation);
+      updateSeqCount();
 
       setStatus('');
       devReadout();
@@ -1120,6 +1175,7 @@ function handleInput(hex) {
     STATE.phase = 'idle';
     canvas.classList.add('watching');
     STATE.disruptions++;
+    maybeUpdateBest();
     vaaraSound();
 
     const word = FI[Math.min(STATE.disruptions, FI.length - 1)];
@@ -1136,6 +1192,7 @@ function handleInput(hex) {
 
       setStatus('');
       devReadout();
+      updateSeqCount();
       setTimeout(newRound, 500);
     }, 900);
   }
@@ -1155,8 +1212,12 @@ function pushGlyph(station) {
 
 function renderTray() {
   const tray  = document.getElementById('glyph-tray');
-  const empty = document.getElementById('tray-empty');
-  if (empty) empty.remove();
+  tray.innerHTML = '';
+
+  if (STATE.glyphs.length === 0) {
+    tray.innerHTML = '<span class="tray-empty" id="tray-empty">—</span>';
+    return;
+  }
 
   STATE.glyphs.forEach((g, i) => {
     const fresh  = i === STATE.glyphs.length - 1;
@@ -1194,6 +1255,28 @@ function setStatus(text, cls) {
   const el = document.getElementById('status');
   el.textContent = text;
   el.className   = 'status-line' + (cls ? ` ${cls}` : '');
+}
+
+const SESSION_BEST_KEY = m => `kaamos-kuule-best-${m}`;
+
+function sessionBest() {
+  return parseInt(sessionStorage.getItem(SESSION_BEST_KEY(gameMode)) || '0', 10);
+}
+
+function updateSeqCount() {
+  const n    = STATE.glyphs.length;
+  const best = sessionBest();
+  document.getElementById('seq-n').textContent  = n;
+  document.getElementById('seq-fi').textContent = FI[Math.min(n, FI.length - 1)];
+  if (best > 0) {
+    document.getElementById('seq-best').textContent = `paras ${FI[Math.min(best, FI.length - 1)]}`;
+  }
+}
+
+function maybeUpdateBest() {
+  const n    = STATE.glyphs.length;
+  const best = sessionBest();
+  if (n > best) sessionStorage.setItem(SESSION_BEST_KEY(gameMode), n);
 }
 
 function devReadout() {
