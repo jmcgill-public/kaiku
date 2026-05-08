@@ -97,13 +97,10 @@ KaikuEditor::KaikuEditor (KaikuProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
     setLookAndFeel (&laf);
-    setSize (920, 620);
 
     // Title
     titleLabel.setText ("KAIKU", juce::dontSendNotification);
-    titleLabel.setFont (juce::Font (juce::FontOptions().withName("Iosevka")
-                                   .withFallbacks({"Fira Code","Consolas"})
-                                   .withHeight(22.0f)));
+    titleLabel.setFont (juce::Font ("Iosevka", 22.0f, juce::Font::plain));
     titleLabel.setColour (juce::Label::textColourId, KaamOSLookAndFeel::amber());
     titleLabel.setJustificationType (juce::Justification::centredLeft);
     addAndMakeVisible (titleLabel);
@@ -151,6 +148,7 @@ KaikuEditor::KaikuEditor (KaikuProcessor& p)
 
     startTime = juce::Time::getMillisecondCounterHiRes() * 0.001;
     startTimerHz (30);
+    setSize (920, 620);   // must be last — triggers resized() immediately
 }
 
 KaikuEditor::~KaikuEditor()
@@ -194,7 +192,7 @@ void KaikuEditor::paint (juce::Graphics& g)
                                     20.0f, juce::Colour (0xFF0D0D1F));
 
     // Operator stack labels
-    auto& f = laf.getLabelFont (titleLabel);
+    auto f = laf.getLabelFont (titleLabel);
     g.setFont (f.withHeight (10.0f));
     g.setColour (KaamOSLookAndFeel::dimAmber());
     int opW = (getWidth() - 20) / 3;

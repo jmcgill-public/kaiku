@@ -1,5 +1,6 @@
 #pragma once
 #include "FMOperator.h"
+#include <string>
 
 // ─────────────────────────────────────────────────────────────────────────────
 // FMEngine — 6-operator FM engine for Tyhjyydenkaiku
@@ -42,7 +43,7 @@ struct FMPatch
     OpParams ops[6];
     float    masterLevel  = 0.8f;
     float    detuneAmount = 8.0f;   // Hz of detune on ops[2] (second hurdy string)
-    juce::String name;
+    std::string name;
 
     static FMPatch makeTyhjyydenkaiku();
     static FMPatch makeKuilunsikio();

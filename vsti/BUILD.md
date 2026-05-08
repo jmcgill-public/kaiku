@@ -59,6 +59,58 @@ VST3:         `build/Kaiku_artefacts/Release/VST3/Kaiku.vst3`
 
 ---
 
+## Windows (LAB-02 / incidental)
+
+### Prerequisites
+
+- **Visual Studio 2022 Community** (free)
+  https://visualstudio.microsoft.com/vs/community/
+  Workload: *Desktop development with C++*. Nothing else needed.
+  Install to C: (default). ~6GB.
+
+- **CMake 3.22+**
+  https://cmake.org/download/ — add to PATH during install.
+
+JUCE downloads automatically via FetchContent. No separate install.
+
+### Build
+
+**Point the build directory at D: to keep C: clear.**
+Run from a Developer Command Prompt for VS 2022
+(Start → Visual Studio 2022 → Developer Command Prompt):
+
+```cmd
+cd C:\cygwin64\home\minix\github\mcgill-enterprises\eerikki-muistaa\kaiku\vsti
+cmake -B D:\build\kaiku -DCMAKE_BUILD_TYPE=Release
+cmake --build D:\build\kaiku --config Release --parallel
+```
+
+First run fetches JUCE (~400MB) into `D:\build\kaiku\_deps\`.
+Subsequent builds are fast.
+
+VST3 output: `D:\build\kaiku\Kaiku_artefacts\Release\VST3\Kaiku.vst3`
+
+### Install to REAPER
+
+```cmd
+xcopy /E /I "D:\build\kaiku\Kaiku_artefacts\Release\VST3\Kaiku.vst3" ^
+    "%COMMONPROGRAMFILES%\VST3\Kaiku.vst3\"
+```
+
+Then in REAPER: Options → Preferences → VST → Re-scan.
+
+### Troubleshooting
+
+- **"cmake not found"** — re-run CMake installer, check *Add to PATH*.
+- **"LINK : fatal error LNK1181"** — stale build dir, delete `D:\build\kaiku` and retry.
+- **FetchContent timeout** — corporate network / proxy issue; clone JUCE manually
+  to `D:\JUCE` and add `-DJUCE_PATH=D:\JUCE` to the cmake command.
+- **VST3 not appearing in REAPER** — confirm the `.vst3` bundle copied correctly
+  (it's a folder, not a single file) and that REAPER's VST path includes
+  `%COMMONPROGRAMFILES%\VST3\`.
+
+---
+
 ## CLAP (future stretch goal)
 
 JUCE 8 supports CLAP via the `juce_clap_hosting` module.
