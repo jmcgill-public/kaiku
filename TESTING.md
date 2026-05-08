@@ -1,11 +1,33 @@
+<<<<<<< HEAD
 # kaiku — eval brief
 
 How to test the instrument before it ships.
+=======
+# TESTING
+
+Ear testing for the Kaiku VST3i. Windows64 build. F# Phrygian.
+
+The instrument makes sound. These exercises confirm which sound, and whether it is the correct one.
+
+This is the first iteration of [musicians-memory.com](https://musicians-memory.com) — practice materials for an instrument that does not exist anywhere else. Before testing, read [contrib/MISSION.md](contrib/MISSION.md) for the context that makes these exercises mean something.
+
+---
+
+## Directory layout
+
+```
+eval/
+  exercises/     — HTML index, rendered PDF practice sheets, card thumbnails
+  scores/        — LilyPond source (.ly) and MIDI renders (.mid)
+TESTING.md       — this file
+```
+>>>>>>> bb1e9ed (eval)
 
 ---
 
 ## Setup
 
+<<<<<<< HEAD
 **Host:** REAPER. Any version that loads VST3.
 
 **Tempo:** Set REAPER project tempo to **40 BPM** before loading any eval MIDI.
@@ -47,11 +69,102 @@ All MIDI: 40 BPM, TPQN 480, whole note + whole rest, sounding pitch.
 | `Ensemble_Preset_2.wav` | ✓ clean | baseline ensemble reference |
 | `Contrabass.wav` | legacy | 120 BPM (short notes) — discard |
 | `Ensemble.wav` | clipped | +9.4 dBTP, gain staging failure — discard |
+=======
+### A note before you install
+
+If you know the author, you've probably known him since the seventies — when he was likely the first person you ever met with a computer in the house. He is not trying to install a virus.
+
+Windows will flag this. It should. It is a debug-symbols-enabled, highly experimental VST plugin from the free version of Visual Studio Code. It is the first thing the author has ever compiled with CMake on Windows, and it is the last thing he will do on this Windows 10 machine before upgrading it to 11. After that there will be a Windows 11 build and a proper installer. But the next task is the ear testing, and that task needs you.
+
+There are practice sheets for Soprano, high Tenor, low Tenor, Contrabass, and piano reference. There are exercises for solo timbre, two-voice motion, full ensemble texture, and envelope behavior. The instructions in this document describe what to listen for in any drone synth — and this one needs that evaluation badly. The next release will have reverb.
+
+### Installing the plugin
+
+This is a test build. It carries debugging symbols and has not been installed to the system VST3 folder. The bundle is in the build tree:
+
+```
+vsti/build/Kaiku_artefacts/Release/VST3/Kaiku.vst3
+```
+
+In REAPER: **Options → Preferences → Plug-ins → VST**. Add the folder containing `Kaiku.vst3` to the VST plug-in paths, then click **Re-scan**. Kaiku will appear in the instrument list as `Kaiku (Kaamos)`.
+
+A standalone build exists but has no on-screen keyboard and cannot drive MIDI from a score. It is not useful for these exercises. Use REAPER.
+
+### Loading exercises
+
+Open `eval/exercises/index.html` in a browser to see the full exercise index with practice sheets and download links.
+
+In REAPER:
+- Load the REAPER template from `eval/exercises/reaper-template.rpp`
+- Kaiku is pre-instantiated on the MIDI track
+- Render settings are pre-configured: 48 kHz, 24-bit, stereo
+- Enable the spectrum analyser on the master bus before rendering
+
+Use headphones or nearfield monitors. This is not a casual listen.
+
+---
+
+## What we are testing
+
+Kaiku has three FM stacks running in parallel (Tyhjyydenkaiku topology):
+
+| Stack | Role | Ratio |
+|-------|------|-------|
+| A | F1 formant body | ~1.0× |
+| B | F2 nasal partial | ~2.0× |
+| C | Wheel carrier | 1.008× |
+
+Stack C runs at 1.008× the fundamental. This creates a slow beating — the wheel imperfection. At F#1 the beat period is approximately 2.7 seconds. At F#5 it reads as fast vibrato (~5.9 Hz). **This beating is the instrument. Do not report it as a defect.**
+
+The Hiljaisuus LFO runs at 0.15 Hz — one cycle every 6.67 seconds. At ♩=40, a whole note is 6 seconds. Slow-tempo exercises are slow deliberately: to let the LFO complete a visible cycle.
+
+---
+
+## Phases
+
+### Phase I — Timbre (Solo)
+
+One pitch class at a time. One voice. Whole notes with whole rests between.
+
+The rest is not silence — it is the test. Listen for the reverb tail, the release envelope, and the 1.008× beat. Each register presents differently. Do not skip contrabass.
+
+**Exercises E01–E06.** Soprano, high tenor, low tenor, contrabass, and the b2 (G♮) isolated across all registers, plus piano reference.
+
+The b2 (G♮) is load-bearing for the Phrygian character. It gets its own exercise. If it sounds wrong, everything downstream is wrong.
+
+### Phase II — Motion (Two Voices)
+
+Soprano against piano reference. Whole notes throughout.
+
+Two things are tested simultaneously: FM formant interaction between voices (Stack A and B can stack unpredictably in parallel thirds), and the REAPER ensemble render path.
+
+**Exercises E07–E11.** Similar motion, contrary motion, parallel thirds, parallel fourths, parallel fifths.
+
+### Phase III — Ensemble (Full Texture)
+
+All parts. Long notes, long rests.
+
+The question at this phase is not timbre — Phase I settled that. The question is blend, mask, and alias. Does the nasal partial (Stack B) disappear in full texture or take over? Does the wheel carrier create beating artifacts between parts at close intervals?
+
+**Exercises E12–E13.** Full texture sustained; full texture mixed motion.
+
+### Phase IV — Envelope and Dynamics
+
+Attack, sustain, release, tail. Velocity response. Voice stealing.
+
+**Exercises E14–E17.**
+
+- **E14 — Staccato, pp through ff.** Reveals click artifacts and release behavior. Each velocity level is a separate question.
+- **E15 — Crescendo, sustained.** Does the sustain hold without drift? Does the FM character shift with amplitude?
+- **E16 — LFO cycle, ♩=40.** The Hiljaisuus LFO completes one full cycle at this tempo. The modulation should be visible in the spectrogram as a slow periodicity on the amplitude envelope.
+- **E17 — Re-trigger, same pitch.** Same note fired before the previous release completes. Tests the 16-voice allocator's behavior: phase cancellation, amplitude doubling, pop on re-attack.
+>>>>>>> bb1e9ed (eval)
 
 ---
 
 ## What to listen for
 
+<<<<<<< HEAD
 ### Pitch
 
 The F# Phrygian scale ascending: F#, G, A, B, C#, D, E, F#.
@@ -117,3 +230,50 @@ Flag: any additional clipping in the wet signal. The +0.8 dBTP intersample peak 
 *Cross-ref: `vsti/SPEC.md` — patch topology and Cw detuning*
 *Cross-ref: `ir/` — impulse responses*
 *Cross-ref: `zds/kaiku/release_eval.md` — ZDS operational procedure*
+=======
+**In the ears:**
+- The 1.008× beat — period varies by register, wait for it
+- The reverb tail decaying into silence between notes
+- G♮ pulling toward F# in context
+- Any click, pop, or artifact on attack or release
+- Amplitude consistency across the velocity range
+
+**In the spectrogram:**
+- Clean harmonic series with consistent FM sidebands
+- Sideband pairs at ±1.008× intervals from each harmonic (the wheel carrier)
+- Flat noise floor — no unexpected spikes
+- Aliasing appears as energy above 15 kHz; this is a defect
+- The LFO at 0.15 Hz is visible as slow amplitude periodicity on long notes
+
+---
+
+## Reporting
+
+Record findings in the GitHub wiki. One entry per exercise.
+
+**Fields:** expected / observed / rating (Pass · Marginal · Fail) / notes.
+
+Marginal = something audible that cannot be characterized. Fail = artifact, wrong pitch, silence where there should not be silence, pop, or spectrogram anomaly. If uncertain: Marginal. Write what was heard.
+
+**Include with Marginal or Fail entries:**
+- WAV render of the exercise
+- Spectrogram screenshot of the anomaly
+
+**Do not include:**
+- REAPER project files
+- Spectrogram screenshots for passing exercises
+- Aesthetic opinions about the sound design
+- Corrected or revised MIDI
+
+---
+
+## Phase 2 criteria
+
+| Phase 1 result | Phase 2 action |
+|----------------|----------------|
+| All pass | Polyphony stress testing; full harmonic field at tempo |
+| b2 exercises fail | Operator rebalancing before anything else |
+| Envelope artifacts | ADSR parameter review; release curve adjustment |
+| Beat inconsistent across registers | Stack C ratio implementation audit |
+| Ensemble mask/alias | Stack B level calibration |
+>>>>>>> bb1e9ed (eval)
