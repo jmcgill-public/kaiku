@@ -20,10 +20,7 @@ KaamOSLookAndFeel::KaamOSLookAndFeel()
     setColour (juce::TextButton::textColourOffId,           amber());
     setColour (juce::TextButton::textColourOnId,            stationGreen());
 
-    terminalFont = juce::Font (juce::FontOptions()
-        .withName ("Iosevka")
-        .withFallbacks ({"Fira Code", "Fira Mono", "Consolas", "Courier New"})
-        .withHeight (12.0f));
+    terminalFont = juce::Font ("Iosevka", 12.0f, juce::Font::plain);
 }
 
 void KaamOSLookAndFeel::drawRotarySlider (juce::Graphics& g,
